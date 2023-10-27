@@ -1,3 +1,3 @@
 apiVersion: v2
-name: root-app
+name: core
 version: 1.0.0
