@@ -8,3 +8,7 @@ argo-cd:
   server:
     extraArgs:
       - --insecure
+      - --application-namespaces="*"
+  controller:
+    extraArgs:
+      - --application-namespaces="*"
