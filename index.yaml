@@ -2,6 +2,17 @@ apiVersion: v1
 entries:
   argo-cd:
   - apiVersion: v2
+    created: "2023-10-29T01:25:25.136816391Z"
+    dependencies:
+    - name: argo-cd
+      repository: https://argoproj.github.io/argo-helm
+      version: 5.46.8
+    digest: 20d6d912aadeb4db249a68191699107fef47c5793636844e219e5eaca66d0eae
+    name: argo-cd
+    urls:
+    - https://github.com/OwnYourIO/SpencersLab/releases/download/argo-cd-1.0.3/argo-cd-1.0.3.tgz
+    version: 1.0.3
+  - apiVersion: v2
     created: "2023-10-29T01:06:18.539712372Z"
     dependencies:
     - name: argo-cd
@@ -13,6 +24,13 @@ entries:
     - https://github.com/OwnYourIO/SpencersLab/releases/download/argo-cd-1.0.2/argo-cd-1.0.2.tgz
     version: 1.0.2
   core:
+  - apiVersion: v2
+    created: "2023-10-29T01:25:25.25012466Z"
+    digest: 6484c020dd26d295d2bbae149520c9533b279cdb79a2d00ccc704fa41ce2dac6
+    name: core
+    urls:
+    - https://github.com/OwnYourIO/SpencersLab/releases/download/core-1.0.4/core-1.0.4.tgz
+    version: 1.0.4
   - apiVersion: v2
     created: "2023-10-29T01:06:18.684355054Z"
     digest: a9e707b94d838497bbfa798fcce891000ac190794f4db1954d0541d3cd350b38
@@ -27,4 +45,4 @@ entries:
     urls:
     - https://github.com/OwnYourIO/SpencersLab/releases/download/core-1.0.1/core-1.0.1.tgz
     version: 1.0.1
-generated: "2023-10-29T01:06:18.684368157Z"
+generated: "2023-10-29T01:25:25.25013686Z"
