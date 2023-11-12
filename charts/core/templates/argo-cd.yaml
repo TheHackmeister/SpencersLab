@@ -6,10 +6,13 @@ metadata:
     - resources-finalizer.argocd.argoproj.io
 spec:
   project: default
-  source:
-    repoURL: https://github.com/OwnYourIO/SpencersLab.git
-    path: charts/argo-cd
-    targetRevision: HEAD
+  sources:
+    - repoURL: https://github.com/OwnYourIO/SpencersLab.git
+      path: charts/argo-cd
+      targetRevision: HEAD
+    - repoURL: https://github.com/OwnYourIO/IaC.git
+      path: src/projects/core/envs/main
+      targetRevision: HEAD
   destination:
     server: https://kubernetes.default.svc
     namespace: default
