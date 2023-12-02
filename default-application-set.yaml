@@ -1,0 +1,43 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: main
+spec:
+  generators:
+    # Generator for apps that should deploy to all cluster.
+    - matrix:
+        generators:
+          - clusters: {}
+          - list:
+              elements:
+                - appName: crossplane
+                  namespace: crossplane-system
+                - appName: nginx-ingress-controller
+                  namespace: ingress-nginx
+                - appName: prometheus-operator
+                  namespace: monitoring
+  template:
+    metadata:
+      name: "{{name}}-{{appName}}"
+      annotations:
+        argocd.argoproj.io/manifest-generate-paths: ".;.."
+    spec:
+      project: default
+      source:
+        repoURL: https://github.com/JulienJourdain/infrastructure.git
+        targetRevision: HEAD
+        path: "resources/{{appName}}/{{name}}"
+        helm:
+          releaseName: "{{appName}}"
+          valueFiles:
+            - ../common.values.yaml
+            - values.yaml
+      destination:
+        name: "{{name}}"
+        namespace: "{{namespace}}"
+      syncPolicy:
+        automated:
+          prune: true
+          selfHeal: true
+        syncOptions:
+          - CreateNamespace=true
