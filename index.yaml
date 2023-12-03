@@ -25,6 +25,13 @@ entries:
     version: 1.0.2
   core:
   - apiVersion: v2
+    created: "2023-12-03T01:14:55.274156367Z"
+    digest: 728b1f916c4e9fb74d3841768260552ad898b78e8bb85b5290a0a41addfea659
+    name: core
+    urls:
+    - https://github.com/OwnYourIO/SpencersLab/releases/download/core-1.0.5/core-1.0.5.tgz
+    version: 1.0.5
+  - apiVersion: v2
     created: "2023-10-29T01:25:25.25012466Z"
     digest: 6484c020dd26d295d2bbae149520c9533b279cdb79a2d00ccc704fa41ce2dac6
     name: core
@@ -45,4 +52,4 @@ entries:
     urls:
     - https://github.com/OwnYourIO/SpencersLab/releases/download/core-1.0.1/core-1.0.1.tgz
     version: 1.0.1
-generated: "2023-10-29T01:25:25.25013686Z"
+generated: "2023-12-03T01:14:55.274185983Z"
