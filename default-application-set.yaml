@@ -20,8 +20,11 @@ spec:
     spec:
       project: default
       source:
+        # TODO: Move this to a variable from the cluster secret.
         repoURL: https://github.com/OwnYourIO/SpencersLab.git
         targetRevision: main
+        # TODO: I know this isn't quite right. I think it needs to be the stage
+        #path: "charts/{{appName}}/{{name}}"
         path: "charts/{{appName}}"
         #helm:
         #  releaseName: "{{appName}}"
