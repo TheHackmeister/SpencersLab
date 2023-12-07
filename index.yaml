@@ -56,6 +56,18 @@ entries:
     urls:
     - https://github.com/OwnYourIO/SpencersLab/releases/download/argo-cd-1.0.2/argo-cd-1.0.2.tgz
     version: 1.0.2
+  base:
+  - apiVersion: v2
+    created: "2023-12-07T03:12:09.875957915Z"
+    dependencies:
+    - name: sealed-secrets
+      repository: https://bitnami-labs.github.io/sealed-secrets
+      version: 2.13.2
+    digest: 8df4d9c5b4974056cfa7ef31ebb870bdf478273f1ba934992f16fdbe32dee26f
+    name: base
+    urls:
+    - https://github.com/OwnYourIO/SpencersLab/releases/download/base-1.0.2/base-1.0.2.tgz
+    version: 1.0.2
   core:
   - apiVersion: v2
     created: "2023-12-03T01:14:55.274156367Z"
@@ -85,4 +97,4 @@ entries:
     urls:
     - https://github.com/OwnYourIO/SpencersLab/releases/download/core-1.0.1/core-1.0.1.tgz
     version: 1.0.1
-generated: "2023-12-07T01:30:22.685069628Z"
+generated: "2023-12-07T03:12:09.875983162Z"
