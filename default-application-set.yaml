@@ -14,7 +14,8 @@ spec:
                   namespace: default
   template:
     metadata:
-      name: "{{name}}-{{appName}}"
+      #name: "{{name}}-{{appName}}"
+      name: "{{appName}}"
       annotations:
         argocd.argoproj.io/manifest-generate-paths: ".;.."
     spec:
