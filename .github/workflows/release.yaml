@@ -25,6 +25,12 @@ jobs:
         run: |
           git config user.name "$GITHUB_ACTOR"
           git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
+      - name: Bump a Helm Chart Version Locally
+        uses: explorium-ai/bump-helm-chart-action@main
+        with:
+          - chart-path: charts/base
+            app_version: true
+            level: patch
           
       # Addresses https://github.com/helm/chart-releaser-action/issues/74
       - name: Add repositories
