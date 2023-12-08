@@ -58,6 +58,21 @@ entries:
     version: 1.0.2
   base:
   - apiVersion: v2
+    appVersion: 1.0.3
+    created: "2023-12-08T23:58:42.587110742Z"
+    dependencies:
+    - name: deploy
+      repository: https://ownyourio.github.io/SpencersLab/
+      version: 1.0.10
+    - name: sealed-secrets
+      repository: https://bitnami-labs.github.io/sealed-secrets
+      version: 2.13.2
+    digest: 765e3d5d120acb2760a1be46a326f38257431d407191468b9593181aecc5c708
+    name: base
+    urls:
+    - https://github.com/OwnYourIO/SpencersLab/releases/download/base-1.0.7/base-1.0.7.tgz
+    version: 1.0.7
+  - apiVersion: v2
     appVersion: 1.0.2
     created: "2023-12-08T23:52:31.310278788Z"
     dependencies:
@@ -137,6 +152,18 @@ entries:
     version: 1.0.1
   deploy:
   - apiVersion: v2
+    appVersion: 1.0.3
+    created: "2023-12-08T23:58:42.83571109Z"
+    dependencies:
+    - name: argo-cd
+      repository: https://argoproj.github.io/argo-helm
+      version: 5.51.6
+    digest: 3f9cc22717a4c3e7e3d3dee4079d2ade5391857ec2974f70e469ded08b4ab165
+    name: deploy
+    urls:
+    - https://github.com/OwnYourIO/SpencersLab/releases/download/deploy-1.0.12/deploy-1.0.12.tgz
+    version: 1.0.12
+  - apiVersion: v2
     appVersion: 1.0.2
     created: "2023-12-08T23:52:31.543527853Z"
     dependencies:
@@ -160,4 +187,4 @@ entries:
     urls:
     - https://github.com/OwnYourIO/SpencersLab/releases/download/deploy-1.0.10/deploy-1.0.10.tgz
     version: 1.0.10
-generated: "2023-12-08T23:52:31.543552499Z"
+generated: "2023-12-08T23:58:42.83573793Z"
