@@ -1,14 +1,14 @@
 apiVersion: v2
 name: base
-version: 1.0.3
-appVersion: 1.0.0
+version: 1.0.4
+appVersion: 1.0.1
 dependencies:
-  - name: deploy
-    version: 1.0.10
-    repository: https://ownyourio.github.io/SpencersLab/
+- name: deploy
+  version: 1.0.10
+  repository: https://ownyourio.github.io/SpencersLab/
   #- name: cert-manager
   #  version: 1.13.2
   #  repository: https://charts.jetstack.io
-  - name: sealed-secrets
-    version: 2.13.2
-    repository: https://bitnami-labs.github.io/sealed-secrets
+- name: sealed-secrets
+  version: 2.13.2
+  repository: https://bitnami-labs.github.io/sealed-secrets
