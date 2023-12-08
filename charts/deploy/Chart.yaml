@@ -1,6 +1,7 @@
 apiVersion: v2
 name: deploy
 version: 1.0.9
+appVersion: 1.0.0
 dependencies:
   - name: argo-cd
     version: 5.51.6
