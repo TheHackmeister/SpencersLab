@@ -1,6 +1,9 @@
 dependencies:
+- name: deploy
+  repository: https://ownyourio.github.io/SpencersLab/
+  version: 1.0.10
 - name: sealed-secrets
   repository: https://bitnami-labs.github.io/sealed-secrets
   version: 2.13.2
-digest: sha256:c7162d0056a57aeb74070b479987fadd0da25f29b7532f2881449fc132dcf5cd
-generated: "2023-12-06T20:11:05.419661644-07:00"
+digest: sha256:22469eba84514a885eee51f51462f3d86b1766ef16926e8b0a05debd0a953fd4
+generated: "2023-12-08T16:38:17.550460894-07:00"
