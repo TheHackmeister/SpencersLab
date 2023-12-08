@@ -29,13 +29,13 @@ jobs:
         uses: explorium-ai/bump-helm-chart-action@main
         with:
           chart-path: charts/base
-          #app_version: true
+          app_version: false
           level: patch
       - name: Bump a Helm Chart Version Locally
         uses: explorium-ai/bump-helm-chart-action@main
         with:
           chart-path: charts/deploy
-          #app_version: true
+          app_version: false
           level: patch
           
       # Addresses https://github.com/helm/chart-releaser-action/issues/74
