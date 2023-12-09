@@ -22,10 +22,10 @@ spec:
                 name: argo-cd-argocd-server
                 port:
                   number: 80
-  #tls:
-  #  - hosts:
-  #      - auth.spencerslab.com
-  #    secretName: wildcard-cert
+  tls:
+    - hosts:
+        - core.spencerslab.com
+      secretName: letsencrypt-prod-key
 #---
 #apiVersion: traefik.containo.us/v1alpha1
 #kind: Middleware
