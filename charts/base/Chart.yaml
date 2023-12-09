@@ -1,7 +1,7 @@
 apiVersion: v2
 name: base
-version: 1.0.15
-appVersion: 1.0.11
+version: 1.0.16
+appVersion: 1.0.12
 dependencies:
 - name: deploy
   version: 1.0.12
