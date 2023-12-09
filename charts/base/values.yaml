@@ -12,3 +12,6 @@ argo-cd:
   controller:
     extraArgs:
       - --application-namespaces="*"
+
+cert-manager:
+  installCRDs: true
