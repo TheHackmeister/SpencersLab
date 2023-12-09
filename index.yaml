@@ -58,6 +58,21 @@ entries:
     version: 1.0.2
   base:
   - apiVersion: v2
+    appVersion: 1.0.10
+    created: "2023-12-09T01:19:14.176914745Z"
+    dependencies:
+    - name: deploy
+      repository: https://ownyourio.github.io/SpencersLab/
+      version: 1.0.12
+    - name: sealed-secrets
+      repository: https://bitnami-labs.github.io/sealed-secrets
+      version: 2.13.2
+    digest: 5306a44180405caa42eac8286509795c31b78c088357988343c64157ea8b2b5c
+    name: base
+    urls:
+    - https://github.com/OwnYourIO/SpencersLab/releases/download/base-1.0.14/base-1.0.14.tgz
+    version: 1.0.14
+  - apiVersion: v2
     appVersion: 1.0.9
     created: "2023-12-09T01:11:54.647711192Z"
     dependencies:
@@ -250,4 +265,4 @@ entries:
     urls:
     - https://github.com/OwnYourIO/SpencersLab/releases/download/deploy-1.0.10/deploy-1.0.10.tgz
     version: 1.0.10
-generated: "2023-12-09T01:11:54.647769401Z"
+generated: "2023-12-09T01:19:14.1769979Z"
