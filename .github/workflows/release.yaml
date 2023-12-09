@@ -26,14 +26,26 @@ jobs:
           git config user.name "$GITHUB_ACTOR"
           git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
 
+      # Suggested by: https://how.wtf/run-workflow-step-or-job-based-on-file-changes-github-actions.html
+      - uses: dorny/paths-filter@v2
+        id: changes
+        with:
+          filters: |
+            base:
+              - 'charts/base/**'
+            deploy:
+              - 'charts/deploy/**'
+
       - name: Bump a Helm Chart Version Locally
         uses: explorium-ai/bump-helm-chart-action@main
+        if: steps.changes.outputs.base == 'true'
         with:
           chart-path: charts/base
           app_version: true
           level: patch
       - name: Bump a Helm Chart Version Locally
         uses: explorium-ai/bump-helm-chart-action@main
+        if: steps.changes.outputs.deploy == 'true'
         with:
           chart-path: charts/deploy
           app_version: false
