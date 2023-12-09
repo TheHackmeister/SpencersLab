@@ -25,7 +25,7 @@ spec:
   tls:
     - hosts:
         - core.spencerslab.com
-      secretName: letsencrypt-prod-key
+      secretName: wildcard-cert
 #---
 #apiVersion: traefik.containo.us/v1alpha1
 #kind: Middleware
