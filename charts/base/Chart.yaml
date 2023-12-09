@@ -6,9 +6,9 @@ dependencies:
 - name: deploy
   version: 1.0.12
   repository: https://ownyourio.github.io/SpencersLab/
-#- name: cert-manager
-#  version: 1.13.2
-#  repository: https://charts.jetstack.io
+- name: cert-manager
+  version: 1.13.2
+  repository: https://charts.jetstack.io
 - name: sealed-secrets
   version: 2.13.2
   repository: https://bitnami-labs.github.io/sealed-secrets
