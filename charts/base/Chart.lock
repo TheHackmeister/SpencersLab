@@ -8,5 +8,8 @@ dependencies:
 - name: sealed-secrets
   repository: https://bitnami-labs.github.io/sealed-secrets
   version: 2.13.2
-digest: sha256:cd090b74e9d81c57ba1915f1ee89cf3600e8785218115c445ae5f0e312eb2136
-generated: "2023-12-08T18:45:55.671865302-07:00"
+- name: external-secrets
+  repository: https://charts.external-secrets.io
+  version: 0.9.10
+digest: sha256:9955ea5b5c23767a470ab89ca4443200c85d2ca7c6c0f577dc9e562b26b9c403
+generated: "2023-12-18T18:00:51.665798625-07:00"
