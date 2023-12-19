@@ -47,7 +47,7 @@ jobs:
           level: patch
       - name: Bump Helm Chart Version for Deploy
         uses: explorium-ai/bump-helm-chart-action@main
-        if: steps.changes.outputs.base == 'true'
+        if: steps.changes.outputs.deploy == 'true'
         with:
           chart-path: charts/deploy
           app_version: false
