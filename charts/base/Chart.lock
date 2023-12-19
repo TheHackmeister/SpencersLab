@@ -1,7 +1,7 @@
 dependencies:
 - name: deploy
   repository: https://ownyourio.github.io/SpencersLab/
-  version: 1.0.13
+  version: 1.0.16
 - name: cert-manager
   repository: https://charts.jetstack.io
   version: v1.13.2
@@ -11,5 +11,5 @@ dependencies:
 - name: external-secrets
   repository: https://charts.external-secrets.io
   version: 0.9.10
-digest: sha256:9955ea5b5c23767a470ab89ca4443200c85d2ca7c6c0f577dc9e562b26b9c403
-generated: "2023-12-18T18:00:51.665798625-07:00"
+digest: sha256:490dfcbbe9e17fe255b88b7d099211d99bb3dc56e1eeedc9d25fac3a641b1e3d
+generated: "2023-12-18T21:24:13.764891726-07:00"
