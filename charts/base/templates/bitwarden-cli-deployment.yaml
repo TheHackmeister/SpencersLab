@@ -32,6 +32,10 @@ spec:
             #      key: BW_HOST
             - name: UNLOCK_VAULT
               value: "true"
+            - name: SERVE_PORT
+              value: 8087
+            - name: SERVER_HOST_URL
+              value: https://vault.bitwarden.com
             - name: VAULT_EMAIL
               valueFrom:
                 secretKeyRef:
