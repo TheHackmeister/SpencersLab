@@ -426,6 +426,18 @@ entries:
   deploy:
   - apiVersion: v2
     appVersion: 1.0.7
+    created: "2023-12-21T01:15:09.996069166Z"
+    dependencies:
+    - name: argo-cd
+      repository: https://argoproj.github.io/argo-helm
+      version: 5.51.6
+    digest: e556e34ad7c1cf1402f6bfb6617b3d6b07dfb31e2aaeac123e8d30e828200288
+    name: deploy
+    urls:
+    - https://github.com/OwnYourIO/SpencersLab/releases/download/deploy-1.0.20/deploy-1.0.20.tgz
+    version: 1.0.20
+  - apiVersion: v2
+    appVersion: 1.0.7
     created: "2023-12-19T02:48:32.15544348Z"
     dependencies:
     - name: argo-cd
@@ -508,4 +520,4 @@ entries:
     urls:
     - https://github.com/OwnYourIO/SpencersLab/releases/download/deploy-1.0.10/deploy-1.0.10.tgz
     version: 1.0.10
-generated: "2023-12-19T04:49:55.898992075Z"
+generated: "2023-12-21T01:15:09.996147493Z"
