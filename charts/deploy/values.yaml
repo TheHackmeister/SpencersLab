@@ -5,6 +5,7 @@ argo-cd:
     enabled: false
   applicationSet:
     enabled: true
+  
   server:
     extraArgs:
       - --insecure
