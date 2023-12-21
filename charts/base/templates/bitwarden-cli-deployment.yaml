@@ -30,6 +30,8 @@ spec:
             #    secretKeyRef:
             #      name: bitwarden-cli
             #      key: BW_HOST
+            - name: UNLOCK_VAULT
+              value: "true"
             - name: VAULT_EMAIL
               valueFrom:
                 secretKeyRef:
