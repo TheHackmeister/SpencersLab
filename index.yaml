@@ -58,6 +58,27 @@ entries:
     version: 1.0.2
   base:
   - apiVersion: v2
+    appVersion: 1.0.26
+    created: "2023-12-21T04:05:49.088656561Z"
+    dependencies:
+    - name: deploy
+      repository: https://ownyourio.github.io/SpencersLab/
+      version: 1.0.20
+    - name: cert-manager
+      repository: https://charts.jetstack.io
+      version: 1.13.2
+    - name: sealed-secrets
+      repository: https://bitnami-labs.github.io/sealed-secrets
+      version: 2.13.2
+    - name: external-secrets
+      repository: https://charts.external-secrets.io
+      version: 0.9.10
+    digest: 38749e51d94435bfe8250c05c8cdc0373aa3b2ef38746cade45f158b36a6776c
+    name: base
+    urls:
+    - https://github.com/OwnYourIO/SpencersLab/releases/download/base-1.0.31/base-1.0.31.tgz
+    version: 1.0.31
+  - apiVersion: v2
     appVersion: 1.0.25
     created: "2023-12-21T03:54:26.326630264Z"
     dependencies:
@@ -646,4 +667,4 @@ entries:
     urls:
     - https://github.com/OwnYourIO/SpencersLab/releases/download/deploy-1.0.10/deploy-1.0.10.tgz
     version: 1.0.10
-generated: "2023-12-21T03:54:26.326812784Z"
+generated: "2023-12-21T04:05:49.088821188Z"
