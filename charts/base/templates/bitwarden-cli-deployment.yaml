@@ -47,10 +47,9 @@ spec:
           livenessProbe:
             exec:
               command:
-                - wget
-                - -q
-                - http://127.0.0.1:8087/sync
-                - --post-data=''
+                - curl
+                - -f
+                - http://127.0.0.1:8087/status
             initialDelaySeconds: 20
             failureThreshold: 3
             timeoutSeconds: 1
