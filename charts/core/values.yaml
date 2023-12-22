@@ -20,7 +20,10 @@ envValueFrom:
       key: password
       name: authentik-secret-key
 authentik:
-  email:
+  events:
+    context_processors:
+      geoip: "/tmp/non-existent-file"
+      asn: "/tmp/non-existent-file"
   # This sends anonymous usage-data, stack traces on errors and
   # performance data to sentry.io, and is fully opt-in
   error_reporting:
