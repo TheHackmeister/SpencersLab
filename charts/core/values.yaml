@@ -28,15 +28,18 @@ authentik:
   # performance data to sentry.io, and is fully opt-in
   error_reporting:
     enabled: false
-  postgresql:
+  #postgresql:
   email:
     from: auth@spencerslab.com
     host: mail.spencerslab.com
-geoip:
     port: 587
     use_tls: true
     username: auth@spencerslab.com
 
+postgresql:
+  enabled: true
+redis:
+  enabled: true
 #geoip:
 #  # sign up under: https://www.maxmind.com/en/geolite2/signup
 #  accountId: "912808"
@@ -52,8 +55,3 @@ ingress:
       paths:
         - path: "/"
           pathType: Prefix
-
-postgresql:
-  enabled: true
-redis:
-  enabled: true
