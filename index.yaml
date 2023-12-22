@@ -58,6 +58,27 @@ entries:
     version: 1.0.2
   base:
   - apiVersion: v2
+    appVersion: 1.0.30
+    created: "2023-12-22T18:51:29.664623465Z"
+    dependencies:
+    - name: deploy
+      repository: https://ownyourio.github.io/SpencersLab/
+      version: 1.0.20
+    - name: cert-manager
+      repository: https://charts.jetstack.io
+      version: 1.13.2
+    - name: sealed-secrets
+      repository: https://bitnami-labs.github.io/sealed-secrets
+      version: 2.13.2
+    - name: external-secrets
+      repository: https://charts.external-secrets.io
+      version: 0.9.10
+    digest: bbf338ea32cfa9734c577182bc4945650095f6499604a8b23f9961d1ddb0da25
+    name: base
+    urls:
+    - https://github.com/OwnYourIO/SpencersLab/releases/download/base-1.0.35/base-1.0.35.tgz
+    version: 1.0.35
+  - apiVersion: v2
     appVersion: 1.0.29
     created: "2023-12-21T05:06:06.797074063Z"
     dependencies:
@@ -558,6 +579,18 @@ entries:
     version: 1.0.2
   core:
   - apiVersion: v2
+    appVersion: 1.0.5
+    created: "2023-12-22T18:51:29.903340498Z"
+    dependencies:
+    - name: authentik
+      repository: https://charts.goauthentik.io
+      version: 2023.10.4
+    digest: dd79c4de1b50acc8fff7e305b99e0cf6519121275da33a228313ed9b3ddd175f
+    name: core
+    urls:
+    - https://github.com/OwnYourIO/SpencersLab/releases/download/core-1.0.13/core-1.0.13.tgz
+    version: 1.0.13
+  - apiVersion: v2
     appVersion: 1.0.4
     created: "2023-12-19T04:49:55.89891413Z"
     dependencies:
@@ -634,6 +667,18 @@ entries:
     - https://github.com/OwnYourIO/SpencersLab/releases/download/core-1.0.1/core-1.0.1.tgz
     version: 1.0.1
   deploy:
+  - apiVersion: v2
+    appVersion: 1.0.7
+    created: "2023-12-22T18:51:30.109362051Z"
+    dependencies:
+    - name: argo-cd
+      repository: https://argoproj.github.io/argo-helm
+      version: 5.51.6
+    digest: 32c6ee28fc4c96145e69e72c26d8667727f6a8aeb88d6beb4b145b7faaab4f24
+    name: deploy
+    urls:
+    - https://github.com/OwnYourIO/SpencersLab/releases/download/deploy-1.0.21/deploy-1.0.21.tgz
+    version: 1.0.21
   - apiVersion: v2
     appVersion: 1.0.7
     created: "2023-12-21T01:15:09.996069166Z"
@@ -730,4 +775,4 @@ entries:
     urls:
     - https://github.com/OwnYourIO/SpencersLab/releases/download/deploy-1.0.10/deploy-1.0.10.tgz
     version: 1.0.10
-generated: "2023-12-21T05:06:06.797271913Z"
+generated: "2023-12-22T18:51:30.109602529Z"
