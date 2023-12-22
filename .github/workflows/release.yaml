@@ -29,8 +29,8 @@ jobs:
           filters: |
             base:
               - 'charts/base/**'
-            argo-cd:
-              - 'charts/argo-cd/**'
+            argocd:
+              - 'charts/argocd/**'
             core:
               - 'charts/core/**'
 
@@ -41,11 +41,11 @@ jobs:
           chart-path: charts/base
           app_version: true
           level: patch
-      - name: Bump Helm Chart Version for Argo-CD
+      - name: Bump Helm Chart Version for argocd
         uses: explorium-ai/bump-helm-chart-action@main
-        if: steps.changes.outputs.argo-cd == 'true'
+        if: steps.changes.outputs.argocd == 'true'
         with:
-          chart-path: charts/argo-cd
+          chart-path: charts/argocd
           app_version: false
           level: patch
       - name: Bump Helm Chart Version for Core
@@ -57,11 +57,11 @@ jobs:
           level: patch
           
       # Addresses https://github.com/helm/chart-releaser-action/issues/74
-      #- name: Add repositories
-      #  run: |
-      #    for dir in $(ls -d charts/*/); do
-      #      helm dependency list $dir 2> /dev/null | tail +2 | head -n -1 | awk '{ print "helm repo add " $1 " " $3 }' | while read cmd; do $cmd; done
-      #    done
+      - name: Add repositories
+        run: |
+          for dir in $(ls -d charts/*/); do
+            helm dependency list $dir 2> /dev/null | tail +2 | head -n -1 | awk '{ print "helm repo add " $1 " " $3 }' | while read cmd; do $cmd; done
+          done
 
       - name: Run chart-releaser
         # Check for newest version at: https://github.com/helm/chart-releaser-action/releases
