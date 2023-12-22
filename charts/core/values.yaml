@@ -34,10 +34,11 @@ geoip:
     use_tls: true
     username: auth@spencerslab.com
 
-geoip:
-  # sign up under: https://www.maxmind.com/en/geolite2/signup
-  accountId: "912808"
-  enabled: true
+#geoip:
+#  # sign up under: https://www.maxmind.com/en/geolite2/signup
+#  accountId: "912808"
+#  enabled: true
+#  licenseKey: "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"
 
 ingress:
   ingressClassName: traefik
