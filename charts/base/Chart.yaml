@@ -3,8 +3,8 @@ name: base
 version: 1.0.35
 appVersion: 1.0.30
 dependencies:
-- name: argocd
-  version: 1.0.23
+- name: deploy
+  version: 1.0.21
   repository: https://ownyourio.github.io/SpencersLab/
 - name: cert-manager
   version: 1.13.2
