@@ -1,7 +1,7 @@
 dependencies:
-- name: deploy
+- name: argocd
   repository: https://ownyourio.github.io/SpencersLab/
-  version: 1.0.21
+  version: 1.0.25
 - name: cert-manager
   repository: https://charts.jetstack.io
   version: v1.13.2
@@ -11,5 +11,5 @@ dependencies:
 - name: external-secrets
   repository: https://charts.external-secrets.io
   version: 0.9.10
-digest: sha256:9db56853665537513a8a2833807e4a187f351b743377f8baa4e38e42a384d39a
-generated: "2023-12-22T12:22:40.21069395-07:00"
+digest: sha256:5531bdbb700c2e3f3e839e44f0f7a82a78547e6301689168e39f6d9a1376468f
+generated: "2023-12-22T12:30:31.754174104-07:00"
