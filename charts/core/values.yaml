@@ -38,6 +38,7 @@ authentik:
   postgresql:
     enabled: true
     auth: 
+        username: authentik
         existingSecret: authentik-postgres
         usePasswordFiles: true
   redis:
