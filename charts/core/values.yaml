@@ -3,7 +3,7 @@ authentik:
     AUTHENTIK_POSTGRESQL__USER:
       secretKeyRef:
         key: username
-        name: authentik-postgres-user
+        name: authentik-postgres
     AUTHENTIK_POSTGRESQL__PASSWORD:
       secretKeyRef:
         key: password
