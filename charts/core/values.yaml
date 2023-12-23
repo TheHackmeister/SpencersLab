@@ -44,7 +44,7 @@ redis:
 #  # sign up under: https://www.maxmind.com/en/geolite2/signup
 #  accountId: "912808"
 #  enabled: true
-#  licenseKey: "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"
+#  licenseKey: ""
 
 ingress:
   ingressClassName: traefik
