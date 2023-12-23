@@ -35,12 +35,12 @@ authentik:
     use_tls: true
     #username: auth@spencerslab.com
 
-postgresql:
-  enabled: true
-  postgresqlPassword:
-    existingSecret: authentik-postgres
-redis:
-  enabled: true
+  postgresql:
+    enabled: true
+    postgresqlPassword:
+      existingSecret: authentik-postgres
+  redis:
+    enabled: true
 #geoip:
 #  # sign up under: https://www.maxmind.com/en/geolite2/signup
 #  accountId: "912808"
