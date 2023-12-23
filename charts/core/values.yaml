@@ -28,16 +28,17 @@ authentik:
   # performance data to sentry.io, and is fully opt-in
   error_reporting:
     enabled: false
-  #postgresql:
   email:
     from: auth@spencerslab.com
     host: mail.spencerslab.com
     port: 587
     use_tls: true
-    username: auth@spencerslab.com
+    #username: auth@spencerslab.com
 
 postgresql:
   enabled: true
+  postgresqlPassword:
+    existingSecret: authentik-postgres
 redis:
   enabled: true
 #geoip:
