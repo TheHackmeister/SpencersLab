@@ -1,7 +1,7 @@
 apiVersion: v2
 name: core
-version: 1.0.20
-appVersion: 1.0.12
+version: 1.0.21
+appVersion: 1.0.13
 dependencies:
 - name: authentik
   version: 2023.10.4
