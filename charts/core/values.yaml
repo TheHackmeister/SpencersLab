@@ -18,7 +18,7 @@ authentik:
         name: authentik-smtp
     AUTHENTIK_SECRET_KEY:
       secretKeyRef:
-        key: password
+        key: secret_key
         name: authentik-secret-key
   events:
     context_processors:
