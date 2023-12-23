@@ -1,25 +1,25 @@
-envValueFrom: 
-  AUTHENTIK_POSTGRESQL__USER:
-    secretKeyRef:
-      key: username
-      name: authentik-postgres-user
-  AUTHENTIK_POSTGRESQL__PASSWORD:
-    secretKeyRef:
-      key: password
-      name: authentik-postgres-user
-  AUTHENTIK_EMAIL__USERNAME:
-    secretKeyRef:
-      key: username
-      name: authentik-smtp
-  AUTHENTIK_EMAIL__PASSWORD:
-    secretKeyRef:
-      key: password
-      name: authentik-smtp
-  AUTHENTIK_SECRET_KEY:
-    secretKeyRef:
-      key: password
-      name: authentik-secret-key
 authentik:
+  envValueFrom: 
+    AUTHENTIK_POSTGRESQL__USER:
+      secretKeyRef:
+        key: username
+        name: authentik-postgres-user
+    AUTHENTIK_POSTGRESQL__PASSWORD:
+      secretKeyRef:
+        key: password
+        name: authentik-postgres-user
+    AUTHENTIK_EMAIL__USERNAME:
+      secretKeyRef:
+        key: username
+        name: authentik-smtp
+    AUTHENTIK_EMAIL__PASSWORD:
+      secretKeyRef:
+        key: password
+        name: authentik-smtp
+    AUTHENTIK_SECRET_KEY:
+      secretKeyRef:
+        key: password
+        name: authentik-secret-key
   events:
     context_processors:
       geoip: "/tmp/non-existent-file"
