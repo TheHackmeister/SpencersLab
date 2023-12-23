@@ -39,15 +39,16 @@ authentik:
     enabled: true
     user: file:///postgres-creds/username
     password: file:///postgres-creds/password
+    primary: 
+      extraVolumeMounts:
+        - name: postgres-creds
+          mountPath: /postgres-creds
+      extraVolumes:
+        - name: postgres-creds
+          secret:
+            secretName: authentik-postgres
   redis:
     enabled: true
-volumeMounts:
-  - name: postgres-creds
-    mountPath: /postgres-creds
-volumes:
-  - name: postgres-creds
-    secret:
-      secretName: authentik-postgres
 #geoip:
 #  # sign up under: https://www.maxmind.com/en/geolite2/signup
 #  accountId: "912808"
