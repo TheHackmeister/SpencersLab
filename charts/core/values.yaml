@@ -37,8 +37,7 @@ authentik:
 
   postgresql:
     enabled: true
-    postgresqlPassword:
-      existingSecret: authentik-postgres
+    existingSecret: authentik-postgres
   redis:
     enabled: true
 #geoip:
