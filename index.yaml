@@ -637,6 +637,18 @@ entries:
     version: 1.0.2
   core:
   - apiVersion: v2
+    appVersion: 1.0.26
+    created: "2023-12-23T23:00:43.092031206Z"
+    dependencies:
+    - name: authentik
+      repository: https://charts.goauthentik.io
+      version: 2023.10.4
+    digest: 5a5ea484089c3ac736d9f90d93e696bbab3f5e7c76cdd206bb3d211533be8e3f
+    name: core
+    urls:
+    - https://github.com/OwnYourIO/SpencersLab/releases/download/core-1.0.34/core-1.0.34.tgz
+    version: 1.0.34
+  - apiVersion: v2
     appVersion: 1.0.25
     created: "2023-12-23T22:46:53.250849846Z"
     dependencies:
@@ -1085,4 +1097,4 @@ entries:
     urls:
     - https://github.com/OwnYourIO/SpencersLab/releases/download/deploy-1.0.10/deploy-1.0.10.tgz
     version: 1.0.10
-generated: "2023-12-23T22:46:53.251095964Z"
+generated: "2023-12-23T23:00:43.092266985Z"
