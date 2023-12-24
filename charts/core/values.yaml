@@ -23,11 +23,11 @@ authentik:
     GEOIPUPDATE_ACCOUNT_ID:
       secretKeyRef:
         key: GEOIPUPDATE_ACCOUNT_ID
-        name: authentik-secret-key
+        name: authentik-geoip
     GEOIPUPDATE_LICENSE_KEY:
       secretKeyRef:
         key: GEOIPUPDATE_LICENSE_KEY
-        name: authentik-secret-key
+        name: authentik-geoip
   # This sends anonymous usage-data, stack traces on errors and
   # performance data to sentry.io, and is fully opt-in
   error_reporting:
