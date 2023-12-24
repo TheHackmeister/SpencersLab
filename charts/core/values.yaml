@@ -37,20 +37,10 @@ authentik:
 
   postgresql:
     enabled: true
-    user: file:///postgres-creds/username
-    password: file:///postgres-creds/password
     auth: 
         username: authentik
         existingSecret: core-postgresql
         usePasswordFiles: true
-    primary: 
-      extraVolumeMounts:
-        - name: postgres-creds
-          mountPath: /postgres-creds
-      extraVolumes:
-        - name: postgres-creds
-          secret:
-            secretName: core-postgresql
   redis:
     enabled: true
 #geoip:
