@@ -50,7 +50,7 @@ authentik:
       extraVolumes:
         - name: postgres-creds
           secret:
-            secretName: authentik-postgres
+            secretName: core-postgresql
   redis:
     enabled: true
 #geoip:
