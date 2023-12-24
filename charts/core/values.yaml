@@ -43,13 +43,14 @@ authentik:
         usePasswordFiles: true
   redis:
     enabled: true
-#geoip:
-#  # sign up under: https://www.maxmind.com/en/geolite2/signup
-#  accountId: "912808"
-#  enabled: true
-#  licenseKey: ""
+  geoip:
+    # sign up under: https://www.maxmind.com/en/geolite2/signup
+    enabled: true
+    accountId: file:///run/secrets/geoip/GEOIPUPDATE_ACCOUNT_ID
+    licenseKey: file:///run/secrets/geoip/GEOIPUPDATE_LICENSE_KEY
 
 ingress:
+  # Specify kubernetes ingress controller class name
   ingressClassName: traefik
   enabled: true
   hosts:
