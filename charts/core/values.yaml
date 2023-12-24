@@ -1,13 +1,13 @@
 authentik:
   envValueFrom: 
-    AUTHENTIK_POSTGRESQL__USER:
-      secretKeyRef:
-        key: username
-        name: authentik-postgres
+    #AUTHENTIK_POSTGRESQL__USER:
+    #  secretKeyRef:
+    #    key: username
+    #    name: authentik-postgres
     AUTHENTIK_POSTGRESQL__PASSWORD:
       secretKeyRef:
-        key: password
-        name: authentik-postgres
+        key: postgresql-password
+        name: core-postgresql
     AUTHENTIK_EMAIL__USERNAME:
       secretKeyRef:
         key: username
@@ -41,7 +41,7 @@ authentik:
     password: file:///postgres-creds/password
     auth: 
         username: authentik
-        existingSecret: authentik-postgres
+        existingSecret: core-postgresql
         usePasswordFiles: true
     primary: 
       extraVolumeMounts:
