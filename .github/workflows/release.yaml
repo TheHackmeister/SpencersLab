@@ -26,7 +26,7 @@ jobs:
           git config user.name "$GITHUB_ACTOR"
           git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
 
-      # For pull requests it's not necessary to checkout the code
+      # Suggested by: https://how.wtf/run-workflow-step-or-job-based-on-file-changes-github-actions.html
       - uses: dorny/paths-filter@v2
         id: filter
         with:
@@ -41,73 +41,35 @@ jobs:
         run: |
           echo "${{ steps.charts.outputs.CHARTS }}"
 
-  release:
-    # Needed because of this: https://github.com/helm/chart-releaser-action/issues/110
+  test-build:
     needs: changes
     strategy:
       matrix:
         chart: [ "${{ needs.changes.outputs.charts }}" ]
         #chart: ${{ fromJSON(needs.changes.outputs.charts) }}
     #if: ${{ needs.changes.outputs.charts != '' && toJson(fromJson(needs.changes.outputs.charts)) != '[]' }}
+    # Needed because of this: https://github.com/helm/chart-releaser-action/issues/110
     permissions:
       contents: write
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
-
       - name: Configure Git
         run: |
           git config user.name "$GITHUB_ACTOR"
           git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
 
-      # Suggested by: https://how.wtf/run-workflow-step-or-job-based-on-file-changes-github-actions.html
-      #- uses: dorny/paths-filter@v2
-      #  id: changes
-      #  with:
-      #    filters: |
-      #      charts:
-      #        - charts/*/
-      #      services:
-      #        - services/*/
-      #    #filters: |
-      #    #  base:
-      #    #    - 'charts/base/**'
-      #    #  argocd:
-      #    #    - 'charts/argocd/**'
-      #    #  core:
-      #    #    - 'charts/core/**'
-
-      - name: Bump Helm Chart Version
+      - name: Bump Helm Chart Version for ${{ matrix.chart }}
         uses: explorium-ai/bump-helm-chart-action@main
         #if: steps.changes.outputs.charts == 'true'
         with:
           chart-path: charts/${{ matrix.chart }}
           app_version: true
           level: patch
-      #- name: Bump Helm Chart Version for Base
-      #  uses: explorium-ai/bump-helm-chart-action@main
-      #  if: steps.changes.outputs.base == 'true'
-      #  with:
-      #    chart-path: charts/base
-      #    app_version: true
-      #    level: patch
-      #- name: Bump Helm Chart Version for argocd
-      #  uses: explorium-ai/bump-helm-chart-action@main
-      #  if: steps.changes.outputs.argocd == 'true'
-      #  with:
-      #    chart-path: charts/argocd
-      #    app_version: false
-      #    level: patch
-      #- name: Bump Helm Chart Version for Core
-      #  uses: explorium-ai/bump-helm-chart-action@main
-      #  if: steps.changes.outputs.core == 'true'
-      #  with:
-      #    chart-path: charts/core
-      #    app_version: false
-      #    level: patch
           
       # Addresses https://github.com/helm/chart-releaser-action/issues/74
       - name: Add repositories
@@ -115,7 +77,75 @@ jobs:
           for dir in $(ls -d charts/*/); do
             helm dependency list $dir 2> /dev/null | tail +2 | head -n -1 | awk '{ print "helm repo add " $1 " " $3 }' | while read cmd; do $cmd; done
           done
+      - name: Run chart-releaser
+        # Check for newest version at: https://github.com/helm/chart-releaser-action/releases
+        uses: helm/chart-releaser-action@v1.6.0
+        with:
+          skip_existing: true
+          skip_upload: true
+        env:
+          CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
 
+  bump:
+    needs: test
+    strategy:
+      matrix:
+        chart: [ "${{ needs.changes.outputs.charts }}" ]
+        #chart: ${{ fromJSON(needs.changes.outputs.charts) }}
+    #if: ${{ needs.changes.outputs.charts != '' && toJson(fromJson(needs.changes.outputs.charts)) != '[]' }}
+    # Needed because of this: https://github.com/helm/chart-releaser-action/issues/110
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Configure Git
+        run: |
+          git config user.name "$GITHUB_ACTOR"
+          git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
+
+      - name: Bump Helm Chart Version for ${{ matrix.chart }}
+        uses: explorium-ai/bump-helm-chart-action@main
+        #if: steps.changes.outputs.charts == 'true'
+        with:
+          chart-path: charts/${{ matrix.chart }}
+          app_version: true
+          level: patch
+
+      - name: Add & Commit
+        uses: EndBug/add-and-commit@v9.1.3
+
+  release:
+    needs: bump
+    strategy:
+      matrix:
+        chart: [ "${{ needs.changes.outputs.charts }}" ]
+        #chart: ${{ fromJSON(needs.changes.outputs.charts) }}
+    #if: ${{ needs.changes.outputs.charts != '' && toJson(fromJson(needs.changes.outputs.charts)) != '[]' }}
+    # Needed because of this: https://github.com/helm/chart-releaser-action/issues/110
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Configure Git
+        run: |
+          git config user.name "$GITHUB_ACTOR"
+          git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
+      # Addresses https://github.com/helm/chart-releaser-action/issues/74
+      - name: Add repositories
+        run: |
+          for dir in $(ls -d charts/*/); do
+            helm dependency list $dir 2> /dev/null | tail +2 | head -n -1 | awk '{ print "helm repo add " $1 " " $3 }' | while read cmd; do $cmd; done
+          done
       - name: Run chart-releaser
         # Check for newest version at: https://github.com/helm/chart-releaser-action/releases
         uses: helm/chart-releaser-action@v1.6.0
@@ -123,6 +153,3 @@ jobs:
           skip_existing: true
         env:
           CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
-
-      - name: Add & Commit
-        uses: EndBug/add-and-commit@v9.1.3
