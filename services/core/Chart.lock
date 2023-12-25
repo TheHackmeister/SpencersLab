@@ -1,6 +1,6 @@
 dependencies:
 - name: authentik
-  repository: https://charts.goauthentik.io
-  version: 2023.10.4
-digest: sha256:af64f3c45763f90a9ec621d19edcbdb5cce6caa9ef5b793b90dd8dfc528905b7
-generated: "2023-12-16T15:19:35.305209372-07:00"
+  repository: https://ownyourio.github.io/SpencersLab/
+  version: 2023.10.8
+digest: sha256:b6cb52a5d53dd675b158d58a3ef0da35b8576d2e145367eed4947b94efeba563
+generated: "2023-12-25T16:35:18.20703534-07:00"
