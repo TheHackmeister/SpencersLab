@@ -39,6 +39,12 @@ jobs:
               - charts/**/
             charts4:
               - charts/**/**
+      - id: charts
+        run: |
+          echo "${{ steps.filter.outputs.changes.charts }}"
+          echo "${{ steps.filter.outputs.changes.charts_files }}"
+          echo "${{ steps.filter.outputs.charts2 }}"
+          echo "${{ steps.filter.outputs.charts2_files }}"
 
   release:
     # Needed because of this: https://github.com/helm/chart-releaser-action/issues/110
