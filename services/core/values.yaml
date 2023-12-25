@@ -8,7 +8,7 @@ authentik:
     AUTHENTIK_POSTGRESQL__PASSWORD:
       secretKeyRef:
         key: postgresql-password
-        name: core-postgresql
+        name: authentik-postgresql
     AUTHENTIK_EMAIL__USERNAME:
       secretKeyRef:
         key: username
@@ -42,18 +42,18 @@ authentik:
 
   postgresql:
     enabled: true
-    #auth: 
-    #    username: authentik
-    #    existingSecret: authentik-postgres
+    auth: 
+        username: authentik
+        existingSecret: authentik-postgres
     #    usePasswordFiles: true
   redis:
     enabled: true
   geoip:
     # sign up under: https://www.maxmind.com/en/geolite2/signup
-    enabled: false
+    enabled: true
     #accountId: file:///run/secrets/geoip/GEOIPUPDATE_ACCOUNT_ID
     #licenseKey: file:///run/secrets/geoip/GEOIPUPDATE_LICENSE_KEY
-    #existingSecret: true
+    existingSecret: authentik-geoip
 
 ingress:
   # Specify kubernetes ingress controller class name
