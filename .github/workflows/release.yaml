@@ -46,7 +46,7 @@ jobs:
     needs: changes
     strategy:
       matrix:
-        chart: [ ${{ needs.changes.outputs.charts }} ]
+        chart: [ "${{ needs.changes.outputs.charts }}" ]
         #chart: ${{ fromJSON(needs.changes.outputs.charts) }}
     #if: ${{ needs.changes.outputs.charts != '' && toJson(fromJson(needs.changes.outputs.charts)) != '[]' }}
     permissions:
