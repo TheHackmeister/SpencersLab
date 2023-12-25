@@ -39,7 +39,7 @@ jobs:
     strategy:
       matrix:
         chart: ${{ fromJSON(needs.changes.outputs.charts) }}
-    if: steps.changes.outputs.charts == 'true'
+    if: ${{ needs.changes.outputs.charts != '' && toJson(fromJson(needs.changes.outputs.charts)) != '[]' }}
     permissions:
       contents: write
     runs-on: ubuntu-latest
