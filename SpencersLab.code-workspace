@@ -1,0 +1,17 @@
+{
+  "folders": [
+    {
+      "path": "."
+    },
+    {
+      "path": "../IaC"
+    },
+    {
+      "path": "../authentik-helm"
+    }
+  ],
+  "settings": {
+    "files.associations": {
+    }
+  }
+}

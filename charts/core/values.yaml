@@ -43,7 +43,7 @@ authentik:
     enabled: true
     auth: 
         username: authentik
-        existingSecret: core-postgresql
+        existingSecret: authentik-postgres
         usePasswordFiles: true
   redis:
     enabled: true
