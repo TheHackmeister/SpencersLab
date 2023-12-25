@@ -13,7 +13,8 @@ jobs:
       pull-requests: read
     outputs:
       # Expose matched filters as job 'packages' output variable
-      charts: ${{ steps.filter.outputs.changes }}
+      #charts: ${{ steps.filter.outputs.changes }}
+      charts: ${{ steps.charts.outputs.CHARTS }}
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -32,18 +33,10 @@ jobs:
           list-files: shell
           filters: |
             charts:
-              - charts/*/
-            charts2:
-              - charts/*/**
-            charts3:
-              - charts/**/
-            charts4:
-              - charts/**/**
+              - charts/**
       - id: charts
         run: |
-          echo "${{ steps.filter.outputs.charts2 }}"
-          echo "${{ steps.filter.outputs.charts2_files }}"
-          for file in ${{ steps.filter.outputs.charts2_files }}; do echo $file | cut -d "/" -f 2 ; done | sort | uniq
+          echo "CHARTS=$(for file in ${{ steps.filter.outputs.charts_files }}; do echo $file | cut -d "/" -f 2 ; done | sort | uniq)" >> $GITHUB_OUTPUT
 
   release:
     # Needed because of this: https://github.com/helm/chart-releaser-action/issues/110
@@ -87,7 +80,7 @@ jobs:
         uses: explorium-ai/bump-helm-chart-action@main
         #if: steps.changes.outputs.charts == 'true'
         with:
-          chart-path: ${{ matrix.chart }}
+          chart-path: charts/${{ matrix.chart }}
           app_version: true
           level: patch
       #- name: Bump Helm Chart Version for Base
