@@ -27,7 +27,7 @@ spec:
         targetRevision: main
         # TODO: I know this isn't quite right. I think it needs to be the stage
         #path: "charts/{{appName}}/{{name}}"
-        path: "charts/{{appName}}"
+        path: "services/{{appName}}"
         #helm:
         #  releaseName: "{{appName}}"
         #  valueFiles:
