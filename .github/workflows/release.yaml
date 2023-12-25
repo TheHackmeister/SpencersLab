@@ -39,7 +39,7 @@ jobs:
           echo "CHARTS=$(for file in ${{ steps.filter.outputs.charts_files }}; do echo $file | cut -d "/" -f 2 ; done | sort | uniq)" >> $GITHUB_OUTPUT
       - id: test_output
         run: |
-          echo "${{ steps.charts.outputs }}"
+          echo "${{ steps.charts.outputs.CHARTS }}"
 
   release:
     # Needed because of this: https://github.com/helm/chart-releaser-action/issues/110
