@@ -87,7 +87,7 @@ jobs:
           CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
 
   bump:
-    needs: test
+    needs: test-build
     strategy:
       matrix:
         chart: [ "${{ needs.changes.outputs.charts }}" ]
