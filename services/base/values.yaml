@@ -1,2 +1,5 @@
 cert-manager:
   installCRDs: true
+
+bitwarden-ids:
+  cloudflare-token: 0f8504eb-1339-4a32-861b-af440002801e
