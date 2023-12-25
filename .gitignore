@@ -2,4 +2,3 @@
 .cr-release-packages/*
 charts/**/charts
 services/**/charts
-*secret.yaml
