@@ -5,10 +5,10 @@ authentik:
     #  secretKeyRef:
     #    key: username
     #    name: authentik-postgres
-    #AUTHENTIK_POSTGRESQL__PASSWORD:
-    #  secretKeyRef:
-    #    key: postgresql-password
-    #    name: authentik-postgres
+    AUTHENTIK_POSTGRESQL__PASSWORD:
+      secretKeyRef:
+        key: core-postgresql
+        name: postgresql-password
     AUTHENTIK_EMAIL__USERNAME:
       secretKeyRef:
         key: username
