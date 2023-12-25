@@ -6,8 +6,29 @@ on:
       - main
 
 jobs:
+  changes:
+    runs-on: ubuntu-latest
+    # Required permissions
+    permissions:
+      pull-requests: read
+    outputs:
+      # Expose matched filters as job 'packages' output variable
+      packages: ${{ steps.filter.outputs.changes }}
+    steps:
+    # For pull requests it's not necessary to checkout the code
+    - uses: dorny/paths-filter@v2
+      id: filter
+      with:
+        filters: |
+          charts:
+            - charts/*/
+
   release:
     # Needed because of this: https://github.com/helm/chart-releaser-action/issues/110
+    needs: changes
+    strategy:
+      matrix:
+        chart: ${{ fromJSON(needs.changes.outputs.charts) }}
     permissions:
       contents: write
     runs-on: ubuntu-latest
@@ -23,38 +44,50 @@ jobs:
           git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
 
       # Suggested by: https://how.wtf/run-workflow-step-or-job-based-on-file-changes-github-actions.html
-      - uses: dorny/paths-filter@v2
-        id: changes
-        with:
-          filters: |
-            base:
-              - 'charts/base/**'
-            argocd:
-              - 'charts/argocd/**'
-            core:
-              - 'charts/core/**'
+      #- uses: dorny/paths-filter@v2
+      #  id: changes
+      #  with:
+      #    filters: |
+      #      charts:
+      #        - charts/*/
+      #      services:
+      #        - services/*/
+      #    #filters: |
+      #    #  base:
+      #    #    - 'charts/base/**'
+      #    #  argocd:
+      #    #    - 'charts/argocd/**'
+      #    #  core:
+      #    #    - 'charts/core/**'
 
-      - name: Bump Helm Chart Version for Base
+      - name: Bump Helm Chart Version
         uses: explorium-ai/bump-helm-chart-action@main
-        if: steps.changes.outputs.base == 'true'
+        #if: steps.changes.outputs.charts == 'true'
         with:
-          chart-path: charts/base
+          chart-path: ${{ matrix.chart }}
           app_version: true
           level: patch
-      - name: Bump Helm Chart Version for argocd
-        uses: explorium-ai/bump-helm-chart-action@main
-        if: steps.changes.outputs.argocd == 'true'
-        with:
-          chart-path: charts/argocd
-          app_version: false
-          level: patch
-      - name: Bump Helm Chart Version for Core
-        uses: explorium-ai/bump-helm-chart-action@main
-        if: steps.changes.outputs.core == 'true'
-        with:
-          chart-path: charts/core
-          app_version: false
-          level: patch
+      #- name: Bump Helm Chart Version for Base
+      #  uses: explorium-ai/bump-helm-chart-action@main
+      #  if: steps.changes.outputs.base == 'true'
+      #  with:
+      #    chart-path: charts/base
+      #    app_version: true
+      #    level: patch
+      #- name: Bump Helm Chart Version for argocd
+      #  uses: explorium-ai/bump-helm-chart-action@main
+      #  if: steps.changes.outputs.argocd == 'true'
+      #  with:
+      #    chart-path: charts/argocd
+      #    app_version: false
+      #    level: patch
+      #- name: Bump Helm Chart Version for Core
+      #  uses: explorium-ai/bump-helm-chart-action@main
+      #  if: steps.changes.outputs.core == 'true'
+      #  with:
+      #    chart-path: charts/core
+      #    app_version: false
+      #    level: patch
           
       # Addresses https://github.com/helm/chart-releaser-action/issues/74
       - name: Add repositories
