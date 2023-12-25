@@ -32,6 +32,12 @@ jobs:
           filters: |
             charts:
               - charts/*/
+            charts2:
+              - charts/*/**
+            charts3:
+              - charts/**/
+            charts4:
+              - charts/**/**
 
   release:
     # Needed because of this: https://github.com/helm/chart-releaser-action/issues/110
