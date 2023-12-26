@@ -242,7 +242,6 @@ serviceAccount:
     enabled: false
   fullnameOverride: authentik
   nameOverride: authentik
-
 prometheus:
   serviceMonitor:
     create: false
