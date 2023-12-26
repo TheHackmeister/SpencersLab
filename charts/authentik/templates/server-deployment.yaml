@@ -140,12 +140,12 @@ spec:
             - name: GEOIPUPDATE_ACCOUNT_ID
               valueFrom:
                 secretKeyRef:
-                  name: {{ include coalesce $.Values.geoip.existingSecret "authentik.names.fullname" $ }}
+                  name: {{ include (coalesce $.Values.geoip.existingSecret "authentik.names.fullname") $ }}
                   key: GEOIPUPDATE_ACCOUNT_ID
             - name: GEOIPUPDATE_LICENSE_KEY
               valueFrom:
                 secretKeyRef:
-                  name: {{ include coalesce $.Values.geoip.existingSecret "authentik.names.fullname" $ }}
+                  name: {{ include (coalesce $.Values.geoip.existingSecret "authentik.names.fullname") $ }}
                   key: GEOIPUPDATE_LICENSE_KEY
             - name: GEOIPUPDATE_EDITION_IDS
               value: {{ required "geoip edition id required" $.Values.geoip.editionIds | quote }}
