@@ -43,7 +43,7 @@ jobs:
 
   test-build:
     needs: changes
-    if: ${{ needs.changes.outputs.charts != '' && toJson(fromJson(needs.changes.outputs.charts)) != '[]' }}
+    #if: ${{ needs.changes.outputs.charts != '' && toJson(fromJson(needs.changes.outputs.charts)) != '[]' }}
     strategy:
       matrix:
         chart: [ "${{ needs.changes.outputs.charts }}" ]

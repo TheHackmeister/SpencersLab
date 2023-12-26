@@ -270,6 +270,7 @@ geoip:
   containerSecurityContext: {}
   # -- name of the existing geoip secret to use
   existingSecret: ""
+  
 postgresql:
   # -- enable the bundled bitnami postgresql chart
   enabled: false
