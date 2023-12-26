@@ -8,7 +8,7 @@ authentik:
     AUTHENTIK_POSTGRESQL__PASSWORD:
       secretKeyRef:
         key: postgresql-password
-        name: authentik-postgresql
+        name: authentik-postgres
     AUTHENTIK_EMAIL__USERNAME:
       secretKeyRef:
         key: username
