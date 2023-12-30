@@ -42,10 +42,6 @@ authentik:
 
   postgresql:
     enabled: true
-    auth: 
-        username: authentik
-        existingSecret: authentik-postgres
-    #    usePasswordFiles: true
   redis:
     enabled: true
   geoip:
@@ -54,6 +50,12 @@ authentik:
     accountId: dont-use
     licenseKey: dont-use
     existingSecret: authentik-geoip
+
+postgresql: 
+  auth: 
+      username: authentik
+      existingSecret: authentik-postgres
+  #    usePasswordFiles: true
 
 ingress:
   # Specify kubernetes ingress controller class name
