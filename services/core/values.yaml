@@ -66,27 +66,27 @@ authentik:
     licenseKey: dont-use
     existingSecret: authentik-geoip
 
-auth: 
-  username: authentik
-  existingSecret: authentik-postgres
-postgresql: 
-  existingSecret: authentik-postgres
-  auth: 
-    username: authentik
-    existingSecret: authentik-postgres
-  #    usePasswordFiles: true
-global:
-  postgresql: 
-    existingSecret: authentik-postgres
-    auth: 
-        username: authentik
-        existingSecret: authentik-postgres
-    #    usePasswordFiles: true
-#global.postgresql: 
-  auth: 
-      username: authentik
-      existingSecret: authentik-postgres
-  #    usePasswordFiles: true
+#auth: 
+#  username: authentik
+#  existingSecret: authentik-postgres
+#postgresql: 
+#  existingSecret: authentik-postgres
+#  auth: 
+#    username: authentik
+#    existingSecret: authentik-postgres
+#  #    usePasswordFiles: true
+#global:
+#  postgresql: 
+#    existingSecret: authentik-postgres
+#    auth: 
+#        username: authentik
+#        existingSecret: authentik-postgres
+#    #    usePasswordFiles: true
+##global.postgresql: 
+#  auth: 
+#      username: authentik
+#      existingSecret: authentik-postgres
+#  #    usePasswordFiles: true
 
 ingress:
   # Specify kubernetes ingress controller class name
