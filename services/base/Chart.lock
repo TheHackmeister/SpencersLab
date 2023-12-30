@@ -1,15 +1,12 @@
 dependencies:
 - name: argocd
   repository: https://ownyourio.github.io/SpencersLab/
-  version: 1.0.25
+  version: 1.0.27
 - name: cert-manager
   repository: https://charts.jetstack.io
   version: v1.13.2
-- name: sealed-secrets
-  repository: https://bitnami-labs.github.io/sealed-secrets
-  version: 2.13.2
 - name: external-secrets
   repository: https://charts.external-secrets.io
   version: 0.9.10
-digest: sha256:5531bdbb700c2e3f3e839e44f0f7a82a78547e6301689168e39f6d9a1376468f
-generated: "2023-12-22T12:30:31.754174104-07:00"
+digest: sha256:e35ac9e731bbe8d44423c987ab7dfcef168268e264e5741f4ab1fa678c4cd45e
+generated: "2023-12-30T14:09:00.898841303-07:00"
