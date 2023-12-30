@@ -52,13 +52,13 @@ authentik:
     licenseKey: dont-use
     existingSecret: authentik-geoip
 
-ingress:
-  # Specify kubernetes ingress controller class name
-  ingressClassName: traefik
-  enabled: true
-  hosts:
-    # Specify external host name
-    - host: auth.spencerslab.com
-      paths:
-        - path: "/"
-          pathType: Prefix
+  ingress:
+    # Specify kubernetes ingress controller class name
+    ingressClassName: traefik
+    enabled: true
+    hosts:
+      # Specify external host name
+      - host: auth.spencerslab.com
+        paths:
+          - path: "/"
+            pathType: Prefix
