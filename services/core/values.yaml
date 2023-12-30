@@ -45,7 +45,7 @@ authentik:
     #username: authentik
     #existingSecret: authentik-postgres
   postgresql: 
-    existingSecret: authentik-postgres
+    #existingSecret: authentik-postgres
     #auth: 
         #username: authentik
         #existingSecret: authentik-postgres
