@@ -40,22 +40,15 @@ authentik:
     use_tls: true
     #username: auth@spencerslab.com
 
-  existingSecret: authentik-postgres
-  global.auth: 
-    username: authentik
-    existingSecret: authentik-postgres
-  global.postgresql: 
-    auth: 
-        username: authentik
-        existingSecret: authentik-postgres
-  auth: 
-    username: authentik
-    existingSecret: authentik-postgres
+  #existingSecret: authentik-postgres
+  #auth: 
+    #username: authentik
+    #existingSecret: authentik-postgres
   postgresql: 
     existingSecret: authentik-postgres
-    auth: 
-        username: authentik
-        existingSecret: authentik-postgres
+    #auth: 
+        #username: authentik
+        #existingSecret: authentik-postgres
     enabled: true
   redis:
     enabled: true
@@ -65,28 +58,6 @@ authentik:
     accountId: dont-use
     licenseKey: dont-use
     existingSecret: authentik-geoip
-
-#auth: 
-#  username: authentik
-#  existingSecret: authentik-postgres
-#postgresql: 
-#  existingSecret: authentik-postgres
-#  auth: 
-#    username: authentik
-#    existingSecret: authentik-postgres
-#  #    usePasswordFiles: true
-#global:
-#  postgresql: 
-#    existingSecret: authentik-postgres
-#    auth: 
-#        username: authentik
-#        existingSecret: authentik-postgres
-#    #    usePasswordFiles: true
-##global.postgresql: 
-#  auth: 
-#      username: authentik
-#      existingSecret: authentik-postgres
-#  #    usePasswordFiles: true
 
 ingress:
   # Specify kubernetes ingress controller class name
