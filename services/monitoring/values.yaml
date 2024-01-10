@@ -8,13 +8,22 @@ prometheus:
 
 config: 
   clients:
-    - url: http://monitoring-loki.svc.cluster.local/loki/api/v1/push
+    - url: http://monitoring-loki.default:3100/loki/api/v1/push
+loki-stack:
+  loki:
+    auth_enabled: false
+    ingress:
+      enabled: true
+      ingressClassName: traefik
+      tls:
+      - loki.spencerslab.com
+
 kube-prometheus-stack: 
   grafana:
     additionalDataSources: 
       - name: Loki
         type: loki
-        url: http://monitoring-loki.default.svc.cluster.local
+        url: http://monitoring-loki.default:3100
         access: proxy
         isDefault: false
     ingress:
