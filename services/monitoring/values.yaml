@@ -42,7 +42,6 @@ kube-prometheus-stack:
         type: loki
         url: http://monitoring-loki.default:3100
         access: proxy
-        isDefault: false
     ingress:
       enabled: true
       ingressClassName: traefik
