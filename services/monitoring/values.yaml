@@ -12,7 +12,18 @@ config:
 loki-stack:
   loki:
     auth_enabled: false
+    gateway:
+      enabled: true
+      ingress:
+        enabled: true
+        ingressClassName: traefik
+        hosts:
+        - loki.spencerslab.com
+        paths:
+        - "/" 
+        pathType: Prefix
   gateway:
+    enabled: true
     ingress:
       enabled: true
       ingressClassName: traefik
@@ -20,8 +31,9 @@ loki-stack:
       - loki.spencerslab.com
       paths:
       - "/" 
-      tls:
-      - loki.spencerslab.com
+      pathType: Prefix
+      #tls:
+      #- loki.spencerslab.com
 
 kube-prometheus-stack: 
   grafana:
