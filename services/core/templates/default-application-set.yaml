@@ -12,10 +12,13 @@ spec:
               elements:
                 - appName: base
                   namespace: default
+                  ServerSideApply: false
                 - appName: core
                   namespace: default
+                  ServerSideApply: false
                 - appName: monitoring
                   namespace: default
+                  ServerSideApply: true
   template:
     metadata:
       name: "{{ `{{appName}}` }}"
@@ -44,4 +47,4 @@ spec:
         syncOptions:
           - CreateNamespace=true
           # Needed for: https://github.com/prometheus-community/helm-charts/issues/3345
-          - ServerSideApply=true
+          - "ServerSideApply={{ '{{ServerSideApply}}'}}"
