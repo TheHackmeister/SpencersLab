@@ -51,3 +51,5 @@ kube-prometheus-stack:
       paths:
       - "/"
       pathType: Prefix
+      tls:
+      - grafana.spencerslab.com
