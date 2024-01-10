@@ -9,20 +9,19 @@ prometheus:
 config: 
   clients:
     - url: http://monitoring-loki.svc.cluster.local/loki/api/v1/push
-
-grafana:
-  additionalDataSources: 
-    - name: Loki
-      type: loki
-      url: http://monitoring-loki.default.svc.cluster.local
-      access: proxy
-      isDefault: false
-  ingress:
-    enabled: true
-    ingressClassName: traefik
-    hosts:
-      # Specify external host name
-      - host: grafana.spencerslab.com
-        paths:
-          - path: "/"
-            pathType: Prefix
+kube-prometheus-stack: 
+  grafana:
+    additionalDataSources: 
+      - name: Loki
+        type: loki
+        url: http://monitoring-loki.default.svc.cluster.local
+        access: proxy
+        isDefault: false
+    ingress:
+      enabled: true
+      ingressClassName: traefik
+      hosts:
+      - grafana.spencerslab.com
+      paths:
+      - "/"
+      pathType: Prefix
