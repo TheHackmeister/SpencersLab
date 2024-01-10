@@ -18,25 +18,25 @@ spec:
                   namespace: default
   template:
     metadata:
-      name: "{{appName}}"
+      name: "{{ `{{appName}}` }}"
       annotations:
         argocd.argoproj.io/manifest-generate-paths: ".;.."
     spec:
       project: default
       source:
-        repoURL: "{{ metadata.annotations.repo.chart }}"
+        repoURL: "{{ `{{ metadata.annotations.repo.chart }}` }}"
         targetRevision: main
         # TODO: I know this isn't quite right. I think it needs to be the stage
-        #path: "charts/{{appName}}/{{name}}"
-        path: "services/{{appName}}"
+        #path: "charts/{{ `{{appName}}` }}/{{ `{{name}}`  }}"
+        path: "services/{{ `{{appName}}` }}"
         #helm:
         #  releaseName: "{{appName}}"
         #  valueFiles:
         #    #- ../common.values.yaml
         #    - values.yaml
       destination:
-        name: "{{name}}"
-        namespace: "{{namespace}}"
+        name: "{{ `{{name}}` }}"
+        namespace: "{{ `{{namespace}}` }}"
       syncPolicy:
         automated:
           prune: true
