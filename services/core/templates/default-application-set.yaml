@@ -30,7 +30,7 @@ spec:
         #path: "charts/{{ `{{appName}}` }}/{{ `{{name}}`  }}"
         path: "services/{{ `{{appName}}` }}"
         #helm:
-        #  releaseName: "{{appName}}"
+        #  releaseName: "{{ `{{appName}}` }}"
         #  valueFiles:
         #    #- ../common.values.yaml
         #    - values.yaml
