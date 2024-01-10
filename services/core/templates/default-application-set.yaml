@@ -14,8 +14,8 @@ spec:
                   namespace: default
                 - appName: core
                   namespace: default
-                #- appName: monitoring
-                #  namespace: default
+                - appName: monitoring
+                  namespace: default
   template:
     metadata:
       name: "{{ `{{appName}}` }}"
