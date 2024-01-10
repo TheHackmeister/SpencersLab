@@ -43,3 +43,5 @@ spec:
           selfHeal: true
         syncOptions:
           - CreateNamespace=true
+          # Needed for: https://github.com/prometheus-community/helm-charts/issues/3345
+          - ServerSideApply=true
