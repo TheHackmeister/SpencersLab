@@ -18,6 +18,7 @@ spec:
                   ServerSideApply: "false"
                 - appName: monitoring
                   namespace: default
+                  # To address: https://github.com/prometheus-community/helm-charts/issues/3345
                   ServerSideApply: "true"
   template:
     metadata:
@@ -29,11 +30,9 @@ spec:
       source:
         repoURL: "{{ `{{ metadata.annotations.repo.chart }}` }}"
         targetRevision: main
-        # TODO: I know this isn't quite right. I think it needs to be the stage
-        #path: "charts/{{ `{{appName}}` }}/{{ `{{name}}`  }}"
         path: "services/{{ `{{appName}}` }}"
+        #path: "services/{{ `{{appName}}` }}/{{ `{{ metadata.annotations.stage }}` }}"
         #helm:
-        #  releaseName: "{{ `{{appName}}` }}"
         #  valueFiles:
         #    #- ../common.values.yaml
         #    - values.yaml

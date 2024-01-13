@@ -12,10 +12,3 @@ dependencies:
 - name: external-secrets
   version: 0.9.10
   repository: https://charts.external-secrets.io
-#- name: prometheus
-#  version: 25.3.1
-#  repository: https://prometheus-community.github.io/helm-charts
-#  helm:
-#    values: |
-#      pushgateway:
-#        enabled: false
