@@ -1,3 +1,5 @@
+#From https://gitlab.tikalk.dev/matan.amiel/kube-prometheus-stack/-/blob/main/values.yaml
+# https://medium.com/israeli-tech-radar/how-to-create-a-monitoring-stack-using-kube-prometheus-stack-part-1-eff8bf7ba9a9
 prometheus:
   ruleSelectorNilUsesHelmValues: false
   serviceMonitorSelectorNilUsesHelmValues: false
@@ -5,10 +7,12 @@ prometheus:
   probeSelectorNilUsesHelmValues: false
   scrapeConfigSelectorNilUsesHelmValues: false
 
-
+# TODO: Sure seems like this needs to be namespaced differently?
+# Should probably go under loki stack as it's for promtail?
 config: 
   clients:
     - url: http://monitoring-loki.default:3100/loki/api/v1/push
+
 loki-stack:
   loki:
     auth_enabled: false
@@ -42,6 +46,7 @@ kube-prometheus-stack:
         type: loki
         url: http://monitoring-loki.default:3100
         access: proxy
+        default: false
     ingress:
       enabled: true
       ingressClassName: traefik
