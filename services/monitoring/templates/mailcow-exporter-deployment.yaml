@@ -1,0 +1,61 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mailcow-exporter
+spec:
+  replicas: 1
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
+    type: RollingUpdate
+  selector:
+    matchLabels:
+      app: mailcow-exporter
+  template:
+    metadata:
+      labels:
+        app: mailcow-exporter
+    spec:
+      containers:
+        - name: mailcow-exporter
+          image: "thej6s/mailcow-exporter:1.4.0"
+          securityContext:
+            readOnlyRootFilesystem: true
+          env:
+            - name: MAILCOW_EXPORTER_HOST
+              value: {{ .Values.mailcow.host | quote }}
+            - name: MAILCOW_EXPORTER_API_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: mailcow-exporter-api-key
+                  key: key
+          livenessProbe:
+            httpGet:
+              path: /metrics
+              port: 9099
+            initialDelaySeconds: 30
+            timeoutSeconds: 10
+          ports:
+            - containerPort: 9099
+              name: http
+          readinessProbe:
+            httpGet:
+              path: /metrics
+              port: 9099
+            initialDelaySeconds: 10
+            timeoutSeconds: 10
+          resources:
+            limits:
+              cpu: 500m
+              memory: 328Mi
+            requests:
+              cpu: 25m
+              memory: 64Mi
+      restartPolicy: Always
+      securityContext:
+        runAsNonRoot: true
+        runAsGroup: 10000
+        runAsUser: 10000
+        fsGroup: 10000
