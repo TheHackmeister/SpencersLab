@@ -25,7 +25,7 @@ spec:
             readOnlyRootFilesystem: true
           env:
             - name: MAILCOW_EXPORTER_HOST
-              value: {{ .Values.mailcow.host | quote }}
+              value: {{ .Values.mailcow_exporter.host | quote }}
             - name: MAILCOW_EXPORTER_API_KEY
               valueFrom:
                 secretKeyRef:
