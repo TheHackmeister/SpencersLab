@@ -59,3 +59,18 @@ spec:
         runAsGroup: 10000
         runAsUser: 10000
         fsGroup: 10000
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: mailcow-exporter
+  namespace: default
+spec:
+  ports:
+  - name: http-metrics
+    port: 9100
+    protocol: TCP
+    targetPort: 9100
+  selector:
+    app.kubernetes.io/name: mailcow-exporter
+  type: ClusterIP
