@@ -6,6 +6,17 @@ prometheus:
   podMonitorSelectorNilUsesHelmValues: false
   probeSelectorNilUsesHelmValues: false
   scrapeConfigSelectorNilUsesHelmValues: false
+  ingress:
+    enabled: true
+    ingressClassName: traefik
+    hosts:
+    - prometheus.spencerslab.com
+    paths:
+    - "/"
+    pathType: Prefix
+    tls:
+      - hosts:
+        - prometheus.spencerslab.com
 
 loki-stack:
   promtail:
