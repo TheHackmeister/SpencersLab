@@ -6,9 +6,15 @@ prometheus:
   podMonitorSelectorNilUsesHelmValues: false
   probeSelectorNilUsesHelmValues: false
   scrapeConfigSelectorNilUsesHelmValues: false
+  prometheusSpec:
+    additionalScrapeConfigs:
+      - job_name: 'mailcow'
+        static_configs:
+          - targets: [ 'mailcow-exporter:9099' ]
+        params:
+          host: [ 'mail.spencerslab.com' ]
+          #apiKey: [ 'YOUR-APIKEY-HERE' ]
 
-# TODO: Sure seems like this needs to be namespaced differently?
-# Should probably go under loki stack as it's for promtail?
 loki-stack:
   promtail:
     config: 
@@ -59,15 +65,6 @@ kube-prometheus-stack:
       tls:
         - hosts:
           - grafana.spencerslab.com
-  prometheus:
-    prometheusSpec:
-      additionalScrapeConfigs:
-        - job_name: 'mailcow'
-          static_configs:
-            - targets: [ 'mailcow-exporter:9099' ]
-          params:
-            host: [ 'mail.spencerslab.com' ]
-
 mailcow_exporter:
   host: mail.spencerslab.com
   bitwarden_id: 082a5ebe-78b1-4a1e-aefb-b101003c1765
