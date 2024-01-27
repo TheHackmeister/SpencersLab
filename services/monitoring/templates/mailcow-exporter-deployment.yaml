@@ -35,7 +35,7 @@ spec:
             httpGet:
               path: /metrics
               port: 9099
-            initialDelaySeconds: 30
+            initialDelaySeconds: 3000
             timeoutSeconds: 10
           ports:
             - containerPort: 9099
@@ -44,7 +44,7 @@ spec:
             httpGet:
               path: /metrics
               port: 9099
-            initialDelaySeconds: 10
+            initialDelaySeconds: 1000
             timeoutSeconds: 10
           resources:
             limits:
