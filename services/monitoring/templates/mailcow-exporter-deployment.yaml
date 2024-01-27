@@ -74,3 +74,15 @@ spec:
   selector:
     app.kubernetes.io/name: mailcow-exporter
   type: ClusterIP
+---
+apiVersion: monitoring.coreos.com/v1alpha1
+kind: ScrapeConfig
+metadata:
+  name: mailcow
+  labels:
+    release: prom
+spec:
+  static_configs:
+    - targets: [ 'mailcow-exporter:9099' ]
+  params:
+    host: [ 'mail.spencerslab.com' ]
