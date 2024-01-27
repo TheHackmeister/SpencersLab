@@ -6,15 +6,6 @@ prometheus:
   podMonitorSelectorNilUsesHelmValues: false
   probeSelectorNilUsesHelmValues: false
   scrapeConfigSelectorNilUsesHelmValues: false
-  prometheusSpec:
-    # Have to use | to avoid processing it like a secret. https://stackoverflow.com/a/73548225
-    additionalScrapeConfigs: |
-      - job_name: 'mailcow'
-        static_configs:
-          - targets: [ 'mailcow-exporter:9099' ]
-        params:
-          host: [ 'mail.spencerslab.com' ]
-          #apiKey: [ 'YOUR-APIKEY-HERE' ]
 
 loki-stack:
   promtail:

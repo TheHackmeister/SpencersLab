@@ -82,7 +82,7 @@ metadata:
   labels:
     release: prom
 spec:
-  static_configs:
+  staticConfigs:
     - targets: [ 'mailcow-exporter:9099' ]
   params:
     host: [ 'mail.spencerslab.com' ]
