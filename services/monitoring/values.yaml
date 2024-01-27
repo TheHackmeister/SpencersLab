@@ -59,6 +59,13 @@ kube-prometheus-stack:
       tls:
         - hosts:
           - grafana.spencerslab.com
+  prometheusSpec:
+    additionalScrapeConfigs:
+      - job_name: 'mailcow'
+        static_configs:
+          - targets: [ 'mailcow-exporter:9099' ]
+        params:
+          host: [ 'mail.spencerslab.com' ]
 
 mailcow_exporter:
   host: mail.spencerslab.com
