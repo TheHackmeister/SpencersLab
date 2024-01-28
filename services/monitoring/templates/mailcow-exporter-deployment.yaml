@@ -73,7 +73,6 @@ spec:
     targetPort: 9099
   selector:
     app: mailcow-exporter
-    app.kubernetes.io/name: mailcow-exporter
   type: ClusterIP
 ---
 apiVersion: monitoring.coreos.com/v1alpha1
