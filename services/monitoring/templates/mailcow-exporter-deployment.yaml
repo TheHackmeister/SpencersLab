@@ -81,6 +81,7 @@ metadata:
   name: mailcow
   labels:
     release: prom
+    prometheus: system-monitoring-prometheus
 spec:
   staticConfigs:
     - targets: [ 'mailcow-exporter:9099' ]
