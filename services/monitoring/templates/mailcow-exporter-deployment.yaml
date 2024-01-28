@@ -68,9 +68,9 @@ metadata:
 spec:
   ports:
   - name: http-metrics
-    port: 9100
+    port: 9099
     protocol: TCP
-    targetPort: 9100
+    targetPort: 9099
   selector:
     app.kubernetes.io/name: mailcow-exporter
   type: ClusterIP
