@@ -24,11 +24,9 @@ spec:
     spec:
       project: default
       source:
-        repoURL: "{{ `{{ metadata.annotations.repo.chart }}` }}"
+        repoURL: "{{ `{{ metadata.annotations.services.repo }}` }}"
         targetRevision: main
-        # TODO / START HERE: 
-        # I don't think the files are stage spaced yet.
-        path: "services/{{ `{{appName}}` }}/{{ `{{ metadata.annotations.stage }}` }}"
+        path: "{{ `{{ metadata.annotations.services.repo.path }}`}}/{{ `{{appName}}` }}/{{ `{{ metadata.annotations.stage }}` }}"
         #helm:
         #  valueFiles:
         #    #- ../common.values.yaml
