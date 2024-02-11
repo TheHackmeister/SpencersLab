@@ -117,6 +117,15 @@ entries:
     urls:
     - https://github.com/OwnYourIO/SpencersLab/releases/download/argocd-1.0.23/argocd-1.0.23.tgz
     version: 1.0.23
+  auth:
+  - apiVersion: v2
+    appVersion: 1.1.1
+    created: "2024-02-11T01:02:05.559695537Z"
+    digest: b297f3245bff79575cb0c00e5cce31008cf3d665bcfc7b71d22ff5cb8ac9e6a8
+    name: auth
+    urls:
+    - https://github.com/OwnYourIO/SpencersLab/releases/download/auth-1.1.1/auth-1.1.1.tgz
+    version: 1.1.1
   authentik:
   - annotations:
       artifacthub.io/changes: |
@@ -2010,4 +2019,4 @@ entries:
     urls:
     - https://github.com/OwnYourIO/SpencersLab/releases/download/deploy-1.0.10/deploy-1.0.10.tgz
     version: 1.0.10
-generated: "2023-12-26T01:07:13.896639129Z"
+generated: "2024-02-11T01:02:05.559928081Z"
