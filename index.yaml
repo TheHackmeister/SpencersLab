@@ -1447,6 +1447,15 @@ entries:
     urls:
     - https://github.com/OwnYourIO/SpencersLab/releases/download/base-1.0.2/base-1.0.2.tgz
     version: 1.0.2
+  cloud-proxy-appset:
+  - apiVersion: v2
+    appVersion: 1.1.1
+    created: "2024-02-11T05:51:11.090054344Z"
+    digest: c151e67044b9dd166f3730f43c312c8aa376524ea132fe0d4a460193a16cfa5b
+    name: cloud-proxy-appset
+    urls:
+    - https://github.com/OwnYourIO/SpencersLab/releases/download/cloud-proxy-appset-1.1.2/cloud-proxy-appset-1.1.2.tgz
+    version: 1.1.2
   core:
   - apiVersion: v2
     appVersion: 1.0.40
@@ -2138,4 +2147,4 @@ entries:
     urls:
     - https://github.com/OwnYourIO/SpencersLab/releases/download/personal-appset-1.1.0/personal-appset-1.1.0.tgz
     version: 1.1.0
-generated: "2024-02-11T05:46:09.870778806Z"
+generated: "2024-02-11T05:51:11.090340327Z"
