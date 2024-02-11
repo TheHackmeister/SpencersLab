@@ -2068,4 +2068,13 @@ entries:
     urls:
     - https://github.com/OwnYourIO/SpencersLab/releases/download/deploy-1.0.10/deploy-1.0.10.tgz
     version: 1.0.10
-generated: "2024-02-11T04:49:33.489490316Z"
+  infra-appset:
+  - apiVersion: v2
+    appVersion: 1.1.1
+    created: "2024-02-11T04:56:28.042255599Z"
+    digest: 2efb138d7bce01c64a24e41ddaed21d6ff30d7f9488e78d0b5ce312ce38a2bb5
+    name: infra-appset
+    urls:
+    - https://github.com/OwnYourIO/SpencersLab/releases/download/infra-appset-1.1.1/infra-appset-1.1.1.tgz
+    version: 1.1.1
+generated: "2024-02-11T04:56:28.042405288Z"
