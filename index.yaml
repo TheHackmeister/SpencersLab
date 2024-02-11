@@ -119,6 +119,14 @@ entries:
     version: 1.0.23
   auth:
   - apiVersion: v2
+    appVersion: 1.1.2
+    created: "2024-02-11T01:45:57.112562323Z"
+    digest: a1fc3494165afaea89d1284b830e28f05f22cc825ad19bd3ba52d1c8e9f30339
+    name: auth
+    urls:
+    - https://github.com/OwnYourIO/SpencersLab/releases/download/auth-1.1.2/auth-1.1.2.tgz
+    version: 1.1.2
+  - apiVersion: v2
     appVersion: 1.1.1
     created: "2024-02-11T01:02:05.559695537Z"
     digest: b297f3245bff79575cb0c00e5cce31008cf3d665bcfc7b71d22ff5cb8ac9e6a8
@@ -2019,4 +2027,4 @@ entries:
     urls:
     - https://github.com/OwnYourIO/SpencersLab/releases/download/deploy-1.0.10/deploy-1.0.10.tgz
     version: 1.0.10
-generated: "2024-02-11T01:02:05.559928081Z"
+generated: "2024-02-11T01:45:57.112803022Z"
