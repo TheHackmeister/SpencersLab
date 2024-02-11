@@ -887,6 +887,15 @@ entries:
     urls:
     - https://github.com/OwnYourIO/SpencersLab/releases/download/authentik-2023.10.5/authentik-2023.10.5.tgz
     version: 2023.10.5
+  backups-appset:
+  - apiVersion: v2
+    appVersion: 1.1.1
+    created: "2024-02-11T04:49:33.48922979Z"
+    digest: a1c453b105182597854af61f45a53b31783ac7028d4d5103cd6452ddcfab0c49
+    name: backups-appset
+    urls:
+    - https://github.com/OwnYourIO/SpencersLab/releases/download/backups-appset-1.1.1/backups-appset-1.1.1.tgz
+    version: 1.1.1
   base:
   - apiVersion: v2
     appVersion: 1.0.31
@@ -2059,4 +2068,4 @@ entries:
     urls:
     - https://github.com/OwnYourIO/SpencersLab/releases/download/deploy-1.0.10/deploy-1.0.10.tgz
     version: 1.0.10
-generated: "2024-02-11T04:47:01.094354281Z"
+generated: "2024-02-11T04:49:33.489490316Z"
