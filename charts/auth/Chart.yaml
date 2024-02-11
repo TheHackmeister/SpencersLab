@@ -1,7 +1,7 @@
 apiVersion: v2
 name: auth
-version: 1.1.1
-appVersion: 1.1.1
+version: 1.1.2
+appVersion: 1.1.2
 #dependencies:
 #- name: authentik
 #  version: 2023.10.14
