@@ -1,4 +1,6 @@
 ---
+# Started with 
+# https://github.com/prometheus-community/elasticsearch_exporter/blob/master/examples/kubernetes/deployment.yml
 apiVersion: apps/v1
 kind: Deployment
 metadata:

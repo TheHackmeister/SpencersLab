@@ -1,9 +1,0 @@
-dependencies:
-- name: seaweedfs
-  repository: https://seaweedfs.github.io/seaweedfs/helm
-  version: 3.61.0
-- name: gitea
-  repository: https://dl.gitea.com/charts/
-  version: 10.0.2
-digest: sha256:a7066d908fd25b25b61ebf1f3296ecbd6e35452233c434f167e449165f423fb9
-generated: "2024-01-13T18:49:14.010890477-07:00"
