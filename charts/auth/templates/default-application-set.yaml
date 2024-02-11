@@ -26,6 +26,8 @@ spec:
       source:
         repoURL: "{{ `{{ metadata.annotations.repo.chart }}` }}"
         targetRevision: main
+        # TODO / START HERE: 
+        # I don't think the files are stage spaced yet.
         path: "services/{{ `{{appName}}` }}/{{ `{{ metadata.annotations.stage }}` }}"
         #helm:
         #  valueFiles:
