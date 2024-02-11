@@ -2077,4 +2077,22 @@ entries:
     urls:
     - https://github.com/OwnYourIO/SpencersLab/releases/download/infra-appset-1.1.1/infra-appset-1.1.1.tgz
     version: 1.1.1
-generated: "2024-02-11T04:56:28.042405288Z"
+  media-appset:
+  - apiVersion: v2
+    appVersion: 1.1.1
+    created: "2024-02-11T04:58:12.334771932Z"
+    digest: 4bcc99c3312b3a9a6c70cb0fd7d16a1911dec7c756093865007445c16ffc5991
+    name: media-appset
+    urls:
+    - https://github.com/OwnYourIO/SpencersLab/releases/download/media-appset-1.1.1/media-appset-1.1.1.tgz
+    version: 1.1.1
+  monitoring-appset:
+  - apiVersion: v2
+    appVersion: 1.1.0
+    created: "2024-02-11T04:58:12.446143929Z"
+    digest: 98399c463809b967d9501ffb9b8a1f09f264dfc9ff239842c8a63f9ebce66791
+    name: monitoring-appset
+    urls:
+    - https://github.com/OwnYourIO/SpencersLab/releases/download/monitoring-appset-1.1.0/monitoring-appset-1.1.0.tgz
+    version: 1.1.0
+generated: "2024-02-11T04:58:12.446344903Z"
