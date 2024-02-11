@@ -2088,6 +2088,14 @@ entries:
     version: 1.1.1
   monitoring-appset:
   - apiVersion: v2
+    appVersion: 1.1.1
+    created: "2024-02-11T04:59:10.232877174Z"
+    digest: 5f4b8cdc0c4a02e64bd8353d5f8d49cfc2f9604d71dd29db2424e8fbc21e5553
+    name: monitoring-appset
+    urls:
+    - https://github.com/OwnYourIO/SpencersLab/releases/download/monitoring-appset-1.1.1/monitoring-appset-1.1.1.tgz
+    version: 1.1.1
+  - apiVersion: v2
     appVersion: 1.1.0
     created: "2024-02-11T04:58:12.446143929Z"
     digest: 98399c463809b967d9501ffb9b8a1f09f264dfc9ff239842c8a63f9ebce66791
@@ -2095,4 +2103,13 @@ entries:
     urls:
     - https://github.com/OwnYourIO/SpencersLab/releases/download/monitoring-appset-1.1.0/monitoring-appset-1.1.0.tgz
     version: 1.1.0
-generated: "2024-02-11T04:58:12.446344903Z"
+  personal-appset:
+  - apiVersion: v2
+    appVersion: 1.1.0
+    created: "2024-02-11T04:59:10.390805931Z"
+    digest: 046f3753e9c339287963434a5f3ffb269143df0da4239cc884e612c2ebc6b7ac
+    name: personal-appset
+    urls:
+    - https://github.com/OwnYourIO/SpencersLab/releases/download/personal-appset-1.1.0/personal-appset-1.1.0.tgz
+    version: 1.1.0
+generated: "2024-02-11T04:59:10.391125948Z"
