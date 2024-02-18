@@ -2086,6 +2086,15 @@ entries:
     urls:
     - https://github.com/OwnYourIO/SpencersLab/releases/download/deploy-1.0.10/deploy-1.0.10.tgz
     version: 1.0.10
+  email-appset:
+  - apiVersion: v2
+    appVersion: 1.1.1
+    created: "2024-02-18T01:27:31.26394532Z"
+    digest: 7d544f988b1b30164cf31e45814720d093af4181cf3cc45da49520d9e88551b2
+    name: email-appset
+    urls:
+    - https://github.com/OwnYourIO/SpencersLab/releases/download/email-appset-1.1.1/email-appset-1.1.1.tgz
+    version: 1.1.1
   grow-appset:
   - apiVersion: v2
     appVersion: 1.1.1
@@ -2147,4 +2156,4 @@ entries:
     urls:
     - https://github.com/OwnYourIO/SpencersLab/releases/download/personal-appset-1.1.0/personal-appset-1.1.0.tgz
     version: 1.1.0
-generated: "2024-02-11T05:51:11.090340327Z"
+generated: "2024-02-18T01:27:31.264194524Z"
