@@ -2104,6 +2104,15 @@ entries:
     urls:
     - https://github.com/OwnYourIO/SpencersLab/releases/download/grow-appset-1.1.2/grow-appset-1.1.2.tgz
     version: 1.1.2
+  home-appset:
+  - apiVersion: v2
+    appVersion: 1.1.1
+    created: "2024-02-28T03:48:13.096510647Z"
+    digest: c1103b06698964897bfcb02160c4efbe3736434fccbd1b9e3418bc54e5025cad
+    name: home-appset
+    urls:
+    - https://github.com/OwnYourIO/SpencersLab/releases/download/home-appset-1.1.1/home-appset-1.1.1.tgz
+    version: 1.1.1
   infra-appset:
   - apiVersion: v2
     appVersion: 1.1.1
@@ -2156,4 +2165,4 @@ entries:
     urls:
     - https://github.com/OwnYourIO/SpencersLab/releases/download/personal-appset-1.1.0/personal-appset-1.1.0.tgz
     version: 1.1.0
-generated: "2024-02-18T01:27:31.264194524Z"
+generated: "2024-02-28T03:48:13.096718194Z"
