@@ -12,7 +12,7 @@ metadata:
     #traefik.ingress.kubernetes.io/router.middlewares: authentik-authentik-middleware@kubernetescrd
 spec:
   rules:
-    - host: "cluster.{{ $.Values.clusterName . }}.{{ $.Values.domain . }}"
+    - host: "cluster.{{ $.Values.clusterName }}.{{ $.Values.domain }}"
       http:
         paths:
           - path: /
