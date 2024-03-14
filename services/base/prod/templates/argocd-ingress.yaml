@@ -12,7 +12,7 @@ metadata:
     #traefik.ingress.kubernetes.io/router.middlewares: authentik-authentik-middleware@kubernetescrd
 spec:
   rules:
-    - host: core.spencerslab.com
+    - host: "cluster.{{ $.Values.clusterName . }}.{{ $.Values.domain . }}"
       http:
         paths:
           - path: /
@@ -22,10 +22,6 @@ spec:
                 name: base-argocd-server
                 port:
                   number: 80
-  #tls:
-  #  - hosts:
-  #      - core.spencerslab.com
-  #    secretName: wildcard-cert
 #---
 #apiVersion: traefik.containo.us/v1alpha1
 #kind: Middleware
