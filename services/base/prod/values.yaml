@@ -1,5 +1,5 @@
 letsEncryptEmail: "tms@spencerslab.com"
-wildcardUrl: "*.{{ tpl .Values.baseURL . }}"
+wildcardUrl: "*.spencerslab.com"
 cert-manager:
   installCRDs: true
 
