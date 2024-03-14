@@ -2106,6 +2106,14 @@ entries:
     version: 1.1.2
   home-appset:
   - apiVersion: v2
+    appVersion: 1.1.4
+    created: "2024-03-14T03:31:46.62958983Z"
+    digest: 4f61b47d4712bf90f510b3c1ae2591ac0cf746885f294f3ab3f0444470cc6a69
+    name: home-appset
+    urls:
+    - https://github.com/OwnYourIO/SpencersLab/releases/download/home-appset-1.1.4/home-appset-1.1.4.tgz
+    version: 1.1.4
+  - apiVersion: v2
     appVersion: 1.1.1
     created: "2024-02-28T03:48:13.096510647Z"
     digest: c1103b06698964897bfcb02160c4efbe3736434fccbd1b9e3418bc54e5025cad
@@ -2165,4 +2173,4 @@ entries:
     urls:
     - https://github.com/OwnYourIO/SpencersLab/releases/download/personal-appset-1.1.0/personal-appset-1.1.0.tgz
     version: 1.1.0
-generated: "2024-02-28T03:48:13.096718194Z"
+generated: "2024-03-14T03:31:46.629847981Z"
