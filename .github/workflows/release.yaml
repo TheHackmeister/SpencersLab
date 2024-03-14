@@ -33,7 +33,7 @@ jobs:
           list-files: shell
           filters: |
             charts:
-              - charts/**
+              - charts/*/Chart.yaml
       - id: charts
         run: |
           echo "CHARTS=$(for file in ${{ steps.filter.outputs.charts_files }}; do echo $file | cut -d "/" -f 2 ; done | sort | uniq)" >> $GITHUB_OUTPUT
