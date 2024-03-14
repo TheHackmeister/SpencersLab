@@ -2,14 +2,5 @@ dependencies:
 - name: home-appset
   repository: https://ownyourio.github.io/SpencersLab/
   version: 1.1.4
-- name: mosquitto
-  repository: https://charts.truecharts.org
-  version: 14.5.2
-- name: zigbee2mqtt
-  repository: https://charts.truecharts.org
-  version: 11.6.2
-- name: zwavejs2mqtt
-  repository: https://charts.truecharts.org
-  version: 19.5.2
-digest: sha256:58cfd8745cca9ba7a882893a4be99c8333b895f8d8b6fdaabbcfb3ad9bff663a
-generated: "2024-03-13T22:08:37.595849554-06:00"
+digest: sha256:f37ef853ac56c5a47bcc7520e6707bc765587e2e0722a821122a5f0c65eaafbc
+generated: "2024-03-13T22:35:23.950731997-06:00"
