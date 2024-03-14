@@ -33,7 +33,7 @@ jobs:
           list-files: shell
           filters: |
             charts:
-              - charts/*/Chart.yaml
+              - charts/**
       - id: charts
         run: |
           echo "CHARTS=$(for file in ${{ steps.filter.outputs.charts_files }}; do echo $file | cut -d "/" -f 2 ; done | sort | uniq)" >> $GITHUB_OUTPUT
@@ -43,6 +43,7 @@ jobs:
 
   test-build:
     needs: changes
+    if: ${{ needs.changes.outputs.charts != '' }}
     #if: ${{ needs.changes.outputs.charts != '' && toJson(fromJson(needs.changes.outputs.charts)) != '[]' }}
     strategy:
       matrix:
