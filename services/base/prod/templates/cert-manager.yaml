@@ -6,7 +6,7 @@ metadata:
   namespace: default
 spec:
   acme:
-    email: "tmss@spencerslab.com"
+    email: {{ $.Values.letsEncryptEmail | quote }}
     server: https://acme-v02.api.letsencrypt.org/directory
     #server: https://acme-staging-v02.api.letsencrypt.org/directory
     privateKeySecretRef:
@@ -27,7 +27,7 @@ metadata:
   namespace: default
 spec:
   dnsNames:
-    - "*.spencerslab.com"
+    - {{ $.Values.wildcardUrl }}
   secretName: wildcard-cert
   issuerRef:
     name: letsencrypt-prod
