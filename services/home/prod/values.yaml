@@ -1,4 +1,13 @@
 mosquitto: 
   ingress:
+    main:
+      enabled: true
+      ingressClass: traefik
+      hosts:
+        # Specify external host name
+        - host: mqtt.spencerslab.com
+          paths:
+            - path: "/"
+              pathType: Prefix
     websockets:
       enabled: true
