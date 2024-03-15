@@ -1,8 +1,7 @@
 letsEncryptEmail: "tms@spencerslab.com"
-wildcardUrl: |
-  *.{{ tpl $.Values.domain . }}
+wildcardUrl: "*.spencerslab.com"
 #clusterWildcardUrl: `*.{{ tpl $.Values.clusterName }}.{{ tpl .Values.domain . }}`
-clusterWildcardUrl: "*.home-lap.spencerslab.com"
+clusterWildcardUrl: "*.home-lab.spencerslab.com"
 cert-manager:
   installCRDs: true
 
