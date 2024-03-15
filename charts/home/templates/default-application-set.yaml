@@ -33,9 +33,9 @@ spec:
               value: "{{ `{{ metadata.annotations.domain }}` }}"
             - name: clusterName
               value: "{{ `{{ metadata.annotations.clusterName }}` }}"
-        #  valueFiles:
+          valueFiles:
         #    #- ../common.values.yaml
-        #    - values.yaml
+            - values.yaml
       destination:
         name: "{{ `{{name}}` }}"
         namespace: "{{ `{{namespace}}` }}"
