@@ -27,7 +27,7 @@ metadata:
   namespace: default
 spec:
   dnsNames:
-    - {{ $.Values.wildcardUrl | quote }}
+    - "*.{{ $.Values.domain | quote }}"
   secretName: wildcard-cert
   issuerRef:
     name: letsencrypt-prod
@@ -40,7 +40,7 @@ metadata:
   namespace: default
 spec:
   dnsNames:
-    - {{ $.Values.clusterWildcardUrl | quote }}
+    - "*.{{ $.Values.clusterName }}.{{ $.domain }}"
   secretName: cluster-wildcard-cert
   issuerRef:
     name: letsencrypt-prod
