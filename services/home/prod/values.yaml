@@ -1,0 +1,4 @@
+mosquitto: 
+  ingress:
+    websockets:
+      enabled: true
