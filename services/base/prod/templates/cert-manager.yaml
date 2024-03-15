@@ -40,7 +40,7 @@ metadata:
   namespace: default
 spec:
   dnsNames:
-    - "*.{{ $.Values.clusterName }}.{{ $.domain }}"
+    - "*.{{ $.Values.clusterName }}.{{ $.Values.domain }}"
   secretName: cluster-wildcard-cert
   issuerRef:
     name: letsencrypt-prod
