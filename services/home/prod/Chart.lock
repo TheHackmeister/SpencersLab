@@ -2,5 +2,8 @@ dependencies:
 - name: home-appset
   repository: https://ownyourio.github.io/SpencersLab/
   version: 1.1.5
-digest: sha256:3d0b21593dbde83b1721bc551cd65a98b3ed392d2cf04099b94c2f58e95792e4
-generated: "2024-03-14T21:13:05.552261856-06:00"
+- name: mosquitto
+  repository: https://charts.truecharts.org
+  version: 14.5.2
+digest: sha256:b053b9dbbfad975bde9db3b607d66bef433159344a8a55ee1801cb8a5d4fa359
+generated: "2024-03-14T21:23:33.168660576-06:00"
