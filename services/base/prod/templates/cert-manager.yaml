@@ -33,12 +33,24 @@ spec:
     name: letsencrypt-prod
     kind: ClusterIssuer
 ---
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: tls-certificate-cluster
+  namespace: default
+spec:
+  dnsNames:
+    - {{ $.Values.clusterWildcardUrl | quote }}
+  secretName: cluster-wildcard-cert
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+---
 apiVersion: traefik.containo.us/v1alpha1
 kind: TLSStore
 metadata:
   name: default
   namespace: default
-
 spec:
   defaultCertificate:
     secretName: wildcard-cert
