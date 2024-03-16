@@ -10,8 +10,8 @@ dependencies:
   version: 1.1.5
   repository: https://ownyourio.github.io/SpencersLab/
 - name: mosquitto
-  version: 14.5.2
-  repository: https://charts.truecharts.org
+  version: 0.1.1
+  repository: https://lmatfy.github.io/charts
 #- name: zigbee2mqtt
 #  version: 11.6.2
 #  repository: https://charts.truecharts.org
