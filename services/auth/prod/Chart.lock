@@ -8,5 +8,8 @@ dependencies:
 - name: keycloak
   repository: oci://registry-1.docker.io/bitnamicharts
   version: 19.3.3
-digest: sha256:6fef4d29561f9e5b4297676d35ec08a3f9b76748cd70dba1422451cd1b11943b
-generated: "2024-03-16T18:22:22.358600327-06:00"
+- name: seaweedfs
+  repository: https://seaweedfs.github.io/seaweedfs/helm
+  version: 3.61.0
+digest: sha256:afc12657a85da875b416a882e5483c2e63cedc4f875d10331e434c3545db4b4a
+generated: "2024-03-16T18:23:05.567834436-06:00"
