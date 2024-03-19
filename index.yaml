@@ -168,6 +168,14 @@ entries:
     version: 1.1.1
   auth-appset:
   - apiVersion: v2
+    appVersion: 1.1.8
+    created: "2024-03-19T03:05:57.369313876Z"
+    digest: 69a4f72e1920b1530f555e5fbf4919bdb7b80b097bb45b3bdf733349af287427
+    name: auth-appset
+    urls:
+    - https://github.com/OwnYourIO/SpencersLab/releases/download/auth-appset-1.1.8/auth-appset-1.1.8.tgz
+    version: 1.1.8
+  - apiVersion: v2
     appVersion: 1.1.7
     created: "2024-02-11T05:42:22.889930359Z"
     digest: da3713ca98a52a196bb839b42cda85e05c93a399108f04d5be241e72e3a84cf5
@@ -2181,4 +2189,4 @@ entries:
     urls:
     - https://github.com/OwnYourIO/SpencersLab/releases/download/personal-appset-1.1.0/personal-appset-1.1.0.tgz
     version: 1.1.0
-generated: "2024-03-15T03:12:23.483362151Z"
+generated: "2024-03-19T03:05:57.369569046Z"
