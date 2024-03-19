@@ -1,15 +1,9 @@
 dependencies:
-- name: authentik
-  repository: https://ownyourio.github.io/SpencersLab/
-  version: 2023.10.14
 - name: auth-appset
   repository: https://ownyourio.github.io/SpencersLab/
   version: 1.1.7
-- name: keycloak
-  repository: oci://registry-1.docker.io/bitnamicharts
-  version: 19.3.3
 - name: seaweedfs
   repository: https://seaweedfs.github.io/seaweedfs/helm
   version: 3.61.0
-digest: sha256:afc12657a85da875b416a882e5483c2e63cedc4f875d10331e434c3545db4b4a
-generated: "2024-03-16T18:23:05.567834436-06:00"
+digest: sha256:0e356fcbc1cb98cba3cec3461babb0f193ccd359419fd2e1a0074154394b4673
+generated: "2024-03-18T21:12:11.863203813-06:00"
