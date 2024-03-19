@@ -1,9 +1,9 @@
 dependencies:
 - name: auth-appset
   repository: https://ownyourio.github.io/SpencersLab/
-  version: 1.1.7
+  version: 1.1.8
 - name: seaweedfs
   repository: https://seaweedfs.github.io/seaweedfs/helm
   version: 3.61.0
-digest: sha256:0e356fcbc1cb98cba3cec3461babb0f193ccd359419fd2e1a0074154394b4673
-generated: "2024-03-18T21:12:11.863203813-06:00"
+digest: sha256:dac00ad3dd643364a0134e887d359ed233d72030c8f2f1c9c5d4a4cbe48a01ac
+generated: "2024-03-18T21:13:31.764025196-06:00"
