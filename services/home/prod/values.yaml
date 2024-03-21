@@ -1,0 +1,21 @@
+zigbee2mqtt:
+  additionalVolumeMounts:
+    - name: usb
+      mountPath: /dev/ttyUSB0
+
+  additionalVolumes:
+    - name: usb
+      hostPath:
+        path: /dev/ttyUSB0
+
+  ingress:
+    main:
+      enabled: true
+      ingressClassName: traefik
+      tls:
+      - hosts:
+          - "cluster.{{ $.Values.clusterName }}.{{ $.Values.domain }}"
+        secretName: cluster-wildcard-cert
+      hosts:
+        - host: zigbee.spencerslab.com
+
