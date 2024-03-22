@@ -16,6 +16,10 @@ zigbee2mqtt:
   ingress:
     enabled: true
     ingressClassName: traefik
+    labels: {}
+    path: /
+    pathType: Prefix
+    annotations: {}
     tls:
       - secretName: wildcard-cert
         hosts:
