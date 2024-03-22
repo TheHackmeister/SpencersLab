@@ -1,4 +1,6 @@
 zigbee2mqtt:
+  nameOverride: "zigbee2mqtt"
+  fullnameOverride: "zigbee2mqttfull"
   additionalVolumeMounts:
     - name: usb
       mountPath: /dev/ttyUSB0
