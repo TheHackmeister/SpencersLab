@@ -19,7 +19,7 @@ zigbee2mqtt:
     tls:
       - secretName: wildcard-cert
         hosts:
-          - "zigbee2mqtt.{{ $.Values.domain }}"
+          - "zigbee2mqtt.spencerslab.com"
     hosts:
-      - host: "zigbee2mqtt.{{ $.Values.domain }}"
+      - host: "zigbee2mqtt.spencerslab.com"
 
