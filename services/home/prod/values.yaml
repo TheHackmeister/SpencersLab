@@ -14,12 +14,12 @@ zigbee2mqtt:
         path: /dev/ttyUSB0
 
   ingress:
-    #enabled: true
+    enabled: true
     ingressClassName: traefik
     tls:
-    - hosts:
-        - "zigbee2mqtt.{{ $.Values.domain }}"
-      secretName: wildcard-cert
+      - secretName: wildcard-cert
+        hosts:
+          - "zigbee2mqtt.{{ $.Values.domain }}"
     hosts:
       - host: "zigbee2mqtt.{{ $.Values.domain }}"
 
