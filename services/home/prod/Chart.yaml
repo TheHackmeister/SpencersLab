@@ -13,8 +13,8 @@ dependencies:
   version: 0.1.1
   repository: https://lmatfy.github.io/charts
 - name: zigbee2mqtt
-  version: 9.10.0
-  repository: https://andrenarchy.github.io/helm-charts/
+  version: 1.36.0+chart6
+  repository: https://jlpedrosa.github.io/zigbee2mqtt-chart/index/
 #- name: zwavejs2mqtt
 #  version: 19.5.2
 #  repository: https://charts.truecharts.org

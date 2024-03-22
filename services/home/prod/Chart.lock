@@ -6,7 +6,7 @@ dependencies:
   repository: https://lmatfy.github.io/charts
   version: 0.1.1
 - name: zigbee2mqtt
-  repository: https://andrenarchy.github.io/helm-charts/
-  version: 9.10.0
-digest: sha256:b9b3d30984bb31dacc0081ea34b7f468a71f37d1ae92daa11e835aadf01ca79f
-generated: "2024-03-20T20:43:46.804878107-06:00"
+  repository: https://jlpedrosa.github.io/zigbee2mqtt-chart/index/
+  version: 1.36.0+chart1
+digest: sha256:426bf8de0e62f9d9b6ede95e6ce03910f69954693a6ea558b4c127e37ae3250d
+generated: "2024-03-21T20:36:08.188635165-06:00"
