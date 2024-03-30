@@ -2189,4 +2189,17 @@ entries:
     urls:
     - https://github.com/OwnYourIO/SpencersLab/releases/download/personal-appset-1.1.0/personal-appset-1.1.0.tgz
     version: 1.1.0
-generated: "2024-03-19T03:05:57.369569046Z"
+  zigbee2mqtt:
+  - apiVersion: v2
+    appVersion: 1.0.1
+    created: "2024-03-30T00:37:56.454036617Z"
+    dependencies:
+    - name: app-template
+      repository: https://bjw-s.github.io/helm-charts/
+      version: 3.0.4
+    digest: e1452db7509b753370b229e2900c2b0593752982063be711d52b4a61659ba747
+    name: zigbee2mqtt
+    urls:
+    - https://github.com/OwnYourIO/SpencersLab/releases/download/zigbee2mqtt-1.0.1/zigbee2mqtt-1.0.1.tgz
+    version: 1.0.1
+generated: "2024-03-30T00:37:56.454223316Z"
