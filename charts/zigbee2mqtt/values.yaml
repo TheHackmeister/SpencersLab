@@ -9,8 +9,8 @@ app-template:
             repository: ghcr.io/koenkk/zigbee2mqtt
             tag: 1.36.0@sha256:4de1ee53d67a9b4556045c34a2722bfd2348dabbefcb792e862643104d3e9fd0
           env:
-            TZ: ${TIMEZONE}
-            ZIGBEE2MQTT_DATA: /config
+            TZ: America/Denver
+            ZIGBEE2MQTT_DATA: /data
             ZIGBEE2MQTT_CONFIG_ADVANCED_HOMEASSISTANT_DISCOVERY_TOPIC: homeassistant
             ZIGBEE2MQTT_CONFIG_ADVANCED_HOMEASSISTANT_LEGACY_ENTITY_ATTRIBUTES: false
             ZIGBEE2MQTT_CONFIG_ADVANCED_HOMEASSISTANT_LEGACY_TRIGGERS: false
@@ -26,7 +26,7 @@ app-template:
             ZIGBEE2MQTT_CONFIG_DEVICE_OPTIONS_RETAIN: true
             ZIGBEE2MQTT_CONFIG_EXPERIMENTAL_NEW_API: true
             ZIGBEE2MQTT_CONFIG_FRONTEND_PORT: &port 8080
-            ZIGBEE2MQTT_CONFIG_FRONTEND_URL: https://zigbee.${PUBLIC_DOMAIN}
+            ZIGBEE2MQTT_CONFIG_FRONTEND_URL: https://zigbee2mqtt.spencerslab.com
             ZIGBEE2MQTT_CONFIG_HOMEASSISTANT: true
             ZIGBEE2MQTT_CONFIG_MQTT_INCLUDE_DEVICE_INFORMATION: true
             ZIGBEE2MQTT_CONFIG_MQTT_KEEPALIVE: 60
@@ -72,15 +72,15 @@ app-template:
       className: internal
       annotations:
         hajimari.io/icon: mdi:zigbee
-        hajimari.io/url: https://zigbee.${PUBLIC_DOMAIN}
+        hajimari.io/url: https://zigbee2mqtt.spencerslab.com
       hosts:
-        - host: &host "{{ .Release.Name }}.${PUBLIC_DOMAIN}"
+        - host: &host "zigbee2mqtt.spencerslab.com"
           paths: &paths
             - path: /
               service:
                 identifier: app
                 port: http
-        - host: &customHost zigbee.${PUBLIC_DOMAIN}
+        - host: &customHost zigbee2mqtt.spencerslab.com
           paths: *paths
       tls:
         - hosts:
