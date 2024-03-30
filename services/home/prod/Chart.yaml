@@ -15,6 +15,9 @@ dependencies:
 - name: zigbee2mqtt
   version: 1.0.5
   repository: https://ownyourio.github.io/SpencersLab/
+- name: common
+  version: 3.0.4
+  repository: https://bjw-s.github.io/helm-charts/
 #- name: zwavejs2mqtt
 #  version: 19.5.2
 #  repository: https://charts.truecharts.org
