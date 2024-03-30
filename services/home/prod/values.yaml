@@ -1,6 +1,7 @@
 bitwarden-ids:
   zigbee2mqtt: 0164cfbc-dd85-43af-a4cc-b13f00108bde
-zigbee2mqtt:
+#zigbee2mqtt:
+common:
   bitwarden-ids:
     zigbee2mqtt: 0164cfbc-dd85-43af-a4cc-b13f00108bde
   controllers:
