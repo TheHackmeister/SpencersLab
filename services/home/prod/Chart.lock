@@ -7,9 +7,9 @@ dependencies:
   version: 0.1.1
 - name: zigbee2mqtt
   repository: https://ownyourio.github.io/SpencersLab/
-  version: 1.0.5
+  version: 1.0.6
 - name: common
   repository: https://bjw-s.github.io/helm-charts/
   version: 3.0.4
-digest: sha256:ec54ea2998654d4b31638047667422aba81ed3864400a2a9d04774a1ccf796f9
-generated: "2024-03-29T21:15:59.899077867-06:00"
+digest: sha256:d9d7186996bb7a1adf82381ef2b32e390c8ccd6d10d4446ce45159d3d8517f47
+generated: "2024-03-29T21:19:34.211205739-06:00"
