@@ -30,7 +30,7 @@ zigbee2mqtt:
             ZIGBEE2MQTT_CONFIG_DEVICE_OPTIONS_RETAIN: true
             ZIGBEE2MQTT_CONFIG_EXPERIMENTAL_NEW_API: true
             ZIGBEE2MQTT_CONFIG_FRONTEND_PORT: &port 8080
-            ZIGBEE2MQTT_CONFIG_FRONTEND_URL: https://zigbee.${PUBLIC_DOMAIN}
+            ZIGBEE2MQTT_CONFIG_FRONTEND_URL: https://zigbee.spencerslab.com
             ZIGBEE2MQTT_CONFIG_HOMEASSISTANT: true
             ZIGBEE2MQTT_CONFIG_MQTT_INCLUDE_DEVICE_INFORMATION: true
             ZIGBEE2MQTT_CONFIG_MQTT_KEEPALIVE: 60
@@ -78,7 +78,6 @@ zigbee2mqtt:
       className: internal
       annotations:
         hajimari.io/icon: mdi:zigbee
-        # TODO Fix these
         hajimari.io/url: https://zigbee.${PUBLIC_DOMAIN}
       hosts:
         - host: &host "{{ .Release.Name }}.${PUBLIC_DOMAIN}"
@@ -87,12 +86,10 @@ zigbee2mqtt:
               service:
                 identifier: app
                 port: http
-        # TODO Fix these
-        - host: &customHost zigbee.${PUBLIC_DOMAIN}
+        - host: &customHost zigbee2mqtt.spencerslab.com
           paths: *paths
       tls:
         - hosts:
-        # TODO Fix these
             - *host
             - *customHost
   persistence:
