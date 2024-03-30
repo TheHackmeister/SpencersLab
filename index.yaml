@@ -2114,6 +2114,14 @@ entries:
     version: 1.1.2
   home-appset:
   - apiVersion: v2
+    appVersion: 1.1.6
+    created: "2024-03-30T02:13:17.513990023Z"
+    digest: d7778591275432777dc256f3b610214b361e122b9570311a3aa8f8c0a27551d9
+    name: home-appset
+    urls:
+    - https://github.com/OwnYourIO/SpencersLab/releases/download/home-appset-1.1.6/home-appset-1.1.6.tgz
+    version: 1.1.6
+  - apiVersion: v2
     appVersion: 1.1.5
     created: "2024-03-15T03:12:23.483139809Z"
     digest: 7654881fa16a2f9c039acaad88700e05a02d6a61818f8e11070443d81394e656
@@ -2226,4 +2234,4 @@ entries:
     urls:
     - https://github.com/OwnYourIO/SpencersLab/releases/download/zigbee2mqtt-1.0.1/zigbee2mqtt-1.0.1.tgz
     version: 1.0.1
-generated: "2024-03-30T00:59:43.192400574Z"
+generated: "2024-03-30T02:13:17.514223629Z"
