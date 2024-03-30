@@ -13,11 +13,8 @@ dependencies:
   version: 0.1.1
   repository: https://lmatfy.github.io/charts
 - name: zigbee2mqtt
-  version: 1.0.7
+  version: 1.0.8
   repository: https://ownyourio.github.io/SpencersLab/
-- name: common
-  version: 3.0.4
-  repository: https://bjw-s.github.io/helm-charts/
 # TODO: Use the better charts.
 #- name: zwavejs2mqtt
 #  version: 19.5.2
