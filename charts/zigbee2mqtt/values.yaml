@@ -86,9 +86,9 @@ app-template:
         - hosts:
             - *host
             - *customHost
-  persistence:
-    config:
-      existingClaim: zigbee2mqtt
+  #persistence:
+  #  config:
+  #    existingClaim: zigbee2mqtt
   service:
     app:
       controller: zigbee2mqtt
