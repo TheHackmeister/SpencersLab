@@ -58,8 +58,6 @@ controllers:
             drop:
               - ALL
     pod:
-      nodeSelector:
-        phoscon.feature.node.kubernetes.io/conbee: "true"
       securityContext:
         runAsUser: 568
         runAsGroup: 568
