@@ -72,7 +72,6 @@ app-template:
       className: internal
       annotations:
         hajimari.io/icon: mdi:zigbee
-        # TODO Fix these
         hajimari.io/url: https://zigbee.${PUBLIC_DOMAIN}
       hosts:
         - host: &host "{{ .Release.Name }}.${PUBLIC_DOMAIN}"
@@ -81,12 +80,10 @@ app-template:
               service:
                 identifier: app
                 port: http
-        # TODO Fix these
         - host: &customHost zigbee.${PUBLIC_DOMAIN}
           paths: *paths
       tls:
         - hosts:
-        # TODO Fix these
             - *host
             - *customHost
   persistence:
