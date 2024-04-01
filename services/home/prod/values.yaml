@@ -1,5 +1,11 @@
 bitwarden-ids:
   zigbee2mqtt: 0164cfbc-dd85-43af-a4cc-b13f00108bde
+controllers:
+  zigbee2mqtt:
+    containers:
+      app:
+        env:
+          ZIGBEE2MQTT_DATA: /config
 zigbee2mqtt:
   bitwarden-ids:
     zigbee2mqtt: 0164cfbc-dd85-43af-a4cc-b13f00108bde
