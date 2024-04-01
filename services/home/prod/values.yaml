@@ -13,11 +13,6 @@ zigbee2mqtt:
     zigbee2mqtt: 0164cfbc-dd85-43af-a4cc-b13f00108bde
   app-template:
     controllers:
-      main:
-        containers:
-          app:
-            env:
-              ZIGBEE2MQTT_DATA: /config
       zigbee2mqtt:
     #    annotations:
     #      reloader.stakater.com/auto: "true"
