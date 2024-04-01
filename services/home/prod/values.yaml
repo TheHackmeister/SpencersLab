@@ -1,7 +1,7 @@
 bitwarden-ids:
   zigbee2mqtt: 0164cfbc-dd85-43af-a4cc-b13f00108bde
 controllers:
-  zigbee2mqtt:
+  main:
     containers:
       app:
         env:
@@ -11,18 +11,23 @@ zigbee2mqtt:
     zigbee2mqtt: 0164cfbc-dd85-43af-a4cc-b13f00108bde
   bitwardenIds:
     zigbee2mqtt: 0164cfbc-dd85-43af-a4cc-b13f00108bde
-  #controllers:
-  #  zigbee2mqtt:
+  controllers:
+    main:
+      containers:
+        app:
+          env:
+            ZIGBEE2MQTT_DATA: /config
+    zigbee2mqtt:
   #    annotations:
   #      reloader.stakater.com/auto: "true"
-  #    containers:
-  #      app:
+      containers:
+        app:
   #        image:
   #          repository: ghcr.io/koenkk/zigbee2mqtt
   #          tag: 1.36.0@sha256:4de1ee53d67a9b4556045c34a2722bfd2348dabbefcb792e862643104d3e9fd0
-  #        env:
+          env:
   #          TZ: America/Denver
-  #          ZIGBEE2MQTT_DATA: /config
+            ZIGBEE2MQTT_DATA: /config
   #          ZIGBEE2MQTT_CONFIG_ADVANCED_HOMEASSISTANT_DISCOVERY_TOPIC: homeassistant
   #          ZIGBEE2MQTT_CONFIG_ADVANCED_HOMEASSISTANT_LEGACY_ENTITY_ATTRIBUTES: false
   #          ZIGBEE2MQTT_CONFIG_ADVANCED_HOMEASSISTANT_LEGACY_TRIGGERS: false
