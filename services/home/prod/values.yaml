@@ -1,6 +1,6 @@
 testing: "work"
 bitwarden-ids:
-  zigbee2mqtt: "{{- tpl \"/config{{ .Values.testing }}{{ $.Values.testing }}{{ .Values.domain }}{{ $.Values.domain }}\" . }}"
+  zigbee2mqtt: "{{- tpl \"0164cfbc-dd85-43af-a4cc-b13f00108bde{{ .Values.testing }}{{ $.Values.testing }}{{ .Values.domain }}{{ $.Values.domain }}\" . }}"
 controllers:
   main:
     containers:
