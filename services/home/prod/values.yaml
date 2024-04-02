@@ -2,8 +2,8 @@ testing: "work"
 look: "{{ `{{- tpl \"0164cfbc-dd85-43af-a4cc-b13f00108bde{{ .Values.testing }}{{ $.Values.testing }}{{ .Values.domain }}{{ $.Values.domain }}\" . }}` }}"
 test2: "{{ .Values.testing }}"
 test3: "{{ $.Values.testing }}"
-test4: {{ .Values.domain }}
-test5: {{ $.Values.domain }}
+test4: "{{ .Values.domain }}"
+test5: `{{ $.Values.domain }}`
 bitwarden-ids:
   zigbee2mqtt: 0164cfbc-dd85-43af-a4cc-b13f00108bde
 controllers:
