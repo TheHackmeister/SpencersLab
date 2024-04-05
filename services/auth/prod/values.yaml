@@ -1,4 +1,7 @@
-  
+
+testing: "WORK"
+testing2: {{ tpl (toYaml ".Values.testing" ) . | quote }}
+
 authentik:
   envValueFrom: 
     #AUTHENTIK_POSTGRESQL__USER:
