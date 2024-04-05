@@ -2,6 +2,8 @@
 testing: "WORK"
 testing2: '{{ tpl "{{ .Values.testing }}" . }}'
 testing3: "{{ tpl '{{ .Values.testing }}' . }}"
+testing4: "{{ tpl (toYaml .Values.testing ) . }}"
+testing5: "{{ tpl (toYaml .Values.testing ) $ }}"
 
 authentik:
   envValueFrom: 
