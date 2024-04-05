@@ -1,9 +1,11 @@
+      enableAuth: true
+
 
 testing: "WORK"
-testing2: pass 
-testing3: pass
-testing4: pass 
-testing5: pass
+testing2: '{{ tpl "{{ .Values.testing }}" . }}'
+testing3: "{{ tpl '{{ .Values.testing }}' . }}"
+testing4: {{ tpl (toYaml .Values.testing ) . | quote }}
+testing5: {{ tpl (toYaml .Values.testing ) $ | quote }}
 
 authentik:
   envValueFrom: 
