@@ -4,9 +4,19 @@ metadata:
   name: testing-secret
 data:
   testConfig: |
-    testing_label: {{ .Values.testing }}
-    testing_label2: {{ .Values.testing2 }}
-    testing_label3: {{ .Values.testing3 }}
+    testing_label: `{{ .Values.testing }}`
+    testing_label: {{ include "test.include" "{{ .Values.testing }}" }}
+    testing_label2: "{{ .Values.testing2 }}"
+    testing_label3: '{{ .Values.testing3 }}'
+    testing_label4: {{ .Values.testing4 }}
+    testing_label5: {{ .Values.testing5 }}
+    testing4: {{ tpl (toYaml .Values.testing ) . | quote }}
+    testing5: {{ tpl (toYaml .Values.testing ) $ }}
+  testConfig2: |-
+    testing_label: `{{ .Values.testing }}`
+    testing_label: {{ include "test.include" "{{ .Values.testing }}" }}
+    testing_label2: "{{ .Values.testing2 }}"
+    testing_label3: '{{ .Values.testing3 }}'
     testing_label4: {{ .Values.testing4 }}
     testing_label5: {{ .Values.testing5 }}
     testing4: {{ tpl (toYaml .Values.testing ) . | quote }}
