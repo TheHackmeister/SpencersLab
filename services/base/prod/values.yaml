@@ -3,5 +3,5 @@ letsEncryptEmail: "tms@spencerslab.com"
 cert-manager:
   installCRDs: true
 
-bitwarden-ids:
+bitwardenIds:
   cloudflare-token: 0f8504eb-1339-4a32-861b-af440002801e

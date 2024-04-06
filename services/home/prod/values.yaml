@@ -8,8 +8,6 @@ mosquitto:
             - path: "/"
               pathType: Prefix
 zigbee2mqtt:
-  bitwarden-ids:
-    zigbee2mqtt: 0164cfbc-dd85-43af-a4cc-b13f00108bde
   bitwardenIds:
     zigbee2mqtt: 0164cfbc-dd85-43af-a4cc-b13f00108bde
   app-template:
