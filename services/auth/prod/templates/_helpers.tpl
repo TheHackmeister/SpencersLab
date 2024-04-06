@@ -1,3 +1,5 @@
 {{- define "test.include" -}}
-{{- default .Values.testing "broke" -}}
-{{- end -}}
+{{- if .Values.testing }}
+{{- printf .Values.testing }} 
+{{- end }}     
+{{- end }}
