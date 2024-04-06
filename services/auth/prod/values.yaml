@@ -3,8 +3,8 @@
 
 testing: "WORK"
 testing2: 'pass'
-testing3: '{{ include "test.include" | tpl }}'
-testing4: pass
+testing3: '{{ include "test.include" . }}'
+testing4: '{{ include "test.include" $ }}'
 testing5: pass
 
 authentik:
