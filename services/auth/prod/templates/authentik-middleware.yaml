@@ -5,7 +5,7 @@ metadata:
 data:
   testConfig: |
     testing_label: `{{ .Values.testing }}`
-    testing_label: {{ include "test.include" }}
+    testing_label: {{ include "test.include" . }}
     testing_label2: "{{ .Values.testing2 }}"
     testing_label3: '{{ .Values.testing3 }}'
     testing_label4: {{ .Values.testing4 }}
@@ -14,7 +14,7 @@ data:
     testing5: {{ tpl (toYaml .Values.testing ) $ }}
   testConfig2: |-
     testing_label: `{{ .Values.testing }}`
-    testing_label: {{ include "test.include" }}
+    testing_label: {{ include "test.include" $ }}
     testing_label2: "{{ .Values.testing2 }}"
     testing_label3: '{{ .Values.testing3 }}'
     testing_label4: {{ .Values.testing4 }}
