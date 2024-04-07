@@ -24,9 +24,9 @@ zigbee2mqtt:
   bitwardenIds:
     zigbee2mqtt: 0164cfbc-dd85-43af-a4cc-b13f00108bde
   app-template:
-    nameOverride: zigbee2mqtt
     controllers:
       zigbee2mqtt:
+        nameOverride: zigbee2mqtt
     #    annotations:
     #      reloader.stakater.com/auto: "true"
         containers:
