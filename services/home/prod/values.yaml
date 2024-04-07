@@ -28,6 +28,8 @@ zigbee2mqtt:
         enabled: false
       vpn:
         enabled: false
+      netshoot:
+        enabled: false
     controllers:
       zigbee2mqtt:
     #    annotations:
