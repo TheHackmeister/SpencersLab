@@ -7,17 +7,7 @@ mosquitto:
           paths:
             - path: "/"
               pathType: Prefix
-addons:
-  codeserver:
-    enabled: false
-  vpn:
-    enabled: false
 generic-device-plugin:
-  addons:
-    vpn:
-      enabled: false
-    codeserver:
-      enabled: false
   config:
     data: |
       devices:
@@ -35,6 +25,8 @@ zigbee2mqtt:
   app-template:
     addons:
       codeserver:
+        enabled: false
+      vpn:
         enabled: false
     controllers:
       zigbee2mqtt:
