@@ -1,3 +1,6 @@
+globals:
+  nameOverride: zigbee2mqtt
+nameOverride: zigbee2mqtt
 controllers:
   main:
     annotations:
@@ -90,7 +93,7 @@ ingress:
 #    existingClaim: zigbee2mqtt
 service:
   app:
-    controller: zigbee2mqtt
+    controller: main
     ports:
       http:
         port: *port
