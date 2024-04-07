@@ -16,8 +16,7 @@ dependencies:
   version: 1.0.1
   repository: https://ownyourio.github.io/SpencersLab/
 - name: zigbee2mqtt
-  #version: 1.0.16
-  version: 1.0.12
+  version: 1.0.16
   repository: https://ownyourio.github.io/SpencersLab/
 # TODO: Use the better charts.
 #- name: zwavejs2mqtt
