@@ -20,8 +20,6 @@ generic-device-plugin:
             - paths:
                 - path: /dev/ttyUSB0
 zigbee2mqtt:
-  global:
-    nameOverride: zigbee2mqtt
   bitwardenIds:
     zigbee2mqtt: 0164cfbc-dd85-43af-a4cc-b13f00108bde
   app-template:
@@ -46,7 +44,7 @@ zigbee2mqtt:
               limits:
                 squat.ai/zigbee: 0
     ingress:
-      zigbee2mqtttt:
+      zigbee2mqtt:
         annotations:
           hajimari.io/url: https://zigbee2mqtt.spencerslab.com
         hosts:
