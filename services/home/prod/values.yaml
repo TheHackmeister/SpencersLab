@@ -45,8 +45,9 @@ zigbee2mqtt:
               ZIGBEE2MQTT_CONFIG_SERIAL_ADAPTER: ezsp
               ZIGBEE2MQTT_CONFIG_PERMIT_JOIN: "true"
               #ZIGBEE2MQTT_CONFIG_ADVANCED_NETWORK_KEY: GENERATE
-            limits:
-              squat.ai/zigbee: 1
+            resources:
+              limits:
+                squat.ai/zigbee: 1
   ingress:
     app:
       annotations:
