@@ -1,3 +1,5 @@
+global:
+  nameOverride: zigbee2mqtt
 app-template:
   controllers:
     zigbee2mqtt:
