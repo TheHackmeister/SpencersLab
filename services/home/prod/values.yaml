@@ -36,7 +36,7 @@ zigbee2mqtt:
   #    annotations:
   #      reloader.stakater.com/auto: "true"
       containers:
-        app:
+        main:
           image:
             repository: ghcr.io/koenkk/zigbee2mqtt
             tag: 1.36.0@sha256:4de1ee53d67a9b4556045c34a2722bfd2348dabbefcb792e862643104d3e9fd0
@@ -57,7 +57,7 @@ zigbee2mqtt:
             limits:
               squat.ai/zigbee: 0
   ingress:
-    app:
+    main:
       annotations:
         hajimari.io/url: https://zigbee2mqtt.spencerslab.com
       hosts:
