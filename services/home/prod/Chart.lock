@@ -1,7 +1,7 @@
 dependencies:
 - name: home-appset
   repository: https://ownyourio.github.io/SpencersLab/
-  version: 1.1.6
+  version: 1.1.7
 - name: mosquitto
   repository: https://lmatfy.github.io/charts
   version: 0.1.1
@@ -11,5 +11,5 @@ dependencies:
 - name: zigbee2mqtt
   repository: https://ownyourio.github.io/SpencersLab/
   version: 1.0.13
-digest: sha256:d2eed55e41fbbdb9d8ad977b32645a795b2f5aa601d3020db20989f248682952
-generated: "2024-04-07T05:42:46.124497801-06:00"
+digest: sha256:d16deffb92e53140d3513fd0af2b97f5120329d438ee3ad0394edfd8c063251b
+generated: "2024-04-07T05:44:12.285038289-06:00"
