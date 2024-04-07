@@ -20,20 +20,15 @@ generic-device-plugin:
             - paths:
                 - path: /dev/ttyUSB0
 zigbee2mqtt:
-  nameOverride: zigbee2mqttt
+  global:
+    nameOverride: zigbee2mqtt
   bitwardenIds:
     zigbee2mqtt: 0164cfbc-dd85-43af-a4cc-b13f00108bde
   app-template:
     controllers:
       zigbee2mqtt:
-        nameOverride: zigbee2mqtt
-    #    annotations:
-    #      reloader.stakater.com/auto: "true"
         containers:
           main:
-            image:
-              repository: ghcr.io/koenkk/zigbee2mqtt
-              tag: 1.36.0@sha256:4de1ee53d67a9b4556045c34a2722bfd2348dabbefcb792e862643104d3e9fd0
             env:
               TZ: America/Denver
               #ZIGBEE2MQTT_CONFIG_ADVANCED_LOG_LEVEL: info # debug
@@ -52,7 +47,6 @@ zigbee2mqtt:
                 squat.ai/zigbee: 0
     ingress:
       zigbee2mqtttt:
-        nameOverride: zigbee2mqtt
         annotations:
           hajimari.io/url: https://zigbee2mqtt.spencerslab.com
         hosts:
