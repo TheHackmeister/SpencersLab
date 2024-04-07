@@ -90,8 +90,8 @@ app-template:
   #  config:
   #    existingClaim: zigbee2mqtt
   service:
-    zigbee2mqtt:
-      controller: main
+    main:
+      controller: zigbee2mqtt
       ports:
         http:
           port: *port
