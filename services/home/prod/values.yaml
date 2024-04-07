@@ -30,7 +30,7 @@ zigbee2mqtt:
     netshoot:
       enabled: false
   controllers:
-    zigbee2mqtt:
+    main:
       enabled: true
   #    annotations:
   #      reloader.stakater.com/auto: "true"
