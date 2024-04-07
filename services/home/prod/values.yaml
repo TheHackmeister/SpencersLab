@@ -1,4 +1,7 @@
 mosquitto: 
+  addons:
+    codeserver:
+      enabled: false
   ingress:
     main:
       hosts:
@@ -7,6 +10,9 @@ mosquitto:
           paths:
             - path: "/"
               pathType: Prefix
+addons:
+  codeserver:
+    enabled: false
 generic-device-plugin:
   addons:
     codeserver:
@@ -26,6 +32,9 @@ zigbee2mqtt:
   bitwardenIds:
     zigbee2mqtt: 0164cfbc-dd85-43af-a4cc-b13f00108bde
   app-template:
+    addons:
+      codeserver:
+        enabled: false
     controllers:
       zigbee2mqtt:
     #    annotations:
