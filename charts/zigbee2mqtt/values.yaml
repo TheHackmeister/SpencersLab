@@ -67,8 +67,14 @@ app-template:
           fsGroupChangePolicy: OnRootMismatch
           supplementalGroups:
             - 20
+  service:
+    zigbee2mqtt:
+      controller: zigbee2mqtt
+      ports:
+        http:
+          port: *port
   ingress:
-    main:
+    zigbee2mqtt:
       className: treafik
       annotations:
         hajimari.io/icon: mdi:zigbee
@@ -78,7 +84,7 @@ app-template:
           paths: &paths
             - path: /
               service:
-                identifier: app
+                identifier: zigbee2mqtt
                 port: http
         - host: &customHost zigbee2mqtt.local
           paths: *paths
@@ -89,9 +95,3 @@ app-template:
   #persistence:
   #  config:
   #    existingClaim: zigbee2mqtt
-  service:
-    main:
-      controller: zigbee2mqtt
-      ports:
-        http:
-          port: *port
