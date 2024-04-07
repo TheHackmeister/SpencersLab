@@ -8,6 +8,9 @@ mosquitto:
             - path: "/"
               pathType: Prefix
 generic-device-plugin:
+  addons:
+    codeserver:
+      enabled: false
   config:
     data: |
       devices:
