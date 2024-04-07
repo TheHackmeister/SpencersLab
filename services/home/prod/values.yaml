@@ -24,9 +24,7 @@ zigbee2mqtt:
     zigbee2mqtt: 0164cfbc-dd85-43af-a4cc-b13f00108bde
   app-template:
     controllers:
-      main:
-        type: deployment
-        enabled: true
+      zibgee2mqtt:
     #    annotations:
     #      reloader.stakater.com/auto: "true"
         containers:
@@ -59,7 +57,7 @@ zigbee2mqtt:
             paths: &paths
               - path: /
                 service:
-                  identifier: main
+                  identifier: zibgee2mqtt
                   port: http
           - host: &customHost zigbee2mqtt.spencerslab.com
             paths: *paths
