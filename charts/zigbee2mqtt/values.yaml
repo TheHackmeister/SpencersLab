@@ -1,6 +1,6 @@
 app-template:
   controllers:
-    zigbee2mqttt:
+    zigbee2mqtt:
       annotations:
         reloader.stakater.com/auto: "true"
       containers:
@@ -90,7 +90,7 @@ app-template:
   #  config:
   #    existingClaim: zigbee2mqtt
   service:
-    app:
+    zigbee2mqtt:
       controller: main
       ports:
         http:
