@@ -43,6 +43,8 @@ zigbee2mqtt:
               ZIGBEE2MQTT_CONFIG_SERIAL_BAUDRATE: 57600
               ZIGBEE2MQTT_CONFIG_SERIAL_PORT: /dev/ttyUSB1
               ZIGBEE2MQTT_CONFIG_SERIAL_ADAPTER: ezsp
+              ZIGBEE2MQTT_CONFIG_PERMIT_JOIN: "true"
+              #ZIGBEE2MQTT_CONFIG_ADVANCED_NETWORK_KEY: GENERATE
             limits:
               squat.ai/zigbee: 1
   ingress:
