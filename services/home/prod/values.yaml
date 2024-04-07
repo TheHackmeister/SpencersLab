@@ -56,23 +56,23 @@ zigbee2mqtt:
           resources:
             limits:
               squat.ai/zigbee: 0
-ingress:
-  app:
-    annotations:
-      hajimari.io/url: https://zigbee2mqtt.spencerslab.com
-    hosts:
-      - host: &host "zigbee2mqtt.spencerslab.com"
-        paths: &paths
-          - path: /
-            service:
-              identifier: app
-              port: http
-      - host: &customHost zigbee2mqtt.spencerslab.com
-        paths: *paths
-    tls:
-      - hosts:
-          - *host
-          - *customHost
-persistence:
-  config:
-    existingClaim: zigbee2mqtt
+  ingress:
+    app:
+      annotations:
+        hajimari.io/url: https://zigbee2mqtt.spencerslab.com
+      hosts:
+        - host: &host "zigbee2mqtt.spencerslab.com"
+          paths: &paths
+            - path: /
+              service:
+                identifier: app
+                port: http
+        - host: &customHost zigbee2mqtt.spencerslab.com
+          paths: *paths
+      tls:
+        - hosts:
+            - *host
+            - *customHost
+  #persistence:
+  #  config:
+  #    existingClaim: zigbee2mqtt
