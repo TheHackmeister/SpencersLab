@@ -2105,6 +2105,18 @@ entries:
     version: 1.1.1
   generic-device-plugin:
   - apiVersion: v2
+    appVersion: 1.0.2
+    created: "2024-04-07T19:19:59.701443157Z"
+    dependencies:
+    - name: common
+      repository: https://bjw-s.github.io/helm-charts/
+      version: 3.1.0
+    digest: de1213f50aaf2d07e1265038c9f0efc5175714995fd77c68351e5dcc0e44ecad
+    name: generic-device-plugin
+    urls:
+    - https://github.com/OwnYourIO/SpencersLab/releases/download/generic-device-plugin-1.0.2/generic-device-plugin-1.0.2.tgz
+    version: 1.0.2
+  - apiVersion: v2
     appVersion: 1.0.1
     created: "2024-04-07T18:02:59.718534462Z"
     dependencies:
@@ -2495,4 +2507,4 @@ entries:
     urls:
     - https://github.com/OwnYourIO/SpencersLab/releases/download/zigbee2mqtt-1.0.1/zigbee2mqtt-1.0.1.tgz
     version: 1.0.1
-generated: "2024-04-07T19:11:43.642019119Z"
+generated: "2024-04-07T19:19:59.701701918Z"
