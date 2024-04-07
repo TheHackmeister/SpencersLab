@@ -1,7 +1,4 @@
 mosquitto: 
-  addons:
-    codeserver:
-      enabled: false
   ingress:
     main:
       hosts:
