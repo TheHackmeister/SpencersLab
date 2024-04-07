@@ -1,36 +1,37 @@
-globals:
-  nameOverride: generic-device-plugin
-nameOverride: generic-device-plugin
-controllers:
-  main:
-    #annotations:
-    #  reloader.stakater.com/auto: "true"
-    containers:
-      main:
-        type: daemonset
-        image:
-          repository:  ghcr.io/squat/generic-device-plugin
-          tag: 36bfc606bba2064de6ede0ff2764cbb52edff70d
-        env:
-          DOMAIN: 'squat.ai'
-        resources:
-          requests:
-            cpu: 10m
-          limits:
-            memory: 256Mi
+app-template:
+  controllers:
+    main:
+      #annotations:
+      #  reloader.stakater.com/auto: "true"
+      containers:
+        main:
+          type: daemonset
+          image:
+            repository:  ghcr.io/squat/generic-device-plugin
+            tag: 36bfc606bba2064de6ede0ff2764cbb52edff70d
+          env:
+            DOMAIN: 'squat.ai'
+          resources:
+            requests:
+              cpu: 10m
+            limits:
+              memory: 256Mi
+          securityContext:
+            privileged: true
+            allowPrivilegeEscalation: true
+            readOnlyRootFilesystem: true
+      pod:
         securityContext:
-          privileged: true
-          allowPrivilegeEscalation: true
-          readOnlyRootFilesystem: true
-          #capabilities:
-          #  drop:
-          #    - ALL
-    pod:
-      securityContext:
-        runAsUser: 568
-        runAsGroup: 568
-        runAsNonRoot: true
-        fsGroup: 568
-        fsGroupChangePolicy: OnRootMismatch
-        supplementalGroups:
-          - 20
+          runAsUser: 568
+          runAsGroup: 568
+          runAsNonRoot: true
+          fsGroup: 568
+          fsGroupChangePolicy: OnRootMismatch
+          supplementalGroups:
+            - 20
+  service:
+    main:
+      controller: main
+      ports:
+        http:
+          port: 8080
