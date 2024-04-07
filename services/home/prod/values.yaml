@@ -22,57 +22,56 @@ generic-device-plugin:
 zigbee2mqtt:
   bitwardenIds:
     zigbee2mqtt: 0164cfbc-dd85-43af-a4cc-b13f00108bde
-  app-template:
-    addons:
-      codeserver:
-        enabled: false
-      vpn:
-        enabled: false
-      netshoot:
-        enabled: false
-    controllers:
-      zigbee2mqtt:
-        enabled: true
-    #    annotations:
-    #      reloader.stakater.com/auto: "true"
-        containers:
-          app:
-            image:
-              repository: ghcr.io/koenkk/zigbee2mqtt
-              tag: 1.36.0@sha256:4de1ee53d67a9b4556045c34a2722bfd2348dabbefcb792e862643104d3e9fd0
-            env:
-              TZ: America/Denver
-              #ZIGBEE2MQTT_CONFIG_ADVANCED_LOG_LEVEL: info # debug
-              #ZIGBEE2MQTT_CONFIG_ADVANCED_LOG_OUTPUT: '["console"]'
-              ZIGBEE2MQTT_CONFIG_FRONTEND_URL: https://zigbee2mqtt.spencerslab.com
-              ZIGBEE2MQTT_CONFIG_MQTT_SERVER: mqtt://home.spencerslab.com
-              #ZIGBEE2MQTT_CONFIG_SERIAL_DISABLE_LED: false
-              ZIGBEE2MQTT_CONFIG_MQTT_VERSION: 3.1.1 # 5
-              ZIGBEE2MQTT_CONFIG_SERIAL_BAUDRATE: 57600
-              ZIGBEE2MQTT_CONFIG_SERIAL_PORT: /dev/ttyUSB1
-              ZIGBEE2MQTT_CONFIG_SERIAL_ADAPTER: ezsp
-              ZIGBEE2MQTT_CONFIG_PERMIT_JOIN: "true"
-              #ZIGBEE2MQTT_CONFIG_ADVANCED_NETWORK_KEY: GENERATE
-            resources:
-              limits:
-                squat.ai/zigbee: 1
-  ingress:
-    app:
-      annotations:
-        hajimari.io/url: https://zigbee2mqtt.spencerslab.com
-      hosts:
-        - host: &host "zigbee2mqtt.spencerslab.com"
-          paths: &paths
-            - path: /
-              service:
-                identifier: app
-                port: http
-        - host: &customHost zigbee2mqtt.spencerslab.com
-          paths: *paths
-      tls:
-        - hosts:
-            - *host
-            - *customHost
-  persistence:
-    config:
-      existingClaim: zigbee2mqtt
+  addons:
+    codeserver:
+      enabled: false
+    vpn:
+      enabled: false
+    netshoot:
+      enabled: false
+  controllers:
+    zigbee2mqtt:
+      enabled: true
+  #    annotations:
+  #      reloader.stakater.com/auto: "true"
+      containers:
+        app:
+          image:
+            repository: ghcr.io/koenkk/zigbee2mqtt
+            tag: 1.36.0@sha256:4de1ee53d67a9b4556045c34a2722bfd2348dabbefcb792e862643104d3e9fd0
+          env:
+            TZ: America/Denver
+            #ZIGBEE2MQTT_CONFIG_ADVANCED_LOG_LEVEL: info # debug
+            #ZIGBEE2MQTT_CONFIG_ADVANCED_LOG_OUTPUT: '["console"]'
+            ZIGBEE2MQTT_CONFIG_FRONTEND_URL: https://zigbee2mqtt.spencerslab.com
+            ZIGBEE2MQTT_CONFIG_MQTT_SERVER: mqtt://home.spencerslab.com
+            #ZIGBEE2MQTT_CONFIG_SERIAL_DISABLE_LED: false
+            ZIGBEE2MQTT_CONFIG_MQTT_VERSION: 3.1.1 # 5
+            ZIGBEE2MQTT_CONFIG_SERIAL_BAUDRATE: 57600
+            ZIGBEE2MQTT_CONFIG_SERIAL_PORT: /dev/ttyUSB1
+            ZIGBEE2MQTT_CONFIG_SERIAL_ADAPTER: ezsp
+            ZIGBEE2MQTT_CONFIG_PERMIT_JOIN: "true"
+            #ZIGBEE2MQTT_CONFIG_ADVANCED_NETWORK_KEY: GENERATE
+          resources:
+            limits:
+              squat.ai/zigbee: 1
+ingress:
+  app:
+    annotations:
+      hajimari.io/url: https://zigbee2mqtt.spencerslab.com
+    hosts:
+      - host: &host "zigbee2mqtt.spencerslab.com"
+        paths: &paths
+          - path: /
+            service:
+              identifier: app
+              port: http
+      - host: &customHost zigbee2mqtt.spencerslab.com
+        paths: *paths
+    tls:
+      - hosts:
+          - *host
+          - *customHost
+persistence:
+  config:
+    existingClaim: zigbee2mqtt
