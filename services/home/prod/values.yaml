@@ -57,7 +57,7 @@ zigbee2mqtt:
             paths: &paths
               - path: /
                 service:
-                  identifier: main
+                  identifier: zigbee2mqtt
                   port: http
           - host: &customHost zigbee2mqtt.spencerslab.com
             paths: *paths
