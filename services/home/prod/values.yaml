@@ -31,6 +31,7 @@ zigbee2mqtt:
       enabled: false
   controllers:
     main:
+      type: deployment
       enabled: true
   #    annotations:
   #      reloader.stakater.com/auto: "true"
@@ -54,7 +55,7 @@ zigbee2mqtt:
             #ZIGBEE2MQTT_CONFIG_ADVANCED_NETWORK_KEY: GENERATE
           resources:
             limits:
-              squat.ai/zigbee: 1
+              squat.ai/zigbee: 0
 ingress:
   app:
     annotations:
