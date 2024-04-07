@@ -49,7 +49,7 @@ zigbee2mqtt:
               limits:
                 squat.ai/zigbee: 0
     ingress:
-      main:
+      zigbee2mqtt:
         annotations:
           hajimari.io/url: https://zigbee2mqtt.spencerslab.com
         hosts:
