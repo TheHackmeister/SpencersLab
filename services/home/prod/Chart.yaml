@@ -13,8 +13,8 @@ dependencies:
   version: 0.1.1
   repository: https://lmatfy.github.io/charts
 - name: generic-device-plugin
-  version: 0.1.3
-  repository: https://charts.gabe565.com
+  version: 1.0.1
+  repository: https://ownyourio.github.io/SpencersLab/
 - name: zigbee2mqtt
   #version: 1.0.16
   version: 1.0.12
