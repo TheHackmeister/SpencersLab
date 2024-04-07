@@ -1,3 +1,5 @@
+global:
+  nameOverride: generic-device-plugin
 app-template:
   controllers:
     main:
