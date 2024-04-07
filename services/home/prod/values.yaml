@@ -10,8 +10,12 @@ mosquitto:
 addons:
   codeserver:
     enabled: false
+  vpn:
+    enabled: false
 generic-device-plugin:
   addons:
+    vpn:
+      enabled: false
     codeserver:
       enabled: false
   config:
