@@ -10,6 +10,6 @@ dependencies:
   version: 1.0.1
 - name: zigbee2mqtt
   repository: https://ownyourio.github.io/SpencersLab/
-  version: 1.0.18
-digest: sha256:6852c2a2084a4fb22e293809510e3590822429d0b32a3f2070635eb79e169b9d
-generated: "2024-04-07T12:32:29.444367425-06:00"
+  version: 1.0.19
+digest: sha256:c4ca739eab819e84d334583fdde5f522cbda8634a321525b6b10f643bcbe789b
+generated: "2024-04-07T12:41:22.051637218-06:00"
