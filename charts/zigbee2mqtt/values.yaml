@@ -1,8 +1,6 @@
-globals:
-  nameOverride: zigbee2mqtt
 nameOverride: zigbee2mqtt
 controllers:
-  main:
+  zigbee2mqttt:
     annotations:
       reloader.stakater.com/auto: "true"
     containers:
