@@ -1,4 +1,3 @@
-nameOverride: zigbee2mqtt
 controllers:
   zigbee2mqttt:
     annotations:
