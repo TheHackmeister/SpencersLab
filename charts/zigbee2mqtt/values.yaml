@@ -85,6 +85,9 @@ ingress:
       - hosts:
           - *host
           - *customHost
+#persistence:
+#  config:
+#    existingClaim: zigbee2mqtt
 service:
   app:
     controller: zigbee2mqtt
