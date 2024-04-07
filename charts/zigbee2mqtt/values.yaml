@@ -1,5 +1,5 @@
 controllers:
-  zigbee2mqtt:
+  main:
     annotations:
       reloader.stakater.com/auto: "true"
     containers:
@@ -49,7 +49,7 @@ controllers:
           requests:
             cpu: 10m
           limits:
-            smarter-devices/ttyACM0: 1
+            squat.ai/zigbee: 1
             memory: 256Mi
         securityContext:
           allowPrivilegeEscalation: false
