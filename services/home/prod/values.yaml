@@ -23,8 +23,6 @@ zigbee2mqtt:
   bitwardenIds:
     zigbee2mqtt: 0164cfbc-dd85-43af-a4cc-b13f00108bde
   app-template:
-    controller:
-      enabled: true
     addons:
       codeserver:
         enabled: false
@@ -34,6 +32,7 @@ zigbee2mqtt:
         enabled: false
     controllers:
       zigbee2mqtt:
+        enabled: true
     #    annotations:
     #      reloader.stakater.com/auto: "true"
         containers:
