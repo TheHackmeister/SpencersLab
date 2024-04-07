@@ -7,6 +7,18 @@ mosquitto:
           paths:
             - path: "/"
               pathType: Prefix
+generic-device-plugin:
+  config:
+    data: |
+      devices:
+        - name: zigbee
+          groups:
+            - paths:
+                - path: /dev/ttyUSB1
+        - name: zwave
+          groups:
+            - paths:
+                - path: /dev/ttyUSB0
 zigbee2mqtt:
   bitwardenIds:
     zigbee2mqtt: 0164cfbc-dd85-43af-a4cc-b13f00108bde
@@ -22,17 +34,17 @@ zigbee2mqtt:
               tag: 1.36.0@sha256:4de1ee53d67a9b4556045c34a2722bfd2348dabbefcb792e862643104d3e9fd0
             env:
               TZ: America/Denver
-            #ZIGBEE2MQTT_CONFIG_ADVANCED_LOG_LEVEL: info # debug
-            #ZIGBEE2MQTT_CONFIG_ADVANCED_LOG_OUTPUT: '["console"]'
-            ZIGBEE2MQTT_CONFIG_FRONTEND_URL: https://zigbee2mqtt.spencerslab.com
-            ZIGBEE2MQTT_CONFIG_MQTT_SERVER: mqtt://mosquitto.home.svc.cluster.local
-            ZIGBEE2MQTT_CONFIG_MQTT_VERSION: 5
-            ZIGBEE2MQTT_CONFIG_SERIAL_BAUDRATE: 38400
-            ZIGBEE2MQTT_CONFIG_SERIAL_DISABLE_LED: false
-            ZIGBEE2MQTT_CONFIG_SERIAL_PORT: /dev/ttyACM0
-            ZIGBEE2MQTT_CONFIG_SERIAL_ADAPTER: deconz
+              #ZIGBEE2MQTT_CONFIG_ADVANCED_LOG_LEVEL: info # debug
+              #ZIGBEE2MQTT_CONFIG_ADVANCED_LOG_OUTPUT: '["console"]'
+              ZIGBEE2MQTT_CONFIG_FRONTEND_URL: https://zigbee2mqtt.spencerslab.com
+              ZIGBEE2MQTT_CONFIG_MQTT_SERVER: mqtt://home.spencerslab.com
+              #ZIGBEE2MQTT_CONFIG_SERIAL_DISABLE_LED: false
+              ZIGBEE2MQTT_CONFIG_MQTT_VERSION: 3.1.1 # 5
+              ZIGBEE2MQTT_CONFIG_SERIAL_BAUDRATE: 57600
+              ZIGBEE2MQTT_CONFIG_SERIAL_PORT: /dev/ttyUSB1
+              ZIGBEE2MQTT_CONFIG_SERIAL_ADAPTER: ezsp
             limits:
-              smarter-devices/ttyACM0: 1
+              squat.ai/zigbee: 1
   ingress:
     app:
       annotations:
