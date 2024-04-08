@@ -16,6 +16,8 @@ generic-device-plugin:
             args:
               - --config 
               - /config/devices.yaml
+            securityContext:
+              readOnlyRootFilesystem: false
     persistence:
       device-plugins:
         enabled: true
