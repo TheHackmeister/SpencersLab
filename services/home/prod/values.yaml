@@ -69,7 +69,7 @@ zigbee2mqtt:
               #ZIGBEE2MQTT_CONFIG_ADVANCED_NETWORK_KEY: GENERATE
             resources:
               limits:
-                squat.ai/zigbee: 0
+                squat.ai/zigbee: 1
     ingress:
       zigbee2mqtt:
         annotations:
