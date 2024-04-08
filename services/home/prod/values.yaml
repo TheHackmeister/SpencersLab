@@ -9,20 +9,29 @@ mosquitto:
               pathType: Prefix
 generic-device-plugin:
   app-template:
-    configMaps:
+    persistence:
+      device-plugins:
+        enabled: true
+        type: hostPath
+        hostPath: /var/lib/kubelet/device-plugins
+      dev:
+        enabled: true
+        type: hostPath
+        hostPath: /dev
       config:
         enabled: true
-        data:
-          devices.yaml: |-
-            devices:
-              - name: zigbee
-                groups:
-                  - paths:
-                      - path: /dev/ttyUSB1
-              - name: zwave
-                groups:
-                  - paths:
-                      - path: /dev/ttyUSB0
+        type: configMap
+        data: |-
+          devices:
+            - name: zigbee
+              groups:
+                - paths:
+                    - path: /dev/ttyUSB1
+            - name: zwave
+              groups:
+                - paths:
+                    - path: /dev/ttyUSB0
+
 zigbee2mqtt:
   bitwardenIds:
     zigbee2mqtt: 0164cfbc-dd85-43af-a4cc-b13f00108bde
