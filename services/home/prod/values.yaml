@@ -21,7 +21,7 @@ generic-device-plugin:
       config:
         enabled: true
         type: configMap
-        name: generic-device-plugin-config
+        name: home-generic-device-plugin-config
 
     configMaps:
       config:
