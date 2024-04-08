@@ -46,6 +46,8 @@ generic-device-plugin:
                 groups:
                   - paths:
                       - path: /dev/ttyUSB0
+bitwardenIds:
+  zigbee2mqtt: 0164cfbc-dd85-43af-a4cc-b13f00108bde
 zigbee2mqtt:
   bitwardenIds:
     zigbee2mqtt: 0164cfbc-dd85-43af-a4cc-b13f00108bde
