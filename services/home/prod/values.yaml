@@ -12,7 +12,7 @@ generic-device-plugin:
     configMaps:
       config:
         enabled: true
-        data: |-
+        data:
           devices:
             - name: zigbee
               groups:
