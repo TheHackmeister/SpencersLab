@@ -14,7 +14,8 @@ generic-device-plugin:
         containers:
           main:
             args:
-              - --config /config/devices.yaml
+              - --config 
+              - /config/devices.yaml
     persistence:
       device-plugins:
         enabled: true
