@@ -13,7 +13,7 @@ generic-device-plugin:
       config:
         enabled: true
         data:
-          devices:
+          devices: |-
             - name: zigbee
               groups:
                 - paths:
