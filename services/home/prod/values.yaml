@@ -8,17 +8,20 @@ mosquitto:
             - path: "/"
               pathType: Prefix
 generic-device-plugin:
-  config:
-    data: |
-      devices:
-        - name: zigbee
-          groups:
-            - paths:
-                - path: /dev/ttyUSB1
-        - name: zwave
-          groups:
-            - paths:
-                - path: /dev/ttyUSB0
+  app-template:
+    configMaps:
+      config:
+        enabled: true
+        data: |
+          devices:
+            - name: zigbee
+              groups:
+                - paths:
+                    - path: /dev/ttyUSB1
+            - name: zwave
+              groups:
+                - paths:
+                    - path: /dev/ttyUSB0
 zigbee2mqtt:
   bitwardenIds:
     zigbee2mqtt: 0164cfbc-dd85-43af-a4cc-b13f00108bde
