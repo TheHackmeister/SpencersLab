@@ -86,7 +86,7 @@ zigbee2mqtt:
             enabled: true
             image:
               repository: walthowd/husbzb-firmware
-              tag: 5fa2a67b56fa
+              tag: latest
             probes:
               liveness:
                 enabled: true
