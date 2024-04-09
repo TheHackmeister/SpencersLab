@@ -9,7 +9,7 @@ app-template:
         main:
           image:
             repository: ghcr.io/koenkk/zigbee2mqtt
-            tag: 1.36.0@sha256:4de1ee53d67a9b4556045c34a2722bfd2348dabbefcb792e862643104d3e9fd0
+            tag: 1.36.1
           env:
             TZ: Etc/UTC
             ZIGBEE2MQTT_DATA: /config
@@ -63,7 +63,7 @@ app-template:
       pod:
         securityContext:
           runAsUser: 568
-          runAsGroup: 568
+          runAsGroup: 492
           runAsNonRoot: true
           fsGroup: 568
           fsGroupChangePolicy: OnRootMismatch
