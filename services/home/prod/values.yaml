@@ -43,7 +43,7 @@ generic-device-plugin:
               - name: zigbee
                 groups:
                   - paths:
-                      - path: /dev/serial/by-id/usb-Silicon_Labs_HubZ_Smart_Home_Controller_6160008A-if01-port0
+                      - path: /dev/ttyUSB1
               - name: zwave
                 groups:
                   - paths:
@@ -67,7 +67,7 @@ zigbee2mqtt:
               #ZIGBEE2MQTT_CONFIG_SERIAL_DISABLE_LED: false
               ZIGBEE2MQTT_CONFIG_MQTT_VERSION: 4
               ZIGBEE2MQTT_CONFIG_SERIAL_BAUDRATE: 57600
-              ZIGBEE2MQTT_CONFIG_SERIAL_PORT: /dev/serial/by-id/usb-Silicon_Labs_HubZ_Smart_Home_Controller_6160008A-if01-port0
+              ZIGBEE2MQTT_CONFIG_SERIAL_PORT: /dev/ttyUSB1
               ZIGBEE2MQTT_CONFIG_SERIAL_ADAPTER: ezsp
               ZIGBEE2MQTT_CONFIG_PERMIT_JOIN: "true"
               #ZIGBEE2MQTT_CONFIG_ADVANCED_NETWORK_KEY: GENERATE
@@ -82,6 +82,15 @@ zigbee2mqtt:
             resources:
               limits:
                 squat.ai/zigbee: 1
+        pod:  
+          securityContext:
+            runAsGroup: 492
+            runAsNonRoot: false
+            supplementalGroups:
+              - 20
+              - 492
+              - 5
+              - 478
     ingress:
       zigbee2mqtt:
         annotations:
