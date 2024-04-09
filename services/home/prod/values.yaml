@@ -16,6 +16,8 @@ generic-device-plugin:
             args:
               - --config 
               - /config/devices.yaml
+              - --log-level
+              - debug
             securityContext:
               readOnlyRootFilesystem: false
     persistence:
