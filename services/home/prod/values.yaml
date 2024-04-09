@@ -71,6 +71,12 @@ zigbee2mqtt:
               #ZIGBEE2MQTT_CONFIG_ADVANCED_NETWORK_KEY: GENERATE
               # IDK do what the thing says: https://github.com/Koenkk/zigbee2mqtt/issues/19713
               ZIGBEE2MQTT_CONFIG_FRONTEND: "false"
+            probes:
+              startup:
+                enabled: true
+                spec:
+                  failureThreshold: 30
+                  periodSeconds: 10
             resources:
               limits:
                 squat.ai/zigbee: 1
