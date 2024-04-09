@@ -87,7 +87,10 @@ zigbee2mqtt:
             image:
               repository: walthowd/husbzb-firmware
               tag: latest
-            command: bash
+            command: 
+              - tail
+              - '-f'
+              - '/dev/null'
             probes:
               liveness:
                 enabled: true
