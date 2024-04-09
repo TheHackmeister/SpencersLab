@@ -82,32 +82,6 @@ zigbee2mqtt:
             resources:
               limits:
                 squat.ai/zigbee: 0
-          firmware-flasher:
-            enabled: true
-            image:
-              repository: walthowd/husbzb-firmware
-              tag: latest
-            command: 
-              - tail
-              - '-f'
-              - '/dev/null'
-            probes:
-              liveness:
-                enabled: true
-              readiness:
-                enabled: true
-            resources:
-              requests:
-                cpu: 10m
-              limits:
-                squat.ai/zigbee: 1
-                memory: 256Mi
-            securityContext:
-              allowPrivilegeEscalation: false
-              readOnlyRootFilesystem: true
-              capabilities:
-                drop:
-                  - ALL
         pod:  
           securityContext:
             runAsGroup: 492
