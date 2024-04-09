@@ -69,6 +69,8 @@ zigbee2mqtt:
               ZIGBEE2MQTT_CONFIG_SERIAL_ADAPTER: ezsp
               ZIGBEE2MQTT_CONFIG_PERMIT_JOIN: "true"
               #ZIGBEE2MQTT_CONFIG_ADVANCED_NETWORK_KEY: GENERATE
+              # IDK do what the thing says: https://github.com/Koenkk/zigbee2mqtt/issues/19713
+              ZIGBEE2MQTT_CONFIG_FRONTEND: "false"
             resources:
               limits:
                 squat.ai/zigbee: 1
