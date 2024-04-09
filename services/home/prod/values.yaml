@@ -43,7 +43,7 @@ generic-device-plugin:
               - name: zigbee
                 groups:
                   - paths:
-                      - path: /dev/ttyUSB1
+                      - path: /dev/serial/by-id/usb-Silicon_Labs_HubZ_Smart_Home_Controller_6160008A-if01-port0
               - name: zwave
                 groups:
                   - paths:
