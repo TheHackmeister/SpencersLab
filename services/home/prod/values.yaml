@@ -89,6 +89,6 @@ zigbee2mqtt:
           - hosts:
               - *host
               - *customHost
-    #persistence:
-    #  config:
-    #    existingClaim: zigbee2mqtt
+    persistence:
+      config:
+        existingClaim: zigbee2mqtt
