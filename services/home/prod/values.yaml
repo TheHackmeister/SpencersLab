@@ -60,8 +60,8 @@ zigbee2mqtt:
           main:
             env:
               TZ: America/Denver
+              #DEBUG: zigbee-herdsman*
               ZIGBEE2MQTT_CONFIG_ADVANCED_LOG_LEVEL: debug
-              #ZIGBEE2MQTT_CONFIG_ADVANCED_LOG_OUTPUT: '["console"]'
               ZIGBEE2MQTT_CONFIG_FRONTEND_URL: https://zigbee2mqtt.spencerslab.com
               ZIGBEE2MQTT_CONFIG_MQTT_SERVER: mqtt://home.spencerslab.com
               #ZIGBEE2MQTT_CONFIG_SERIAL_DISABLE_LED: false
@@ -81,7 +81,7 @@ zigbee2mqtt:
                   periodSeconds: 10
             resources:
               limits:
-                squat.ai/zigbee: 0
+                squat.ai/zigbee: 1
         pod:  
           securityContext:
             runAsGroup: 492
@@ -102,12 +102,9 @@ zigbee2mqtt:
                 service:
                   identifier: zigbee2mqtt
                   port: http
-          - host: &customHost zigbee2mqtt.spencerslab.com
-            paths: *paths
         tls:
           - hosts:
               - *host
-              - *customHost
     persistence:
       config:
         existingClaim: zigbee2mqtt
