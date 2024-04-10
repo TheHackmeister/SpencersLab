@@ -93,6 +93,7 @@ zigbee2mqtt:
               - 478
     ingress:
       zigbee2mqtt:
+        className: 
         annotations:
           hajimari.io/url: https://zigbee2mqtt.spencerslab.com
         hosts:
