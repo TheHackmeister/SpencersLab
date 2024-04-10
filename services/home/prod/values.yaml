@@ -105,6 +105,7 @@ zigbee2mqtt:
         tls:
           - hosts:
               - *host
+            secret-name: wildcard-cert
     persistence:
       config:
         existingClaim: zigbee2mqtt
