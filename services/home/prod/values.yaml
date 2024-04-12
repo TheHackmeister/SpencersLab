@@ -9,31 +9,6 @@ mosquitto:
               pathType: Prefix
 generic-device-plugin:
   app-template:
-    controllers:
-      main:
-        containers:
-          main:
-            args:
-              - --config 
-              - /config/devices.yaml
-              - --log-level
-              - debug
-            securityContext:
-              readOnlyRootFilesystem: false
-    persistence:
-      device-plugins:
-        enabled: true
-        type: hostPath
-        hostPath: /var/lib/kubelet/device-plugins
-      dev:
-        enabled: true
-        type: hostPath
-        hostPath: /dev
-      config:
-        enabled: true
-        type: configMap
-        name: '{{ .Release.Name }}-generic-device-plugin-config'
-
     configMaps:
       config:
         enabled: true

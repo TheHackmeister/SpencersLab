@@ -2,11 +2,30 @@ global:
   nameOverride: generic-device-plugin
 app-template:
   controllers:
+    persistence:
+      device-plugins:
+        enabled: true
+        type: hostPath
+        hostPath: /var/lib/kubelet/device-plugins
+      dev:
+        enabled: true
+        type: hostPath
+        hostPath: /dev
+      config:
+        enabled: true
+        type: configMap
+        name: '{{ .Release.Name }}-generic-device-plugin-config'
+
     main:
       #annotations:
       #  reloader.stakater.com/auto: "true"
       containers:
         main:
+          args:
+            - --config 
+            - /config/devices.yaml
+            - --log-level
+            - debug
           image:
             repository:  ghcr.io/squat/generic-device-plugin
             tag: 36bfc606bba2064de6ede0ff2764cbb52edff70d
@@ -18,9 +37,22 @@ app-template:
             limits:
               memory: 256Mi
           securityContext:
+            # -- Privileged mode is required to access devices
             privileged: true
             allowPrivilegeEscalation: true
-            readOnlyRootFilesystem: true
+            readOnlyRootFilesystem: false
+      # TODO: Test running this pod with more restrictive permissions.
+      #pod:
+      #  securityContext:
+      #    runAsUser: 568
+      #    runAsGroup: 568
+      #    runAsNonRoot: true
+      #    fsGroup: 568
+      #    fsGroupChangePolicy: OnRootMismatch
+      #    supplementalGroups:
+      #      # Dialout on MicroOS
+      #      - 492 
+      #      - 20
   service:
     main:
       controller: main
