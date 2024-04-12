@@ -2,19 +2,6 @@ global:
   nameOverride: generic-device-plugin
 app-template:
   controllers:
-    persistence:
-      device-plugins:
-        enabled: true
-        type: hostPath
-        hostPath: /var/lib/kubelet/device-plugins
-      dev:
-        enabled: true
-        type: hostPath
-        hostPath: /dev
-      config:
-        enabled: true
-        type: configMap
-        name: '{{ .Release.Name }}-generic-device-plugin-config'
 
     main:
       #annotations:
