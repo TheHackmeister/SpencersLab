@@ -53,9 +53,24 @@ app-template:
       #      # Dialout on MicroOS
       #      - 492 
       #      - 20
+
   service:
     main:
       controller: main
       ports:
         http:
           port: 8080
+
+  persistence:
+    device-plugins:
+      enabled: true
+      type: hostPath
+      hostPath: /var/lib/kubelet/device-plugins
+    dev:
+      enabled: true
+      type: hostPath
+      hostPath: /dev
+    config:
+      enabled: true
+      type: configMap
+      name: '{{ .Release.Name }}-generic-device-plugin-config'
