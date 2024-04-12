@@ -12,8 +12,6 @@ jobs:
     permissions:
       pull-requests: read
     outputs:
-      # Expose matched filters as job 'packages' output variable
-      #charts: ${{ steps.filter.outputs.changes }}
       charts: ${{ steps.charts.outputs.CHARTS }}
     steps:
       - name: Checkout
