@@ -1,5 +1,7 @@
 global:
   nameOverride: zigbee2mqtt
+bitwardenIds:
+  zigbee2mqtt: OVERRIDE_NEEDED
 app-template:
   controllers:
     zigbee2mqtt:
@@ -28,7 +30,7 @@ app-template:
             ZIGBEE2MQTT_CONFIG_DEVICE_OPTIONS_RETAIN: true
             ZIGBEE2MQTT_CONFIG_EXPERIMENTAL_NEW_API: true
             ZIGBEE2MQTT_CONFIG_FRONTEND_PORT: &port 8080
-            ZIGBEE2MQTT_CONFIG_FRONTEND_URL: https://zigbee2mqtt.spencerslab.com
+            ZIGBEE2MQTT_CONFIG_FRONTEND_URL: https://zigbee2mqtt.local
             ZIGBEE2MQTT_CONFIG_HOMEASSISTANT: true
             ZIGBEE2MQTT_CONFIG_MQTT_INCLUDE_DEVICE_INFORMATION: true
             ZIGBEE2MQTT_CONFIG_MQTT_KEEPALIVE: 60
@@ -39,6 +41,8 @@ app-template:
             ZIGBEE2MQTT_CONFIG_SERIAL_BAUDRATE: 38400
             ZIGBEE2MQTT_CONFIG_SERIAL_PORT: /dev/ttyACM0
             ZIGBEE2MQTT_CONFIG_SERIAL_ADAPTER: deconz
+            # IDK, do what the thing says: https://github.com/Koenkk/zigbee2mqtt/issues/19713
+            ZIGBEE2MQTT_CONFIG_FRONTEND: "false"
           envFrom:
             - secretRef:
                 name: zigbee2mqtt-secret
@@ -62,8 +66,6 @@ app-template:
       pod:
         securityContext:
           runAsUser: 568
-          runAsGroup: 492
-          runAsNonRoot: true
           fsGroup: 568
           fsGroupChangePolicy: OnRootMismatch
           supplementalGroups:
@@ -92,6 +94,6 @@ app-template:
         - hosts:
             - *host
             - *customHost
-  #persistence:
-  #  config:
-  #    existingClaim: zigbee2mqtt
+  persistence:
+    config:
+      existingClaim: zigbee2mqtt
