@@ -37,7 +37,7 @@ jobs:
               - charts/**
       - id: charts
         run: |
-          echo "CHARTS=$(for file in ${{ steps.filter.outputs.charts_files }}; do echo $file | cut -d "/" -f 2 ; done | sort | uniq | jq  --raw-input .  | jq --slurp . )" >> $GITHUB_OUTPUT
+          echo "CHARTS=$(for file in ${{ steps.filter.outputs.charts_files }}; do echo $file | cut -d "/" -f 2 ; done | sort | uniq | jq  --raw-input .  | jq --slurp .  | tr '\n' ' ' )" >> $GITHUB_OUTPUT
       - id: test_output
         run: |
           echo "${{ steps.charts.outputs.CHARTS }}"
