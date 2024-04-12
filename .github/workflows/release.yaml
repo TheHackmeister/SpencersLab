@@ -90,9 +90,7 @@ jobs:
     needs: [test-build, changes]
     strategy:
       matrix:
-        chart: [ "${{ needs.changes.outputs.charts }}" ]
-        #chart: ${{ fromJSON(needs.changes.outputs.charts) }}
-    #if: ${{ needs.changes.outputs.charts != '' && toJson(fromJson(needs.changes.outputs.charts)) != '[]' }}
+        chart: ${{ fromJSON(needs.changes.outputs.charts) }}
     # Needed because of this: https://github.com/helm/chart-releaser-action/issues/110
     permissions:
       contents: write
@@ -124,9 +122,7 @@ jobs:
     needs: [bump, changes]
     strategy:
       matrix:
-        chart: [ "${{ needs.changes.outputs.charts }}" ]
-        #chart: ${{ fromJSON(needs.changes.outputs.charts) }}
-    #if: ${{ needs.changes.outputs.charts != '' && toJson(fromJson(needs.changes.outputs.charts)) != '[]' }}
+        chart: ${{ fromJSON(needs.changes.outputs.charts) }}
     # Needed because of this: https://github.com/helm/chart-releaser-action/issues/110
     permissions:
       contents: write
