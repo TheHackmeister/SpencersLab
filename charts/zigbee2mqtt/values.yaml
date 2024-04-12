@@ -66,9 +66,12 @@ app-template:
       pod:
         securityContext:
           runAsUser: 568
+          runAsNonRoot: true
           fsGroup: 568
           fsGroupChangePolicy: OnRootMismatch
           supplementalGroups:
+            # Dialout on MicroOS
+            - 492 
             - 20
   service:
     zigbee2mqtt:

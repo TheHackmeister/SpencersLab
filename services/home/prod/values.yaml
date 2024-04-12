@@ -66,13 +66,6 @@ zigbee2mqtt:
               ZIGBEE2MQTT_CONFIG_SERIAL_BAUDRATE: 57600
               ZIGBEE2MQTT_CONFIG_SERIAL_PORT: /dev/ttyUSB1
               ZIGBEE2MQTT_CONFIG_SERIAL_ADAPTER: ezsp
-        pod:  
-          securityContext:
-            #runAsGroup: 492
-            supplementalGroups:
-              - 492
-              - 5
-              - 478
     ingress:
       zigbee2mqtt:
         annotations:
