@@ -7,9 +7,9 @@ dependencies:
   version: 0.1.1
 - name: generic-device-plugin
   repository: https://ownyourio.github.io/SpencersLab/
-  version: 1.0.6
+  version: 1.0.11
 - name: zigbee2mqtt
   repository: https://ownyourio.github.io/SpencersLab/
-  version: 1.0.29
-digest: sha256:f6b9404574539120911ceb955be67f692f9be68984a22bb3b5036b75b33fd9fa
-generated: "2024-04-11T20:05:57.270496133-06:00"
+  version: 1.0.35
+digest: sha256:21c0b8ea3c12cb8ce701813f57156dcc07fa09cbac3070f0c3fb52f4188cc646
+generated: "2024-04-11T21:30:25.861753841-06:00"
