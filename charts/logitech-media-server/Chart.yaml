@@ -1,5 +1,5 @@
 apiVersion: v2
-name: espresense
+name: logitech-media-server
 version: 1.0.2
 appVersion: 1.0.2
 dependencies:
