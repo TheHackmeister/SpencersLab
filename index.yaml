@@ -2103,6 +2103,19 @@ entries:
     urls:
     - https://github.com/OwnYourIO/SpencersLab/releases/download/email-appset-1.1.1/email-appset-1.1.1.tgz
     version: 1.1.1
+  espresense:
+  - apiVersion: v2
+    appVersion: 1.0.5
+    created: "2024-04-20T22:55:32.263734264Z"
+    dependencies:
+    - name: app-template
+      repository: https://bjw-s.github.io/helm-charts/
+      version: 3.1.0
+    digest: bb45455b0619e79aef7c668e09952abee41af8b06cfdbb6b37dbc1cae51d1df7
+    name: espresense
+    urls:
+    - https://github.com/OwnYourIO/SpencersLab/releases/download/espresense-1.0.5/espresense-1.0.5.tgz
+    version: 1.0.5
   generic-device-plugin:
   - apiVersion: v2
     appVersion: 1.0.13
@@ -2262,6 +2275,19 @@ entries:
     urls:
     - https://github.com/OwnYourIO/SpencersLab/releases/download/home-appset-1.1.1/home-appset-1.1.1.tgz
     version: 1.1.1
+  hyperion:
+  - apiVersion: v2
+    appVersion: 1.0.5
+    created: "2024-04-20T22:55:32.378197271Z"
+    dependencies:
+    - name: app-template
+      repository: https://bjw-s.github.io/helm-charts/
+      version: 3.1.0
+    digest: e0295ac7b563cb73403100dd9277fbe3f14614de187f4e44d890de6e16c0967f
+    name: hyperion
+    urls:
+    - https://github.com/OwnYourIO/SpencersLab/releases/download/hyperion-1.0.5/hyperion-1.0.5.tgz
+    version: 1.0.5
   infra-appset:
   - apiVersion: v2
     appVersion: 1.1.1
@@ -2687,4 +2713,4 @@ entries:
     urls:
     - https://github.com/OwnYourIO/SpencersLab/releases/download/zigbee2mqtt-1.0.1/zigbee2mqtt-1.0.1.tgz
     version: 1.0.1
-generated: "2024-04-12T04:08:11.96518401Z"
+generated: "2024-04-20T22:55:32.378710575Z"
