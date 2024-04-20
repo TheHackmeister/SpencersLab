@@ -2105,6 +2105,18 @@ entries:
     version: 1.1.1
   espresense:
   - apiVersion: v2
+    appVersion: 1.0.7
+    created: "2024-04-20T23:06:10.598042093Z"
+    dependencies:
+    - name: app-template
+      repository: https://bjw-s.github.io/helm-charts/
+      version: 3.1.0
+    digest: 15aaff00cb8bf7564e74684d815f8baa0086e1df4e5dc4fb6fb85858dc7ece3d
+    name: espresense
+    urls:
+    - https://github.com/OwnYourIO/SpencersLab/releases/download/espresense-1.0.7/espresense-1.0.7.tgz
+    version: 1.0.7
+  - apiVersion: v2
     appVersion: 1.0.5
     created: "2024-04-20T22:55:32.263734264Z"
     dependencies:
@@ -2277,6 +2289,18 @@ entries:
     version: 1.1.1
   hyperion:
   - apiVersion: v2
+    appVersion: 1.0.7
+    created: "2024-04-20T23:06:10.692514386Z"
+    dependencies:
+    - name: app-template
+      repository: https://bjw-s.github.io/helm-charts/
+      version: 3.1.0
+    digest: 930d614accd589cfea679a046f57276424f8b3b9c328f48bd89567d895c1f91c
+    name: hyperion
+    urls:
+    - https://github.com/OwnYourIO/SpencersLab/releases/download/hyperion-1.0.7/hyperion-1.0.7.tgz
+    version: 1.0.7
+  - apiVersion: v2
     appVersion: 1.0.5
     created: "2024-04-20T22:55:32.378197271Z"
     dependencies:
@@ -2297,6 +2321,32 @@ entries:
     urls:
     - https://github.com/OwnYourIO/SpencersLab/releases/download/infra-appset-1.1.1/infra-appset-1.1.1.tgz
     version: 1.1.1
+  ledfx:
+  - apiVersion: v2
+    appVersion: 1.0.5
+    created: "2024-04-20T23:06:10.77870002Z"
+    dependencies:
+    - name: app-template
+      repository: https://bjw-s.github.io/helm-charts/
+      version: 3.1.0
+    digest: ea829787c04926c2b639a4ac599ec9ca9b737e1fb000e8f3d488fa103d6bd654
+    name: ledfx
+    urls:
+    - https://github.com/OwnYourIO/SpencersLab/releases/download/ledfx-1.0.5/ledfx-1.0.5.tgz
+    version: 1.0.5
+  logitech-media-server:
+  - apiVersion: v2
+    appVersion: 1.0.6
+    created: "2024-04-20T23:06:10.894123167Z"
+    dependencies:
+    - name: app-template
+      repository: https://bjw-s.github.io/helm-charts/
+      version: 3.1.0
+    digest: 37e4c03e0ea543b63a71232919ccef4454add3d22c1aef4c62e3756df8d1489c
+    name: logitech-media-server
+    urls:
+    - https://github.com/OwnYourIO/SpencersLab/releases/download/logitech-media-server-1.0.6/logitech-media-server-1.0.6.tgz
+    version: 1.0.6
   media-appset:
   - apiVersion: v2
     appVersion: 1.1.1
@@ -2323,6 +2373,19 @@ entries:
     urls:
     - https://github.com/OwnYourIO/SpencersLab/releases/download/monitoring-appset-1.1.0/monitoring-appset-1.1.0.tgz
     version: 1.1.0
+  music-assistant:
+  - apiVersion: v2
+    appVersion: 1.0.6
+    created: "2024-04-20T23:06:10.981732833Z"
+    dependencies:
+    - name: app-template
+      repository: https://bjw-s.github.io/helm-charts/
+      version: 3.1.0
+    digest: c3ae256f7afcecdb46c09de231f2e3be4df31fa400e28c8147df05c7c3a1ae45
+    name: music-assistant
+    urls:
+    - https://github.com/OwnYourIO/SpencersLab/releases/download/music-assistant-1.0.6/music-assistant-1.0.6.tgz
+    version: 1.0.6
   personal-appset:
   - apiVersion: v2
     appVersion: 1.1.1
@@ -2713,4 +2776,4 @@ entries:
     urls:
     - https://github.com/OwnYourIO/SpencersLab/releases/download/zigbee2mqtt-1.0.1/zigbee2mqtt-1.0.1.tgz
     version: 1.0.1
-generated: "2024-04-20T22:55:32.378710575Z"
+generated: "2024-04-20T23:06:10.98189802Z"
