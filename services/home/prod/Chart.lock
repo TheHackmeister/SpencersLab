@@ -11,5 +11,20 @@ dependencies:
 - name: zigbee2mqtt
   repository: https://ownyourio.github.io/SpencersLab/
   version: 1.0.36
-digest: sha256:c7cea81c39fd22f5e5a71ebf4cd937312a356702c44c7d98fb793f85e41685ed
-generated: "2024-04-13T14:15:31.707626679-06:00"
+- name: espresense
+  repository: https://ownyourio.github.io/SpencersLab/
+  version: 1.0.7
+- name: hyperion
+  repository: https://ownyourio.github.io/SpencersLab/
+  version: 1.0.7
+- name: ledfx
+  repository: https://ownyourio.github.io/SpencersLab/
+  version: 1.0.5
+- name: logitech-media-server
+  repository: https://ownyourio.github.io/SpencersLab/
+  version: 1.0.6
+- name: music-assistant
+  repository: https://ownyourio.github.io/SpencersLab/
+  version: 1.0.6
+digest: sha256:8b55692c59505b56d308a5957c05e47401778d733df1153bba69d6ec4ae46b16
+generated: "2024-04-20T17:12:28.49822092-06:00"
