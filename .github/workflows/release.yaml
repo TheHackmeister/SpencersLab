@@ -50,6 +50,9 @@ jobs:
       # Needed because of this: https://github.com/helm/chart-releaser-action/issues/110
       contents: write
     runs-on: ubuntu-latest
+    concurrency:
+      # Only allow 1 to run at a time so that they get bumped correctly. 
+      group: ${{ github.ref }}-test-build
 
     steps:
       - name: Checkout
