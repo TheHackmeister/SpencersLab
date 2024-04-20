@@ -93,6 +93,9 @@ jobs:
     permissions:
       contents: write
     runs-on: ubuntu-latest
+    concurrency:
+      # Only allow 1 to run at a time so that they get bumped correctly. 
+      group: ${{ github.ref }}
 
     steps:
       - name: Checkout
