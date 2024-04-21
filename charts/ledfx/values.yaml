@@ -1,0 +1,65 @@
+global:
+  nameOverride: ledfx
+bitwardenIds:
+  ledfx: OVERRIDE_NEEDED
+app-template:
+  controllers:
+    ledfx:
+      annotations:
+        reloader.stakater.com/auto: "true"
+      containers:
+        main:
+          image:
+            repository: ghcr.io/mchestr/ledfx
+            tag: v2.0.97
+          env:
+            TZ: Etc/UTC
+            HOST: ledfx.local
+          probes:
+            liveness:
+              enabled: true
+            readiness:
+              enabled: true
+          resources:
+            requests:
+              cpu: 10m
+            limits:
+              memory: 256Mi
+          securityContext:
+            allowPrivilegeEscalation: false
+            readOnlyRootFilesystem: true
+            capabilities:
+              drop:
+                - ALL
+      pod:
+        securityContext:
+          runAsUser: 568
+          runAsNonRoot: true
+          fsGroup: 568
+          fsGroupChangePolicy: OnRootMismatch
+  service:
+    ledfx:
+      controller: ledfx
+      ports:
+        http:
+          port: *port
+  ingress:
+    ledfx:
+      annotations:
+        hajimari.io/url: https://ledfx.local
+      hosts:
+        - host: &host "ledfx.local"
+          paths: &paths
+            - path: /
+              service:
+                identifier: ledfx
+                port: http
+        - host: &customHost ledfx.local
+          paths: *paths
+      tls:
+        - hosts:
+            - *host
+            - *customHost
+  persistence:
+    config:
+      existingClaim: ledfx

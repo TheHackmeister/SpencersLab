@@ -1,0 +1,64 @@
+global:
+  nameOverride: hyperion
+bitwardenIds:
+  hyperion: OVERRIDE_NEEDED
+app-template:
+  controllers:
+    hyperion:
+      annotations:
+        reloader.stakater.com/auto: "true"
+      containers:
+        main:
+          image:
+            repository: ghcr.io/appleimperio/docker-hyperhdr
+            tag: 20.0.0.0
+          env:
+            TZ: Etc/UTC
+          probes:
+            liveness:
+              enabled: true
+            readiness:
+              enabled: true
+          resources:
+            requests:
+              cpu: 10m
+            limits:
+              memory: 256Mi
+          securityContext:
+            allowPrivilegeEscalation: false
+            readOnlyRootFilesystem: true
+            capabilities:
+              drop:
+                - ALL
+      pod:
+        securityContext:
+          runAsUser: 568
+          runAsNonRoot: true
+          fsGroup: 568
+          fsGroupChangePolicy: OnRootMismatch
+  service:
+    hyperion:
+      controller: hyperion
+      ports:
+        http:
+          port: *port
+  ingress:
+    hyperion:
+      annotations:
+        hajimari.io/url: https://hyperion.local
+      hosts:
+        - host: &host "hyperion.local"
+          paths: &paths
+            - path: /
+              service:
+                identifier: hyperion
+                port: http
+        - host: &customHost hyperion.local
+          paths: *paths
+      tls:
+        - hosts:
+            - *host
+            - *customHost
+  persistence:
+    config:
+      existingClaim: hyperion

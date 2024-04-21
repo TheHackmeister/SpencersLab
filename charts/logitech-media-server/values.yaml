@@ -1,0 +1,77 @@
+global:
+  nameOverride: logitech-media-server
+bitwardenIds:
+  logitech-media-server: OVERRIDE_NEEDED
+app-template:
+  controllers:
+    logitech-media-server:
+      annotations:
+        reloader.stakater.com/auto: "true"
+      containers:
+        main:
+          image:
+            repository: lmscommunity/logitechmediaserver
+            tag: 9.0.0
+          env:
+            HTTP_PORT: 9000
+            TZ: Etc/UTC
+          probes:
+            liveness:
+              enabled: true
+            readiness:
+              enabled: true
+          resources:
+            requests:
+              cpu: 10m
+            limits:
+              memory: 256Mi
+          securityContext:
+            allowPrivilegeEscalation: false
+            readOnlyRootFilesystem: true
+            capabilities:
+              drop:
+                - ALL
+      pod:
+        securityContext:
+          runAsUser: 568
+          runAsNonRoot: true
+          fsGroup: 568
+          fsGroupChangePolicy: OnRootMismatch
+  service:
+    logitech-media-server:
+      controller: logitech-media-server
+      ports:
+        http:
+          port: 9000
+        cli:
+          enabled: true
+          port: 9090
+          protocol: TCP
+        slimproto:
+          enabled: true
+          port: 3483
+          protocol: TCP
+        slimproto-udp:
+          enabled: true
+          port: 3483
+          protocol: UDP
+  ingress:
+    logitech-media-server:
+      annotations:
+        hajimari.io/url: https://logitech-media-server.local
+      hosts:
+        - host: &host "logitech-media-server.local"
+          paths: &paths
+            - path: /
+              service:
+                identifier: logitech-media-server
+                port: http
+        - host: &customHost logitech-media-server.local
+          paths: *paths
+      tls:
+        - hosts:
+            - *host
+            - *customHost
+  persistence:
+    config:
+      existingClaim: logitech-media-server

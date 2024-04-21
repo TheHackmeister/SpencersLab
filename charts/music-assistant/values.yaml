@@ -1,0 +1,63 @@
+global:
+  nameOverride: music-assistant
+bitwardenIds:
+  music-assistant: OVERRIDE_NEEDED
+app-template:
+  controllers:
+    music-assistant:
+      annotations:
+        reloader.stakater.com/auto: "true"
+      containers:
+        main:
+          image:
+            repository: ghcr.io/music-assistant/server
+            tag: 2.0.0b137
+          env:
+            TZ: Etc/UTC
+          probes:
+            liveness:
+              enabled: true
+            readiness:
+              enabled: true
+          resources:
+            requests:
+              cpu: 100m
+              memory: 512Mi
+            limits:
+              memory: 1024Mi
+          securityContext:
+            allowPrivilegeEscalation: false
+            readOnlyRootFilesystem: true
+            capabilities:
+              drop:
+                - ALL
+      pod:
+        securityContext:
+          runAsUser: 1000
+          runAsGroup: 1000
+          runAsNonRoot: true
+          fsGroup: 1000
+          fsGroupChangePolicy: OnRootMismatch
+  service:
+    music-assistant:
+      controller: music-assistant
+      ports:
+        http:
+          port: 8095
+  ingress:
+    music-assistant:
+      annotations:
+        hajimari.io/url: https://music-assistant.local
+      hosts:
+        - host: &host "music-assistant.local"
+          paths: &paths
+            - path: /
+              service:
+                identifier: music-assistant
+                port: http
+        - host: &customHost music-assistant.local
+          paths: *paths
+      tls:
+        - hosts:
+            - *host
+            - *customHost
