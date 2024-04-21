@@ -74,4 +74,4 @@ app-template:
             - *customHost
   persistence:
     config:
-      existingClaim: logitech-media-server
+      existingClaim: lms
