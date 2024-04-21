@@ -61,3 +61,6 @@ app-template:
         - hosts:
             - *host
             - *customHost
+  persistence:
+    data:
+      existingClaim: music-assistant

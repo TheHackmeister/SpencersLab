@@ -42,7 +42,7 @@ app-template:
       controller: ledfx
       ports:
         http:
-          port: *port
+          port: 8888
   ingress:
     ledfx:
       annotations:

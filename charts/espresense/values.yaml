@@ -42,7 +42,7 @@ app-template:
       controller: espresense
       ports:
         http:
-          port: *port
+          port: 8267
   ingress:
     espresense:
       annotations:

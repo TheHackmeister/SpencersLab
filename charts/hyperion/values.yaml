@@ -41,7 +41,7 @@ app-template:
       controller: hyperion
       ports:
         http:
-          port: *port
+          port: 8090
   ingress:
     hyperion:
       annotations:
