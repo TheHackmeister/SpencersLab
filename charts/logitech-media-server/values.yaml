@@ -25,18 +25,19 @@ app-template:
               cpu: 10m
             limits:
               memory: 256Mi
-          securityContext:
-            allowPrivilegeEscalation: false
-            readOnlyRootFilesystem: true
-            capabilities:
-              drop:
-                - ALL
+          #securityContext:
+          #  allowPrivilegeEscalation: false
+          #  readOnlyRootFilesystem: true
+          #  capabilities:
+          #    drop:
+          #      - ALL
       pod:
         securityContext:
-          runAsUser: 568
-          runAsNonRoot: true
-          fsGroup: 568
-          fsGroupChangePolicy: OnRootMismatch
+          runAsUser: 1000
+          runAsGroup: 1000
+          #runAsNonRoot: true
+          fsGroup: 1000
+          #fsGroupChangePolicy: OnRootMismatch
   service:
     logitech-media-server:
       controller: logitech-media-server
@@ -75,3 +76,5 @@ app-template:
   persistence:
     config:
       existingClaim: lms
+    playlists:
+      existingClaim: lms-playlists
