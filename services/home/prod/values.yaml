@@ -56,3 +56,40 @@ zigbee2mqtt:
           - hosts:
               - *host
             secretName: wildcard-cert
+ledfx:
+  app-template:
+    persistence:
+      config:
+        existingClaim: ledfx
+        advancedMounts:
+          ledfx:
+            main:
+              - path: /app/ledfx-config/
+
+logitech-media-server:
+  app-template:
+    controllers:
+      logitech-media-server:
+        containers:
+          main:
+            resources:
+              requests:
+                memory: 256Mi
+              limits:
+                memory: 4096Mi
+            securityContext:
+              allowPrivilegeEscalation: false
+              readOnlyRootFilesystem: true
+              capabilities:
+                drop:
+                  - ALL
+        pod:
+          securityContext:
+            runAsUser: 1000
+            runAsGroup: 1000
+            runAsNonRoot: true
+            fsGroup: 1000
+    persistence:
+      playlists:
+        enabled: true
+        existingClaim: lms-playlists
