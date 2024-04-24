@@ -92,11 +92,7 @@ espresense:
           - hosts:
               - *host
             secretName: wildcard-cert
-    persistence:
-      config/espresense:
-        accessMode: ReadWriteOnce
-        enabled: true
-        size: 1Gi
+
 ledfx:
   app-template:
     ingress:
