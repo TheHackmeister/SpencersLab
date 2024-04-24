@@ -56,8 +56,63 @@ zigbee2mqtt:
           - hosts:
               - *host
             secretName: wildcard-cert
+music-assistant:
+  app-template:
+    ingress:
+      music-assistant:
+        annotations:
+          hajimari.io/url: https://music-assistant.spencerslab.com
+        hosts:
+          - host: &host "music-assistant.spencerslab.com"
+            paths: &paths
+              - path: /
+                service:
+                  identifier: music-assistant
+                  port: http
+        tls:
+          - hosts:
+              - *host
+            secretName: wildcard-cert
+espresense:
+  bitwardenIds:
+    espresense: 1130d75e-e16c-428b-bf99-b15b0010e993
+  app-template:
+    ingress:
+      espresense:
+        annotations:
+          hajimari.io/url: https://espresense.spencerslab.com
+        hosts:
+          - host: &host "espresense.spencerslab.com"
+            paths: &paths
+              - path: /
+                service:
+                  identifier: espresense
+                  port: http
+        tls:
+          - hosts:
+              - *host
+            secretName: wildcard-cert
+    persistence:
+      config/espresense:
+        enabled: true
+        size: 1Gi
 ledfx:
   app-template:
+    ingress:
+      ledfx:
+        annotations:
+          hajimari.io/url: https://ledfx.spencerslab.com
+        hosts:
+          - host: &host "ledfx.spencerslab.com"
+            paths: &paths
+              - path: /
+                service:
+                  identifier: ledfx
+                  port: http
+        tls:
+          - hosts:
+              - *host
+            secretName: wildcard-cert
     persistence:
       config:
         existingClaim: ledfx
@@ -95,6 +150,21 @@ logitech-media-server:
         #    runAsGroup: 1000
         #    runAsNonRoot: true
         #    fsGroup: 1000
+    ingress:
+      espresense:
+        annotations:
+          hajimari.io/url: https://lms.spencerslab.com
+        hosts:
+          - host: &host "lms.spencerslab.com"
+            paths: &paths
+              - path: /
+                service:
+                  identifier: lms
+                  port: http
+        tls:
+          - hosts:
+              - *host
+            secretName: wildcard-cert
     persistence:
       playlists:
         enabled: true
