@@ -10,8 +10,8 @@ app-template:
       containers:
         main:
           image:
-            repository: ghcr.io/appleimperio/docker-hyperhdr
-            tag: 20.0.0.0
+            repository: nocturno/hyper-hdr
+            tag: amd64-20.0.0.0
           env:
             TZ: Etc/UTC
           probes:
