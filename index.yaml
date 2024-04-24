@@ -2105,6 +2105,18 @@ entries:
     version: 1.1.1
   espresense:
   - apiVersion: v2
+    appVersion: 1.0.9
+    created: "2024-04-24T00:42:27.495527554Z"
+    dependencies:
+    - name: app-template
+      repository: https://bjw-s.github.io/helm-charts/
+      version: 3.1.0
+    digest: 0155419310766568727eb15dd63ae07066975be48a5e443c6fe7607cb8e3538a
+    name: espresense
+    urls:
+    - https://github.com/OwnYourIO/SpencersLab/releases/download/espresense-1.0.9/espresense-1.0.9.tgz
+    version: 1.0.9
+  - apiVersion: v2
     appVersion: 1.0.8
     created: "2024-04-21T02:36:52.760987845Z"
     dependencies:
@@ -2300,6 +2312,18 @@ entries:
     - https://github.com/OwnYourIO/SpencersLab/releases/download/home-appset-1.1.1/home-appset-1.1.1.tgz
     version: 1.1.1
   hyperion:
+  - apiVersion: v2
+    appVersion: 1.0.9
+    created: "2024-04-24T00:42:27.687174927Z"
+    dependencies:
+    - name: app-template
+      repository: https://bjw-s.github.io/helm-charts/
+      version: 3.1.0
+    digest: d3694f960243d9b17fb22ba648f18b80c1cf2e88cbd935a8fda81d0886fd8785
+    name: hyperion
+    urls:
+    - https://github.com/OwnYourIO/SpencersLab/releases/download/hyperion-1.0.9/hyperion-1.0.9.tgz
+    version: 1.0.9
   - apiVersion: v2
     appVersion: 1.0.8
     created: "2024-04-21T02:36:52.916854089Z"
@@ -2872,4 +2896,4 @@ entries:
     urls:
     - https://github.com/OwnYourIO/SpencersLab/releases/download/zigbee2mqtt-1.0.1/zigbee2mqtt-1.0.1.tgz
     version: 1.0.1
-generated: "2024-04-22T03:25:28.402065194Z"
+generated: "2024-04-24T00:42:27.687423102Z"
