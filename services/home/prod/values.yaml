@@ -160,7 +160,7 @@ logitech-media-server:
             paths: &paths
               - path: /
                 service:
-                  identifier: lms
+                  identifier: logitech-media-server
                   port: http
         tls:
           - hosts:
