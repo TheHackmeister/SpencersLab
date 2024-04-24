@@ -23,10 +23,10 @@ dependencies:
 #  version: 19.5.2
 #  repository: https://charts.truecharts.org
 - name: espresense
-  version: 1.0.8
+  version: 1.0.9
   repository: https://ownyourio.github.io/SpencersLab/
 #- name: hyperion
-#  version: 1.0.8
+#  version: 1.0.9
 #  repository: https://ownyourio.github.io/SpencersLab/
 - name: ledfx
   version: 1.0.6
@@ -35,5 +35,5 @@ dependencies:
   version: 1.0.11
   repository: https://ownyourio.github.io/SpencersLab/
 - name: music-assistant
-  version: 1.0.7
+  version: 1.0.8
   repository: https://ownyourio.github.io/SpencersLab/

@@ -13,7 +13,7 @@ dependencies:
   version: 1.0.36
 - name: espresense
   repository: https://ownyourio.github.io/SpencersLab/
-  version: 1.0.8
+  version: 1.0.9
 - name: ledfx
   repository: https://ownyourio.github.io/SpencersLab/
   version: 1.0.6
@@ -22,6 +22,6 @@ dependencies:
   version: 1.0.11
 - name: music-assistant
   repository: https://ownyourio.github.io/SpencersLab/
-  version: 1.0.7
-digest: sha256:997a5562139d87842fadae660bf8cad54d6387fe4f145c26bbba4acce822d039
-generated: "2024-04-21T21:26:18.90452815-06:00"
+  version: 1.0.8
+digest: sha256:652285bee244cd55e5ed3c1590cf7873b2eda8c55f2947ecfb0c8b6b962159bb
+generated: "2024-04-23T21:31:31.940209702-06:00"
