@@ -15,6 +15,9 @@ app-template:
           env:
             TZ: Etc/UTC
             CONFIG_DIR: "/config"
+          envFrom:
+            - secretRef:
+                name: espresense-secret
           probes:
             liveness:
               enabled: true
