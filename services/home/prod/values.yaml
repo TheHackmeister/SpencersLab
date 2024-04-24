@@ -94,8 +94,7 @@ espresense:
             secretName: wildcard-cert
     persistence:
       config/espresense:
-        accessModes:
-        - ReadWriteOnce
+        accessMode: ReadWriteOnce
         enabled: true
         size: 1Gi
 ledfx:
