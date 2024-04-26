@@ -66,14 +66,6 @@ music-assistant:
             enabled: true
             port: 9090
             protocol: TCP
-          slimproto:
-            enabled: true
-            port: 3483
-            protocol: TCP
-          slimproto-udp:
-            enabled: true
-            port: 3483
-            protocol: UDP
     
     ingress:
       music-assistant:
