@@ -62,6 +62,8 @@ music-assistant:
       music-assistant:
         type: LoadBalancer
         ports:
+          http:
+            primary: true
           cli:
             enabled: true
             port: 9090
