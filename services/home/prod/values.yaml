@@ -60,7 +60,7 @@ music-assistant:
   app-template:
     service:
       music-assistant:
-        type: LoadBalancerIP
+        type: LoadBalancer
         ports:
           cli:
             enabled: true
