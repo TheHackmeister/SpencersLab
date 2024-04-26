@@ -58,6 +58,23 @@ zigbee2mqtt:
             secretName: wildcard-cert
 music-assistant:
   app-template:
+    service:
+      music-assistant:
+        type: LoadBalancerIP
+        ports:
+          cli:
+            enabled: true
+            port: 9090
+            protocol: TCP
+          slimproto:
+            enabled: true
+            port: 3483
+            protocol: TCP
+          slimproto-udp:
+            enabled: true
+            port: 3483
+            protocol: UDP
+    
     ingress:
       music-assistant:
         annotations:
