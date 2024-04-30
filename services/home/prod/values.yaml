@@ -80,6 +80,9 @@ music-assistant:
           http2:
             port: 1780
     
+    pod:
+      music-assistant:
+        hostNetwork: true
     ingress:
       music-assistant:
         annotations:
