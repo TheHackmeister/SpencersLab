@@ -59,9 +59,9 @@ zigbee2mqtt:
 music-assistant:
   app-template:
     service:
-      externalTrafficPolicy: Local
       music-assistant:
         type: LoadBalancer
+        externalTrafficPolicy: Local
         ports:
           http:
             primary: true
