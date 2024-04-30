@@ -61,6 +61,7 @@ music-assistant:
     service:
       music-assistant:
         type: LoadBalancer
+        ExternalTrafficPolicy: Local
         ports:
           http:
             primary: true
@@ -75,11 +76,9 @@ music-assistant:
           slimproto:
             enabled: true
             port: 3483
-            protocol: TCP
-          slimproto-udp:
-            enabled: true
-            port: 3483
-            protocol: UDP
+            #protocol: TCP
+          http2:
+            port: 1780
     
     ingress:
       music-assistant:
