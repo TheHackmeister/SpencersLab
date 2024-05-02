@@ -71,20 +71,29 @@ music-assistant:
           control:
             port: 1705
     
-    persistence:
-      snapserver:
-        enabled: true
-        type: persistentVolumeClaim
-        accessMode: ReadWriteOnce
-        size: 1Gi
-        advancedMounts:
-          music-assistant:
-            main:
-              - path: /var/lib/snapserver/
+    # persistence:
+    #   snapserver:
+    #     enabled: true
+    #     type: persistentVolumeClaim
+    #     accessMode: ReadWriteOnce
+    #     size: 1Gi
+    #     advancedMounts:
+    #       music-assistant:
+    #         main:
+    #           - path: /var/lib/snapserver/
 
     pod:
       music-assistant:
         hostNetwork: true
+      securityContext:
+        runAsUser: 1000
+        runAsGroup: 1001
+        fsGroup: 1001
+        runAsNonRoot: false
+        fsGroupChangePolicy: "OnRootMismatch"
+        supplementalGroups:
+          - 100
+
     ingress:
       music-assistant:
         annotations:
