@@ -79,7 +79,7 @@ music-assistant:
         size: 1Gi
         advancedMounts:
           music-assistant:
-            music-assistant:
+            main:
               - path: /var/lib/snapserver/
 
     pod:
