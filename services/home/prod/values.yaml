@@ -75,9 +75,6 @@ music-assistant:
       tmp:
         enabled: true
         type: emptyDir
-        accessMode: ReadWriteOnce
-        size: 1Gi
-
     controllers:
       music-assistant:
         containers:
