@@ -59,12 +59,6 @@ zigbee2mqtt:
 music-assistant:
   app-template:
     service:
-      music-assistant:
-        ports:
-          http:
-            primary: true
-          http2:
-            port: 1780
       cast:
         type: LoadBalancer
         controller: music-assistant
