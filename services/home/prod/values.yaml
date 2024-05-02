@@ -59,6 +59,8 @@ zigbee2mqtt:
 music-assistant:
   app-template:
     service:
+      music-assistant:
+        primary: true
       cast:
         type: LoadBalancer
         controller: music-assistant
