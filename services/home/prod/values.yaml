@@ -75,7 +75,7 @@ music-assistant:
       snapserver:
         enabled: true
         type: persistentVolumeClaim
-        accessMode: readWriteOnce
+        accessMode: ReadWriteOnce
         size: 1Gi
         advancedMounts:
           music-assistant:
