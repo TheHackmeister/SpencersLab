@@ -60,7 +60,6 @@ music-assistant:
   app-template:
     service:
       music-assistant:
-        externalTrafficPolicy: Local
         ports:
           http:
             primary: true
