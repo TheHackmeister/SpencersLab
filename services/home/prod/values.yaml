@@ -71,6 +71,17 @@ music-assistant:
           control:
             port: 1705
     
+    persistence:
+      snapserver:
+        enabled: true
+        type: persistentVolumeClaim
+        accessMode: readWriteOnce
+        size: 1Gi
+        advancedMounts:
+          music-assistant:
+            music-assistant:
+              - path: /var/lib/snapserver/
+
     pod:
       music-assistant:
         hostNetwork: true
