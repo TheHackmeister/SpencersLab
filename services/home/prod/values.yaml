@@ -60,25 +60,21 @@ music-assistant:
   app-template:
     service:
       music-assistant:
-        type: LoadBalancer
         externalTrafficPolicy: Local
         ports:
           http:
             primary: true
-          other:
-            enabled: true
-            port: 9000
-            protocol: TCP
-          cli:
-            enabled: true
-            port: 9090
-            protocol: TCP
-          slimproto:
-            enabled: true
-            port: 3483
-            #protocol: TCP
           http2:
             port: 1780
+      cast:
+        type: LoadBalancer
+        controller: music-assistant
+        externalTrafficPolicy: Cluster
+        ports:
+          stream:
+            port: 1704
+          control:
+            port: 1705
     
     pod:
       music-assistant:
