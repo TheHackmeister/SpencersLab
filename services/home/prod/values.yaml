@@ -75,24 +75,12 @@ music-assistant:
       tmp:
         enabled: true
         type: emptyDir
-    controllers:
-      music-assistant:
-        containers:
-          main: 
-            env: 
-              LOG_LEVEL: debug
-
-    pod:
-      music-assistant:
-        hostNetwork: true
-      securityContext:
-        runAsUser: 1000
-        runAsGroup: 1001
-        fsGroup: 1001
-        runAsNonRoot: false
-        fsGroupChangePolicy: "OnRootMismatch"
-        supplementalGroups:
-          - 100
+    #controllers:
+    #  music-assistant:
+    #    containers:
+    #      main: 
+    #        env: 
+    #          LOG_LEVEL: debug
 
     ingress:
       music-assistant:
