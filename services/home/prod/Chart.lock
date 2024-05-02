@@ -22,6 +22,6 @@ dependencies:
   version: 1.0.11
 - name: music-assistant
   repository: https://ownyourio.github.io/SpencersLab/
-  version: 1.0.8
-digest: sha256:652285bee244cd55e5ed3c1590cf7873b2eda8c55f2947ecfb0c8b6b962159bb
-generated: "2024-04-23T21:31:31.940209702-06:00"
+  version: 1.0.9
+digest: sha256:93faae95d39a51636407f574cc8aaf5315d4e0e205f1e6e2c3f8a3cbda9a6a9d
+generated: "2024-05-01T18:21:56.813733761-06:00"
