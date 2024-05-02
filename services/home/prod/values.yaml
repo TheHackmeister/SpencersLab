@@ -71,16 +71,13 @@ music-assistant:
           control:
             port: 1705
     
-    # persistence:
-    #   snapserver:
-    #     enabled: true
-    #     type: persistentVolumeClaim
-    #     accessMode: ReadWriteOnce
-    #     size: 1Gi
-    #     advancedMounts:
-    #       music-assistant:
-    #         main:
-    #           - path: /var/lib/snapserver/
+    persistence:
+      tmp:
+        enabled: true
+        type: emptyDir
+        accessMode: ReadWriteOnce
+        size: 1Gi
+
     controllers:
       music-assistant:
         containers:
