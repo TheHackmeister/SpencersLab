@@ -86,7 +86,7 @@ music-assistant:
         containers:
           main: 
             env: 
-              - LOG_LEVEL: debug
+              LOG_LEVEL: debug
 
     pod:
       music-assistant:
