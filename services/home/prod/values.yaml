@@ -83,9 +83,10 @@ music-assistant:
     #           - path: /var/lib/snapserver/
     controllers:
       music-assistant:
-        main: 
-          env: 
-            - LOG_LEVEL: debug
+        containers:
+          main: 
+            env: 
+              - LOG_LEVEL: debug
 
     pod:
       music-assistant:
