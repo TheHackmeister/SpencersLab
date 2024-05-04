@@ -70,10 +70,11 @@ music-assistant:
             port: 1704
           control:
             port: 1705
-          http2:
-            port: 9000
-          cli:
-            port: 9090
+      lms:
+        type: LoadBalancer
+        controller: music-assistant
+        externalTrafficPolicy: Cluster
+        ports:
           slimproto:
             port: 3483
     
