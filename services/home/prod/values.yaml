@@ -61,7 +61,7 @@ music-assistant:
     service:
       music-assistant:
         primary: true
-      cast:
+      snapcast:
         type: LoadBalancer
         controller: music-assistant
         externalTrafficPolicy: Cluster
@@ -75,6 +75,8 @@ music-assistant:
         controller: music-assistant
         externalTrafficPolicy: Cluster
         ports:
+          cli:
+            port: 9090
           slimproto:
             port: 3483
     
