@@ -61,9 +61,6 @@ music-assistant:
     service:
       music-assistant:
         primary: true
-        ports:
-          http3:
-            port: 9000
       snapcast:
         type: LoadBalancer
         controller: music-assistant
@@ -78,6 +75,8 @@ music-assistant:
         controller: music-assistant
         externalTrafficPolicy: Cluster
         ports:
+          http3:
+            port: 9000
           cli:
             port: 9090
           slimproto:
