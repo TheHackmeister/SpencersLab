@@ -58,6 +58,8 @@ zigbee2mqtt:
             secretName: wildcard-cert
 music-assistant:
   app-template:
+    pod: 
+      hostNetwork: true
     service:
       music-assistant:
         primary: true
