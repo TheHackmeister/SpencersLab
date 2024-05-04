@@ -75,6 +75,8 @@ music-assistant:
         controller: music-assistant
         externalTrafficPolicy: Cluster
         ports:
+          http3:
+            port: 9001
           cli:
             port: 9090
           slimproto-tcp:
