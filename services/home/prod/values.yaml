@@ -75,12 +75,14 @@ music-assistant:
         controller: music-assistant
         externalTrafficPolicy: Cluster
         ports:
-          http3:
-            port: 9000
           cli:
             port: 9090
-          slimproto:
+          slimproto-tcp:
             port: 3483
+            protocol: TCP
+          slimproto-udp:
+            port: 3483
+            protocol: UDP
     
     persistence:
       tmp:
