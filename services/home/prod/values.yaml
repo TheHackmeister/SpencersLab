@@ -83,6 +83,7 @@ music-assistant:
             port: 3483
             protocol: TCP
           slimproto-udp:
+            enabled: true
             port: 3483
             protocol: UDP
     
