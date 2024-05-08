@@ -160,3 +160,24 @@ ledfx:
             main:
               - path: /app/ledfx-config/
 
+
+hyperion:
+  app-template:
+    controllers:
+      hyperion:
+        containers:
+          main:
+            env:
+              TZ: America/Denver
+              PUID: 1000
+              PGID: 1000
+            securityContext:
+              readOnlyRootFilesystem: true
+              capabilities:
+                drop: []
+        pod:
+          securityContext:
+            runAsNonRoot: true
+            runAsUser: 1000
+            fsGroup: 1000
+            fsGroupChangePolicy: OnRootMismatch
