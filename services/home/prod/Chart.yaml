@@ -25,9 +25,9 @@ dependencies:
 - name: espresense
   version: 1.0.9
   repository: https://ownyourio.github.io/SpencersLab/
-#- name: hyperion
-#  version: 1.0.9
-#  repository: https://ownyourio.github.io/SpencersLab/
+- name: hyperion
+  version: 1.0.9
+  repository: https://ownyourio.github.io/SpencersLab/
 - name: ledfx
   version: 1.0.6
   repository: https://ownyourio.github.io/SpencersLab/
