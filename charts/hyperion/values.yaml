@@ -24,18 +24,6 @@ app-template:
               cpu: 10m
             limits:
               memory: 256Mi
-          securityContext:
-            allowPrivilegeEscalation: false
-            readOnlyRootFilesystem: true
-            capabilities:
-              drop:
-                - ALL
-      pod:
-        securityContext:
-          runAsUser: 568
-          runAsNonRoot: true
-          fsGroup: 568
-          fsGroupChangePolicy: OnRootMismatch
   service:
     hyperion:
       controller: hyperion
