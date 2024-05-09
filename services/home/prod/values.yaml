@@ -178,7 +178,7 @@ hyperion:
                 drop: []
         pod:
           securityContext:
-            runAsNonRoot: true
+            runAsNonRoot: false
             runAsUser: 911
             fsGroup: 1000
             fsGroupChangePolicy: OnRootMismatch
