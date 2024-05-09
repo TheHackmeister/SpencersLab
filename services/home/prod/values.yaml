@@ -172,7 +172,7 @@ hyperion:
               PUID: 911
               PGID: 1000
             securityContext:
-              #allowPrivilegeEscalation: true
+              allowPrivilegeEscalation: false
               capabilities:
                 drop: 
                   - ALL
