@@ -2313,6 +2313,18 @@ entries:
     version: 1.1.1
   hyperion:
   - apiVersion: v2
+    appVersion: 1.0.10
+    created: "2024-05-09T00:54:15.526326891Z"
+    dependencies:
+    - name: app-template
+      repository: https://bjw-s.github.io/helm-charts/
+      version: 3.1.0
+    digest: f673282afda73df61bef2f5bfad69b1b6df18e683f59ab76de5f2e336ab767ce
+    name: hyperion
+    urls:
+    - https://github.com/OwnYourIO/SpencersLab/releases/download/hyperion-1.0.10/hyperion-1.0.10.tgz
+    version: 1.0.10
+  - apiVersion: v2
     appVersion: 1.0.9
     created: "2024-04-24T00:42:27.687174927Z"
     dependencies:
@@ -2920,4 +2932,4 @@ entries:
     urls:
     - https://github.com/OwnYourIO/SpencersLab/releases/download/zigbee2mqtt-1.0.1/zigbee2mqtt-1.0.1.tgz
     version: 1.0.1
-generated: "2024-05-02T00:19:19.907693638Z"
+generated: "2024-05-09T00:54:15.526618606Z"
