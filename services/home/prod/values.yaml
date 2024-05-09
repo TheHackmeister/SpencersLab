@@ -172,7 +172,8 @@ hyperion:
               PUID: 1000
               PGID: 1000
             securityContext:
-              readOnlyRootFilesystem: true
+              allowPrivilegeEscalation: true
+              readOnlyRootFilesystem: false
               capabilities:
                 drop: []
         pod:
