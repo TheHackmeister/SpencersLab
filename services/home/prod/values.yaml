@@ -169,8 +169,8 @@ hyperion:
           main:
             env:
               TZ: America/Denver
-              PUID: 911
-              PGID: 1000
+              #PUID: 911
+              #PGID: 1000
             securityContext: {}
               #allowPrivilegeEscalation: true
               #readOnlyRootFilesystem: false
