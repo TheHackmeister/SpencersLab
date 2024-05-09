@@ -171,9 +171,9 @@ hyperion:
               TZ: America/Denver
               PUID: 911
               PGID: 1000
-            #securityContext: {}
+            securityContext:
               #allowPrivilegeEscalation: true
-              #readOnlyRootFilesystem: false
+              readOnlyRootFilesystem: true
               #capabilities:
               #  drop: []
               #    #- ALL
