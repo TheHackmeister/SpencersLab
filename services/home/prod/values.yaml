@@ -171,14 +171,15 @@ hyperion:
               TZ: America/Denver
               PUID: 911
               PGID: 1000
-            securityContext:
-              allowPrivilegeEscalation: true
-              readOnlyRootFilesystem: false
-              capabilities:
-                drop: []
+            securityContext: {}
+              #allowPrivilegeEscalation: true
+              #readOnlyRootFilesystem: false
+              #capabilities:
+              #  drop: []
+              #    #- ALL
         pod:
-          securityContext:
-            runAsNonRoot: false
-            runAsUser: 911
-            fsGroup: 1000
-            fsGroupChangePolicy: OnRootMismatch
+          securityContext: {}
+            #runAsNonRoot: false
+            #runAsUser: 911
+            #fsGroup: 1000
+            #fsGroupChangePolicy: OnRootMismatch
