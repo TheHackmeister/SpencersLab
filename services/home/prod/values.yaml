@@ -183,17 +183,17 @@ hyperion:
             fsGroup: 911
             fsGroupChangePolicy: OnRootMismatch
 
-        ingress:
-          hyperion:
-            annotations:
-              hajimari.io/url: https://hyperhdr.spencerslab.com
-            hosts:
-              - host: &host "hyperhdr.spencerslab.com"
-                paths:
-                  - path: /
-                    service:
-                      identifier: hyperion
-                      port: http
-            tls:
-              - hosts:
-                  - *host
+    ingress:
+      hyperion:
+        annotations:
+          hajimari.io/url: https://hyperhdr.spencerslab.com
+        hosts:
+          - host: &host "hyperhdr.spencerslab.com"
+            paths:
+              - path: /
+                service:
+                  identifier: hyperion
+                  port: http
+        tls:
+          - hosts:
+              - *host
