@@ -16,12 +16,12 @@ dependencies:
   version: 1.0.9
 - name: hyperion
   repository: https://ownyourio.github.io/SpencersLab/
-  version: 1.0.9
+  version: 1.0.10
 - name: ledfx
   repository: https://ownyourio.github.io/SpencersLab/
   version: 1.0.6
 - name: music-assistant
   repository: https://ownyourio.github.io/SpencersLab/
   version: 1.0.9
-digest: sha256:088fd377c393f72341053e9bb3109ab9b3c64a1571d4a86843de413385c7ad9b
-generated: "2024-05-07T20:29:57.434456792-06:00"
+digest: sha256:c8b01fbb67e2153735bddb45571a872ed900f9a9935d618853a4983147b6ecb1
+generated: "2024-05-08T19:06:45.622480761-06:00"
