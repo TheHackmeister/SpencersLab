@@ -169,7 +169,7 @@ hyperion:
           main:
             env:
               TZ: America/Denver
-              PUID: 1000
+              PUID: 911
               PGID: 1000
             securityContext:
               allowPrivilegeEscalation: true
@@ -179,6 +179,6 @@ hyperion:
         pod:
           securityContext:
             runAsNonRoot: true
-            runAsUser: 1000
+            runAsUser: 911
             fsGroup: 1000
             fsGroupChangePolicy: OnRootMismatch
