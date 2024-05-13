@@ -64,7 +64,12 @@ music-assistant:
           main:
             resources:
               requests:
-                cpu: 500m
+                cpu: 1000m
+                memory: 512Mi
+              limits:
+                memory: 1024Mi
+            image:
+              tag: 2.0.2
     pod: 
       hostNetwork: true
     service:
