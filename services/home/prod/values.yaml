@@ -78,7 +78,7 @@ music-assistant:
         externalTrafficPolicy: Local
         ports:
           http3:
-            port: 9001
+            port: 9000
           cli:
             port: 9090
           slimproto-tcp:
