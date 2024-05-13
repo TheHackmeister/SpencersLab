@@ -81,6 +81,12 @@ music-assistant:
             port: 9000
           cli:
             port: 9090
+          another:
+            port: 8095
+          another2:
+            port: 8097
+          another3:
+            port: 8098
           slimproto-tcp:
             port: 3483
             protocol: TCP
