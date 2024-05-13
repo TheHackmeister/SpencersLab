@@ -58,6 +58,13 @@ zigbee2mqtt:
             secretName: wildcard-cert
 music-assistant:
   app-template:
+    controllers:
+      music-assistant:
+        containers:
+          main:
+            resources:
+              requests:
+                cpu: 500m
     pod: 
       hostNetwork: true
     service:
