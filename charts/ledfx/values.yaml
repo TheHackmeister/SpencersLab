@@ -16,33 +16,44 @@ app-template:
             TZ: Etc/UTC
             HOST: ledfx.local
           probes:
-            liveness:
+            liveness: &probes
               enabled: true
-            readiness:
-              enabled: true
+              custom: true
+              spec:
+                httpGet:
+                  path: /api/info
+                  port: &port 8888
+                initialDelaySeconds: 0
+                periodSeconds: 10
+                timeoutSeconds: 1
+                failureThreshold: 3
+            readiness: *probes
+            startup:
+              enabled: false
           resources:
             requests:
               cpu: 10m
             limits:
               memory: 256Mi
-          securityContext:
-            allowPrivilegeEscalation: false
-            readOnlyRootFilesystem: true
-            capabilities:
-              drop:
-                - ALL
-      pod:
-        securityContext:
-          runAsUser: 568
-          runAsNonRoot: true
-          fsGroup: 568
-          fsGroupChangePolicy: OnRootMismatch
+          #securityContext:
+          #  allowPrivilegeEscalation: false
+          #  readOnlyRootFilesystem: true
+          #  capabilities:
+          #    drop:
+          #      - ALL
+      #pod:
+      #  securityContext:
+      #    # Needs to run as root?
+      #    runAsUser: 568
+      #    runAsNonRoot: true
+      #    fsGroup: 568
+      #    fsGroupChangePolicy: OnRootMismatch
   service:
     ledfx:
       controller: ledfx
       ports:
         http:
-          port: 8888
+          port: *port 
   ingress:
     ledfx:
       annotations:
@@ -63,3 +74,5 @@ app-template:
   persistence:
     config:
       existingClaim: ledfx
+      globalMounts:
+        - path: /app/ledfx-config
