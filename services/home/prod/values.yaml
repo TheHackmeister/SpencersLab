@@ -168,6 +168,7 @@ ledfx:
               tag: v0.0.2
             env:
               TZ: America/Denver
+              SNAPSERVER: home-music-assistant.default.svc.cluster.local
               #SNAPSERVER: music-assistant.spencerslab.com
               SND_DEVICE: /dev/snd
             resources:
