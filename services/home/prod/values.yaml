@@ -141,7 +141,10 @@ music-assistant:
             enabled: true
             port: 1935
             protocol: TCP
-            targetPort: 1935
+          shoutcast:
+            enabled: true
+            port: 8000
+            protocol: TCP
 
     persistence:
       tmp:
