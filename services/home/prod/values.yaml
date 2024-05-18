@@ -169,6 +169,7 @@ ledfx:
             env:
               TZ: America/Denver
               SNAPSERVER: music-assistant.spencerslab.com
+              SND_DEVICE: 1
             resources:
               limits:
                 squat.ai/snd: 1
