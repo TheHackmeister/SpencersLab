@@ -167,6 +167,7 @@ ledfx:
     service:
       snapserver:
         controller: ledfx
+        name: snapcast
         ports:
           http:
             port: 1780
