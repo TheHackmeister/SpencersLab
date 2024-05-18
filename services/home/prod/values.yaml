@@ -169,7 +169,7 @@ ledfx:
               tag: v0.0.2
             env:
               TZ: America/Denver
-              SNAPSERVER: music-assistant.spencerslab.com
+              SNAPSERVER: home-music-assistant.default.svc.cluster.local
               SND_DEVICE: /dev/snd/controlC0
             resources:
               limits:
