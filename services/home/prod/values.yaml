@@ -26,7 +26,8 @@ generic-device-plugin:
               - name: snd
                 groups:
                   - paths:
-                      - path: /dev/snd
+                      - path: /dev/snd/controlC0
+                        mountPath: /dev/snd/controlC0
 zigbee2mqtt:
   bitwardenIds:
     zigbee2mqtt: 0164cfbc-dd85-43af-a4cc-b13f00108bde
@@ -168,9 +169,8 @@ ledfx:
               tag: v0.0.2
             env:
               TZ: America/Denver
-              SNAPSERVER: home-music-assistant.default.svc.cluster.local
-              #SNAPSERVER: music-assistant.spencerslab.com
-              SND_DEVICE: /dev/snd
+              SNAPSERVER: music-assistant.spencerslab.com
+              SND_DEVICE: 1
             resources:
               limits:
                 squat.ai/snd: 1
