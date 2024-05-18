@@ -160,6 +160,11 @@ espresense:
 ledfx:
   app-template:
     controllers:
+      ledfx:
+        containers:
+          main:
+            env:
+              SQUEEZE: music-assistant.spencerslab.com
       snapclient:
         containers:
           main:
