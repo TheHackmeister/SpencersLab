@@ -170,6 +170,7 @@ ledfx:
               TZ: America/Denver
               SNAPSERVER: music-assistant.spencerslab.com
               SND_DEVICE: /dev/snd
+            CMD: sleep 300 
             resources:
               limits:
                 squat.ai/snd: 1
