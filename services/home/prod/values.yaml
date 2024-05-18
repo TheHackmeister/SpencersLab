@@ -74,6 +74,10 @@ music-assistant:
                 memory: 1024Mi
             #image:
                 #tag: 2.0.2
+            env:
+              LOG_LEVEL: debug
+              TZ: America/Denver
+
     pod: 
       hostNetwork: true
     service:
@@ -165,20 +169,6 @@ ledfx:
           main:
             env:
               SQUEEZE: 1
-      snapclient:
-        containers:
-          main:
-            image:
-              repository: cthelight/snapclient
-              tag: v0.0.2
-            env:
-              TZ: America/Denver
-              SNAPSERVER: music-assistant.spencerslab.com
-              SND_DEVICE: 21
-              CLIENT_HOST_ID: "LedFx" 
-            resources:
-              limits:
-                squat.ai/snd: 1
     ingress:
       ledfx:
         annotations:
