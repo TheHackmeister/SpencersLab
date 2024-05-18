@@ -101,6 +101,8 @@ music-assistant:
             port: 9000
           cli:
             port: 9090
+          stream:
+            port: 1780
           another:
             port: 8095
           another2:
