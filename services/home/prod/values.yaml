@@ -26,22 +26,7 @@ generic-device-plugin:
               - name: snd
                 groups:
                   - paths:
-                      - path: /dev/snd/controlC0
-                        mountPath: /dev/snd/controlC0
-                      - path: /dev/snd/hwC1D0
-                        mountPath: /dev/snd/hwC1D0
-                      - path: /dev/snd/pcmC1D0c
-                        mountPath: /dev/snd/pcmC1D0c
-                      - path: /dev/snd/pcmC1D0p
-                        mountPath: /dev/snd/pcmC1D0p
-                      - path: /dev/snd/controlC1
-                        mountPath: /dev/snd/controlC1
-                      - path: /dev/snd/hwC1D1
-                        mountPath: /dev/snd/hwC1D1
-                      - path: /dev/snd/pcmC1D2c
-                        mountPath: /dev/snd/pcmC1D2c
-                      - path: /dev/snd/pcmC1D2p
-                        mountPath: /dev/snd/pcmC1D2p
+                      - path: /dev/snd
 zigbee2mqtt:
   bitwardenIds:
     zigbee2mqtt: 0164cfbc-dd85-43af-a4cc-b13f00108bde
