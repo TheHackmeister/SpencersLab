@@ -72,8 +72,8 @@ music-assistant:
                 memory: 512Mi
               limits:
                 memory: 1024Mi
-            #image:
-                #tag: 2.0.2
+            image:
+                tag: 2.0.4
             env:
               LOG_LEVEL: debug
               TZ: America/Denver
