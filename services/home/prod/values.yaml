@@ -168,8 +168,9 @@ ledfx:
               tag: v0.0.2
             env:
               TZ: America/Denver
-              SNAPSERVER: home-music-assistant.default.svc.cluster.local
-              SND_DEVICE: /dev/snd/controlC0
+              SNAPSERVER: music-assistant.spencerslab.com
+              SND_DEVICE: 21
+              CLIENT_HOST_ID: "LedFx" 
             resources:
               limits:
                 squat.ai/snd: 1
