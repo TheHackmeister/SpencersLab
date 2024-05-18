@@ -159,6 +159,8 @@ ledfx:
       ledfx:
         containers:
           snapcast:
+            labels:
+              snapcast: true
             image:
               repository: ghcr.io/mchestr/snapserver
               tag: 0.27.0@sha256:b59972986d156f2dc17013c911eaedf8ec33b4cb2afed38e3e6ff74b3483d134
@@ -166,7 +168,10 @@ ledfx:
               TZ: America/Vancouver
     service:
       snapserver:
-        controller: snapcast
+        controller: ledfx
+        extraSelectorLabels: 
+          snapcast: true
+          
         ports:
           http:
             port: 1780
