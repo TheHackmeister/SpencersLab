@@ -164,7 +164,7 @@ ledfx:
         containers:
           main:
             env:
-              SQUEEZE: music-assistant.spencerslab.com
+              SQUEEZE: 1
       snapclient:
         containers:
           main:
