@@ -77,6 +77,16 @@ music-assistant:
             env:
               LOG_LEVEL: debug
               TZ: America/Denver
+          owncast:
+            annotations:
+              reloader.stakater.com/auto: "true"
+            containers:
+              owncast:
+                image:
+                  repository: gabekangas/owncast
+                  tag: 0.1.3
+                env:
+                  TZ: "${TZ}"
 
     pod: 
       hostNetwork: true
@@ -117,10 +127,32 @@ music-assistant:
             port: 3483
             protocol: UDP
     
+      owncast:
+        controller: owncast
+        enabled: true
+        ports:
+          http:
+            port: 8080
+      rtmp:
+        controller: owncast
+        enabled: true
+        type: LoadBalancer
+        externalTrafficPolicy: Local
+        ports:
+          rtmp:
+            enabled: true
+            port: 1935
+            protocol: TCP
+            targetPort: 1935
+
     persistence:
       tmp:
         enabled: true
         type: emptyDir
+      config:
+        existingClaim: owncast-config
+        globalMounts:
+          - path: /app/data
     #controllers:
     #  music-assistant:
     #    containers:
@@ -143,6 +175,18 @@ music-assistant:
           - hosts:
               - *host
             secretName: wildcard-cert
+      owncast:
+        hosts:
+          - host: &host "stream.spencerslab.com"
+            paths:
+              - path: /
+                service:
+                  identifier: owncast
+                  port: http
+        tls:
+          - hosts:
+              - *host
+
 espresense:
   bitwardenIds:
     espresense: 1130d75e-e16c-428b-bf99-b15b0010e993
