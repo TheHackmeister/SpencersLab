@@ -164,7 +164,7 @@ ledfx:
               tag: v0.0.2
             env:
               TZ: America/Denver
-              SNAPSERVER: home-music-assistant
+              SNAPSERVER: home-music-assistant.default.svc.cluster.local
     ingress:
       ledfx:
         annotations:
