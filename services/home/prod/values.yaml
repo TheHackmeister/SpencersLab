@@ -166,8 +166,7 @@ ledfx:
               TZ: America/Vancouver
     service:
       snapserver:
-        controller: ledfx
-        name: snapcast
+        controller: snapcast
         ports:
           http:
             port: 1780
