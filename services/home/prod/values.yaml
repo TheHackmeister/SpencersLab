@@ -141,6 +141,10 @@ music-assistant:
             enabled: true
             port: 1935
             protocol: TCP
+          rtmp2:
+            enabled: true
+            port: 1936
+            protocol: TCP
           shoutcast:
             enabled: true
             port: 8000
