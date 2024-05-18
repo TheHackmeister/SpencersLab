@@ -165,6 +165,7 @@ ledfx:
             env:
               TZ: America/Denver
               SNAPSERVER: music-assistant.spencerslab.com
+              LIST_DEVICES_AND_EXIT: true
     ingress:
       ledfx:
         annotations:
