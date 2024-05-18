@@ -156,21 +156,15 @@ espresense:
 ledfx:
   app-template:
     controllers:
-      snapserver:
+      snapclient:
         containers:
           main:
             image:
-              repository: ghcr.io/mchestr/snapserver
-              tag: 0.27.0@sha256:b59972986d156f2dc17013c911eaedf8ec33b4cb2afed38e3e6ff74b3483d134
+              repository: cthelight/snapclient
+              tag: v0.0.2
             env:
-              TZ: America/Vancouver
-    service:
-      snapserver:
-        controller: snapserver
-        ports:
-          http:
-            port: 1780
-
+              TZ: America/Denver
+              SNAPSERVER: home-music-assistant
     ingress:
       ledfx:
         annotations:
@@ -181,20 +175,6 @@ ledfx:
               - path: /
                 service:
                   identifier: ledfx
-                  port: http
-        tls:
-          - hosts:
-              - *host
-            secretName: wildcard-cert
-      snapserver:
-        enabled: true
-        hosts:
-          - host: &host "snapserver-ledfx.spencerslab.com"
-            paths:
-              - path: /
-                pathType: Prefix
-                service:
-                  identifier: snapserver
                   port: http
         tls:
           - hosts:
