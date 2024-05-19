@@ -145,6 +145,10 @@ music-assistant:
             enabled: true
             port: 1936
             protocol: TCP
+          http-forward:
+            enabled: true
+            port: 8080
+            protocol: TCP
           shoutcast:
             enabled: true
             port: 8000
