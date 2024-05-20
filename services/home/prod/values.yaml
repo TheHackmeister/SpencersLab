@@ -176,7 +176,7 @@ music-assistant:
           - path: /app/data
       srs-config:
         type: configMap
-        name: "{{ .Release.name }}-srs-config"
+        name: "{{ .Release.Name }}-srs-config"
         globalMounts:
           - path: /usr/local/srs/conf
     #controllers:
