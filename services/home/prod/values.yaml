@@ -77,12 +77,12 @@ music-assistant:
             env:
               LOG_LEVEL: debug
               TZ: America/Denver
-      owncast:
+      srs:
         containers:
           main:
             image:
-              repository: gabekangas/owncast
-              tag: 0.1.3
+              repository: ossrs/srs
+              tag: v5.0.210
             env:
               TZ: America/Denver
 
@@ -121,19 +121,16 @@ music-assistant:
             port: 3483
             protocol: TCP
           slimproto-udp:
-            enabled: true
             port: 3483
             protocol: UDP
     
-      owncast:
-        controller: owncast
-        enabled: true
+      srs:
+        controller: srs
         ports:
           http:
             port: 8080
       rtmp:
-        controller: owncast
-        enabled: true
+        controller: srs
         type: LoadBalancer
         externalTrafficPolicy: Local
         ports:
@@ -141,18 +138,29 @@ music-assistant:
             enabled: true
             port: 1935
             protocol: TCP
-          rtmp2:
-            enabled: true
-            port: 1936
-            protocol: TCP
-          http-forward:
-            enabled: true
-            port: 8080
-            protocol: TCP
-          shoutcast:
-            enabled: true
-            port: 8000
-            protocol: TCP
+            
+    configMaps:
+      srs-config:
+        labels: {}
+        annotations: {}
+        data:
+          realtime.conf: |-
+            listen              1935;
+            max_connections     1000;
+            vhost __defaultVhost__ {
+                tcp_nodelay     on;
+                min_latency     on;
+
+                play {
+                    gop_cache       off;
+                    queue_length    10;
+                    mw_latency      100;
+                }
+
+                publish {
+                    mr off;
+                }
+            }
 
     persistence:
       tmp:
@@ -162,6 +170,11 @@ music-assistant:
         existingClaim: owncast-config
         globalMounts:
           - path: /app/data
+      scs-config:
+        type: configMap
+        existingClam: srs-config
+        globalMounts:
+          - path: /usr/local/srs/conf
     #controllers:
     #  music-assistant:
     #    containers:
