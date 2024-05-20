@@ -144,7 +144,7 @@ music-assistant:
         labels: {}
         annotations: {}
         data:
-          realtime.conf: |-
+          docker.conf: |-
             listen              1935;
             max_connections     1000;
             http_server {
