@@ -147,6 +147,10 @@ music-assistant:
           realtime.conf: |-
             listen              1935;
             max_connections     1000;
+            http_server {
+                enabled         on;
+                listen          8080;
+            }
             vhost __defaultVhost__ {
                 tcp_nodelay     on;
                 min_latency     on;
