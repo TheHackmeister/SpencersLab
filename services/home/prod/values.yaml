@@ -174,9 +174,9 @@ music-assistant:
         existingClaim: owncast-config
         globalMounts:
           - path: /app/data
-      scs-config:
+      srs-config:
         type: configMap
-        name: srs-config
+        name: "{{ .Release.name }}-srs-config"
         globalMounts:
           - path: /usr/local/srs/conf
     #controllers:
