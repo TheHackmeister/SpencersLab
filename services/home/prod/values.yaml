@@ -176,7 +176,6 @@ music-assistant:
           - path: /app/data
       scs-config:
         type: configMap
-        existingClaim: srs-config
         globalMounts:
           - path: /usr/local/srs/conf
     #controllers:
