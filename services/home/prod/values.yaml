@@ -176,7 +176,7 @@ music-assistant:
           - path: /app/data
       scs-config:
         type: configMap
-        existingClam: srs-config
+        existingClaim: srs-config
         globalMounts:
           - path: /usr/local/srs/conf
     #controllers:
@@ -201,13 +201,13 @@ music-assistant:
           - hosts:
               - *host
             secretName: wildcard-cert
-      owncast:
+      srs:
         hosts:
           - host: &host "stream.spencerslab.com"
             paths:
               - path: /
                 service:
-                  identifier: owncast
+                  identifier: srs
                   port: http
         tls:
           - hosts:
