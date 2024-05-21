@@ -137,6 +137,8 @@ music-assistant:
         type: LoadBalancer
         externalTrafficPolicy: Local
         ports:
+          http:
+            port: 8080
           rtmp:
             enabled: true
             port: 1935
