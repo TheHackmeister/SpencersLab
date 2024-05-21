@@ -129,6 +129,9 @@ music-assistant:
         ports:
           http:
             port: 8080
+          api:
+            port: 1985
+            protocol: TCP
       rtmp:
         controller: srs
         type: LoadBalancer
@@ -213,6 +216,10 @@ music-assistant:
                 service:
                   identifier: srs
                   port: http
+              - path: /api/
+                service:
+                  identifier: srs
+                  port: api
         tls:
           - hosts:
               - *host
