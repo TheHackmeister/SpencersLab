@@ -163,6 +163,54 @@ music-assistant:
             vhost __defaultVhost__ {
                 tcp_nodelay     on;
                 min_latency     on;
+                http_remux {
+                  # whether enable the http live streaming service for vhost.
+                  # Overwrite by env SRS_VHOST_HTTP_REMUX_ENABLED for all vhosts.
+                  # default: off
+                  enabled on;
+                  # Whether stream has audio track, used as default value for stream metadata, for example, FLV header contains
+                  # this flag. Sometimes you might want to force the metadata by disable guess_has_av.
+                  # For HTTP-FLV, use this as default value for FLV header audio flag. See https://github.com/ossrs/srs/issues/939#issuecomment-1351385460
+                  # For HTTP-TS, use this as default value for PMT table. See https://github.com/ossrs/srs/issues/939#issuecomment-1365086204
+                  # Overwrite by env SRS_VHOST_HTTP_REMUX_HAS_AUDIO for all vhosts.
+                  # Default: on
+                  has_audio on;
+                  # Whether stream has video track, used as default value for stream metadata, for example, FLV header contains
+                  # this flag. Sometimes you might want to force the metadata by disable guess_has_av.
+                  # For HTTP-FLV, use this as default value for FLV header video flag. See https://github.com/ossrs/srs/issues/939#issuecomment-1351385460
+                  # For HTTP-TS, use this as default value for PMT table. See https://github.com/ossrs/srs/issues/939#issuecomment-1365086204
+                  # Overwrite by env SRS_VHOST_HTTP_REMUX_HAS_VIDEO for all vhosts.
+                  # Default: on
+                  has_video off;
+                  # the stream mount for rtmp to remux to live streaming.
+                  # typical mount to [vhost]/[app]/[stream].flv
+                  # the variables:
+                  #       [vhost] current vhost for http live stream.
+                  #       [app] current app for http live stream.
+                  #       [stream] current stream for http live stream.
+                  # @remark the [vhost] is optional, used to mount at specified vhost.
+                  # the extension:
+                  #       .flv mount http live flv stream, use default gop cache.
+                  #       .ts mount http live ts stream, use default gop cache.
+                  #       .mp3 mount http live mp3 stream, ignore video and audio mp3 codec required.
+                  #       .aac mount http live aac stream, ignore video and audio aac codec required.
+                  # for example:
+                  #       mount to [vhost]/[app]/[stream].flv
+                  #           access by http://ossrs.net:8080/live/livestream.flv
+                  #       mount to /[app]/[stream].flv
+                  #           access by http://ossrs.net:8080/live/livestream.flv
+                  #           or by http://192.168.1.173:8080/live/livestream.flv
+                  #       mount to [vhost]/[app]/[stream].mp3
+                  #           access by http://ossrs.net:8080/live/livestream.mp3
+                  #       mount to [vhost]/[app]/[stream].aac
+                  #           access by http://ossrs.net:8080/live/livestream.aac
+                  #       mount to [vhost]/[app]/[stream].ts
+                  #           access by http://ossrs.net:8080/live/livestream.ts
+                  # @remark the port of http is specified by http_server section.
+                  # Overwrite by env SRS_VHOST_HTTP_REMUX_MOUNT for all vhosts.
+                  # default: [vhost]/[app]/[stream].flv
+                  mount [vhost]/[app]/[stream].flv;
+                }
 
                 play {
                     gop_cache       off;
