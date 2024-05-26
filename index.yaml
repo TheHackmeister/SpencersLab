@@ -2490,6 +2490,14 @@ entries:
     version: 1.1.1
   monitoring-appset:
   - apiVersion: v2
+    appVersion: 1.1.2
+    created: "2024-05-26T23:05:14.95038642Z"
+    digest: d3eddca276b3fd38334bc56ec24f34e5b5de7a510fc0af6b48e8c1ad8b753349
+    name: monitoring-appset
+    urls:
+    - https://github.com/OwnYourIO/SpencersLab/releases/download/monitoring-appset-1.1.2/monitoring-appset-1.1.2.tgz
+    version: 1.1.2
+  - apiVersion: v2
     appVersion: 1.1.1
     created: "2024-02-11T04:59:10.232877174Z"
     digest: 5f4b8cdc0c4a02e64bd8353d5f8d49cfc2f9604d71dd29db2424e8fbc21e5553
@@ -2956,4 +2964,4 @@ entries:
     urls:
     - https://github.com/OwnYourIO/SpencersLab/releases/download/zigbee2mqtt-1.0.1/zigbee2mqtt-1.0.1.tgz
     version: 1.0.1
-generated: "2024-05-26T13:21:31.069937404Z"
+generated: "2024-05-26T23:05:14.950759678Z"
