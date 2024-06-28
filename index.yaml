@@ -2407,6 +2407,18 @@ entries:
     version: 1.1.1
   ledfx:
   - apiVersion: v2
+    appVersion: 1.0.9
+    created: "2024-06-28T04:40:50.865743968Z"
+    dependencies:
+    - name: app-template
+      repository: https://bjw-s.github.io/helm-charts/
+      version: 3.1.0
+    digest: 01caec6383c226fa256b2bdc7f1d263fdd09d75c027c4de18bdd2879564657a9
+    name: ledfx
+    urls:
+    - https://github.com/OwnYourIO/SpencersLab/releases/download/ledfx-1.0.9/ledfx-1.0.9.tgz
+    version: 1.0.9
+  - apiVersion: v2
     appVersion: 1.0.8
     created: "2024-06-11T03:18:37.488059402Z"
     dependencies:
@@ -3040,4 +3052,4 @@ entries:
     urls:
     - https://github.com/OwnYourIO/SpencersLab/releases/download/zigbee2mqtt-1.0.1/zigbee2mqtt-1.0.1.tgz
     version: 1.0.1
-generated: "2024-06-11T03:18:37.865570194Z"
+generated: "2024-06-28T04:40:50.866050341Z"
