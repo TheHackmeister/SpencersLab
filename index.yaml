@@ -3075,6 +3075,19 @@ entries:
     urls:
     - https://github.com/OwnYourIO/SpencersLab/releases/download/personal-appset-1.1.0/personal-appset-1.1.0.tgz
     version: 1.1.0
+  samba:
+  - apiVersion: v2
+    appVersion: 1.0.1
+    created: "2024-08-03T19:48:17.314829617Z"
+    dependencies:
+    - name: app-template
+      repository: https://bjw-s.github.io/helm-charts/
+      version: 3.2.1
+    digest: 2dcece414f01f7305aa9408aa630990764b9b4bcc267b93fff9abddd705ea99d
+    name: samba
+    urls:
+    - https://github.com/OwnYourIO/SpencersLab/releases/download/samba-1.0.1/samba-1.0.1.tgz
+    version: 1.0.1
   zigbee2mqtt:
   - apiVersion: v2
     appVersion: 1.0.37
@@ -3460,4 +3473,4 @@ entries:
     urls:
     - https://github.com/OwnYourIO/SpencersLab/releases/download/zigbee2mqtt-1.0.1/zigbee2mqtt-1.0.1.tgz
     version: 1.0.1
-generated: "2024-07-31T06:02:27.558006568Z"
+generated: "2024-08-03T19:48:17.315128117Z"
