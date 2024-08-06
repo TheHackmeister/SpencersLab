@@ -2777,6 +2777,19 @@ entries:
     urls:
     - https://github.com/OwnYourIO/SpencersLab/releases/download/infra-appset-1.1.1/infra-appset-1.1.1.tgz
     version: 1.1.1
+  jellyfin:
+  - apiVersion: v2
+    appVersion: 1.0.1
+    created: "2024-08-06T04:40:52.473443811Z"
+    dependencies:
+    - name: app-template
+      repository: https://bjw-s.github.io/helm-charts/
+      version: 3.2.1
+    digest: c5210a0f9307fd85264410d23ac1c77859eef7c485d2c1ff069299482c7b4764
+    name: jellyfin
+    urls:
+    - https://github.com/OwnYourIO/SpencersLab/releases/download/jellyfin-1.0.1/jellyfin-1.0.1.tgz
+    version: 1.0.1
   ledfx:
   - apiVersion: v2
     appVersion: 1.0.9
@@ -3493,4 +3506,4 @@ entries:
     urls:
     - https://github.com/OwnYourIO/SpencersLab/releases/download/zigbee2mqtt-1.0.1/zigbee2mqtt-1.0.1.tgz
     version: 1.0.1
-generated: "2024-08-06T01:26:55.439162652Z"
+generated: "2024-08-06T04:40:52.473943782Z"
