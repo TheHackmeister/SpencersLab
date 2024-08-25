@@ -2901,6 +2901,18 @@ entries:
     version: 1.0.5
   logitech-media-server:
   - apiVersion: v2
+    appVersion: 1.0.13
+    created: "2024-08-25T02:52:53.484434594Z"
+    dependencies:
+    - name: app-template
+      repository: https://bjw-s.github.io/helm-charts/
+      version: 3.2.1
+    digest: 5f3a72c471349c15950fa10bf21d328daeef40a0a3af6b5dcc928405e354579e
+    name: logitech-media-server
+    urls:
+    - https://github.com/OwnYourIO/SpencersLab/releases/download/logitech-media-server-1.0.13/logitech-media-server-1.0.13.tgz
+    version: 1.0.13
+  - apiVersion: v2
     appVersion: 1.0.12
     created: "2024-06-11T03:18:37.63214488Z"
     dependencies:
@@ -3031,6 +3043,18 @@ entries:
     - https://github.com/OwnYourIO/SpencersLab/releases/download/monitoring-appset-1.1.0/monitoring-appset-1.1.0.tgz
     version: 1.1.0
   music-assistant:
+  - apiVersion: v2
+    appVersion: 1.0.15
+    created: "2024-08-25T02:52:53.595121353Z"
+    dependencies:
+    - name: app-template
+      repository: https://bjw-s.github.io/helm-charts/
+      version: 3.2.1
+    digest: a9de96caa0fec90a53259332d699e9acae1fc68c5407dc6be7f9ccf51e63aa12
+    name: music-assistant
+    urls:
+    - https://github.com/OwnYourIO/SpencersLab/releases/download/music-assistant-1.0.15/music-assistant-1.0.15.tgz
+    version: 1.0.15
   - apiVersion: v2
     appVersion: 1.0.14
     created: "2024-08-15T00:40:40.894380688Z"
@@ -3194,6 +3218,18 @@ entries:
     - https://github.com/OwnYourIO/SpencersLab/releases/download/samba-1.0.1/samba-1.0.1.tgz
     version: 1.0.1
   snapcast:
+  - apiVersion: v2
+    appVersion: 1.0.2
+    created: "2024-08-25T02:52:53.711949744Z"
+    dependencies:
+    - name: app-template
+      repository: https://bjw-s.github.io/helm-charts/
+      version: 3.2.1
+    digest: 55871977bd5ea371b6a0d48c0de56bb7bfba1338d7fd3574f17cb4c8a6c4cf52
+    name: snapcast
+    urls:
+    - https://github.com/OwnYourIO/SpencersLab/releases/download/snapcast-1.0.2/snapcast-1.0.2.tgz
+    version: 1.0.2
   - apiVersion: v2
     appVersion: 1.0.1
     created: "2024-08-24T22:31:11.469568418Z"
@@ -3591,4 +3627,4 @@ entries:
     urls:
     - https://github.com/OwnYourIO/SpencersLab/releases/download/zigbee2mqtt-1.0.1/zigbee2mqtt-1.0.1.tgz
     version: 1.0.1
-generated: "2024-08-24T22:31:11.469874396Z"
+generated: "2024-08-25T02:52:53.712232953Z"
