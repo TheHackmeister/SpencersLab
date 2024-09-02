@@ -2496,6 +2496,19 @@ entries:
     urls:
     - https://github.com/OwnYourIO/SpencersLab/releases/download/espresense-1.0.5/espresense-1.0.5.tgz
     version: 1.0.5
+  exporter-mikrotik:
+  - apiVersion: v2
+    appVersion: 1.0.1
+    created: "2024-09-02T23:14:54.582205016Z"
+    dependencies:
+    - name: app-template
+      repository: https://bjw-s.github.io/helm-charts/
+      version: 3.2.1
+    digest: d1bd638558c35812a4d16c96b6d8901a1b6f887e7c310cb194a50e66d6312fc7
+    name: exporter-mikrotik
+    urls:
+    - https://github.com/OwnYourIO/SpencersLab/releases/download/exporter-mikrotik-1.0.1/exporter-mikrotik-1.0.1.tgz
+    version: 1.0.1
   generic-device-plugin:
   - apiVersion: v2
     appVersion: 1.0.13
@@ -3659,4 +3672,4 @@ entries:
     urls:
     - https://github.com/OwnYourIO/SpencersLab/releases/download/zigbee2mqtt-1.0.1/zigbee2mqtt-1.0.1.tgz
     version: 1.0.1
-generated: "2024-08-31T21:05:59.028591746Z"
+generated: "2024-09-02T23:14:54.582542947Z"
