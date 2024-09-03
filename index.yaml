@@ -2498,6 +2498,18 @@ entries:
     version: 1.0.5
   exporter-mikrotik:
   - apiVersion: v2
+    appVersion: 1.0.8
+    created: "2024-09-03T01:11:47.011225672Z"
+    dependencies:
+    - name: app-template
+      repository: https://bjw-s.github.io/helm-charts/
+      version: 3.2.1
+    digest: 0c46d5d751d2ae0f657d2b56f5a471c5474b1f179f4c139aea7ae8aa5bd4f242
+    name: exporter-mikrotik
+    urls:
+    - https://github.com/OwnYourIO/SpencersLab/releases/download/exporter-mikrotik-1.0.8/exporter-mikrotik-1.0.8.tgz
+    version: 1.0.8
+  - apiVersion: v2
     appVersion: 1.0.7
     created: "2024-09-03T00:41:51.710266856Z"
     dependencies:
@@ -3744,4 +3756,4 @@ entries:
     urls:
     - https://github.com/OwnYourIO/SpencersLab/releases/download/zigbee2mqtt-1.0.1/zigbee2mqtt-1.0.1.tgz
     version: 1.0.1
-generated: "2024-09-03T00:41:51.710594355Z"
+generated: "2024-09-03T01:11:47.011592136Z"
