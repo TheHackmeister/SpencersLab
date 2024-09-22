@@ -2617,6 +2617,19 @@ entries:
     urls:
     - https://github.com/OwnYourIO/SpencersLab/releases/download/exporter-mikrotik-1.0.1/exporter-mikrotik-1.0.1.tgz
     version: 1.0.1
+  freeipa:
+  - apiVersion: v2
+    appVersion: 1.0.1
+    created: "2024-09-22T19:07:10.996486355Z"
+    dependencies:
+    - name: app-template
+      repository: https://bjw-s.github.io/helm-charts/
+      version: 3.2.1
+    digest: b7feb1bdf6f1c4aa46c7cadb14a75d3f8628d65e358bdcb294192e6d1cca6c30
+    name: freeipa
+    urls:
+    - https://github.com/OwnYourIO/SpencersLab/releases/download/freeipa-1.0.1/freeipa-1.0.1.tgz
+    version: 1.0.1
   generic-device-plugin:
   - apiVersion: v2
     appVersion: 1.0.13
@@ -3960,4 +3973,4 @@ entries:
     urls:
     - https://github.com/OwnYourIO/SpencersLab/releases/download/zigbee2mqtt-1.0.1/zigbee2mqtt-1.0.1.tgz
     version: 1.0.1
-generated: "2024-09-21T22:55:42.17422939Z"
+generated: "2024-09-22T19:07:10.996849748Z"
