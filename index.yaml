@@ -2619,6 +2619,18 @@ entries:
     version: 1.0.1
   freeipa:
   - apiVersion: v2
+    appVersion: 1.0.7
+    created: "2024-09-25T00:51:36.076689412Z"
+    dependencies:
+    - name: app-template
+      repository: https://bjw-s.github.io/helm-charts/
+      version: 3.2.1
+    digest: 849022129538497cef794105c30ba23d0180a5ac5e731d775aa11a2885fa7c78
+    name: freeipa
+    urls:
+    - https://github.com/OwnYourIO/SpencersLab/releases/download/freeipa-1.0.7/freeipa-1.0.7.tgz
+    version: 1.0.7
+  - apiVersion: v2
     appVersion: 1.0.6
     created: "2024-09-22T19:44:49.625283532Z"
     dependencies:
@@ -4033,4 +4045,4 @@ entries:
     urls:
     - https://github.com/OwnYourIO/SpencersLab/releases/download/zigbee2mqtt-1.0.1/zigbee2mqtt-1.0.1.tgz
     version: 1.0.1
-generated: "2024-09-22T19:44:49.625687564Z"
+generated: "2024-09-25T00:51:36.077006527Z"
