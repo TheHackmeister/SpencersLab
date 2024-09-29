@@ -107,6 +107,18 @@ entries:
     version: 1.0.2
   argocd:
   - apiVersion: v2
+    appVersion: 1.0.13
+    created: "2024-09-29T16:39:23.721906568Z"
+    dependencies:
+    - name: argo-cd
+      repository: https://argoproj.github.io/argo-helm
+      version: 7.6.5
+    digest: 837b590a2557a98baaebcbc73b5c1ceccc88cfe3243bb094e94667b79e1db2fd
+    name: argocd
+    urls:
+    - https://github.com/OwnYourIO/SpencersLab/releases/download/argocd-1.0.29/argocd-1.0.29.tgz
+    version: 1.0.29
+  - apiVersion: v2
     appVersion: 1.0.12
     created: "2024-07-05T14:53:52.410406603Z"
     dependencies:
@@ -4130,4 +4142,4 @@ entries:
     urls:
     - https://github.com/OwnYourIO/SpencersLab/releases/download/zigbee2mqtt-1.0.1/zigbee2mqtt-1.0.1.tgz
     version: 1.0.1
-generated: "2024-09-29T16:39:07.327354805Z"
+generated: "2024-09-29T16:39:23.846055522Z"
