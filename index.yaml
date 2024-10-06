@@ -3866,6 +3866,15 @@ entries:
     version: 1.0.1
   seaweedfs:
   - apiVersion: v1
+    appVersion: 4.0.3
+    created: "2024-10-06T10:33:38.173282Z"
+    description: SeaweedFS
+    digest: cc56c5f24623cbcc2b63b1aa9aaca989bd6802bb0c561d769c30ddc6cf341eb0
+    name: seaweedfs
+    urls:
+    - https://github.com/OwnYourIO/SpencersLab/releases/download/seaweedfs-4.0.3753/seaweedfs-4.0.3753.tgz
+    version: 4.0.3753
+  - apiVersion: v1
     appVersion: 4.0.2
     created: "2024-10-06T10:30:08.973187763Z"
     description: SeaweedFS
@@ -4317,4 +4326,4 @@ entries:
     urls:
     - https://github.com/OwnYourIO/SpencersLab/releases/download/zigbee2mqtt-1.0.1/zigbee2mqtt-1.0.1.tgz
     version: 1.0.1
-generated: "2024-10-06T10:30:08.973560498Z"
+generated: "2024-10-06T10:33:38.173761106Z"
