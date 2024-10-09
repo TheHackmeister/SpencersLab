@@ -7,9 +7,9 @@ dependencies:
   version: 0.2.2
 - name: jellyfin
   repository: https://ownyourio.github.io/SpencersLab/
-  version: 1.0.6
+  version: 1.0.7
 - name: jellyseerr
   repository: https://bubylou.github.io/Arr-Stack
   version: 0.2.0
-digest: sha256:af6a4b9e90f9b3086a10f8f54ccc04997209d60c02fb6652bd2dea9843dc1726
-generated: "2024-10-08T20:20:32.109506442-06:00"
+digest: sha256:10aca15f11a78e3b5625d05dac82adc39c7357dd1683fabb1b4dde8664f33ba0
+generated: "2024-10-09T02:38:35.358279442Z"
