@@ -3990,6 +3990,15 @@ entries:
     urls:
     - https://github.com/OwnYourIO/SpencersLab/releases/download/snapcast-1.0.1/snapcast-1.0.1.tgz
     version: 1.0.1
+  traefik-appset:
+  - apiVersion: v2
+    appVersion: 1.1.0
+    created: "2024-11-09T14:27:53.063081095Z"
+    digest: fe3a870449db2db13d558023a0585d6d17a373bd962040b256518a5b1269bd0b
+    name: traefik-appset
+    urls:
+    - https://github.com/OwnYourIO/SpencersLab/releases/download/traefik-appset-1.1.1/traefik-appset-1.1.1.tgz
+    version: 1.1.1
   zigbee2mqtt:
   - apiVersion: v2
     appVersion: 1.0.38
@@ -4387,4 +4396,4 @@ entries:
     urls:
     - https://github.com/OwnYourIO/SpencersLab/releases/download/zigbee2mqtt-1.0.1/zigbee2mqtt-1.0.1.tgz
     version: 1.0.1
-generated: "2024-11-05T02:32:28.029152633Z"
+generated: "2024-11-09T14:27:53.063669947Z"
