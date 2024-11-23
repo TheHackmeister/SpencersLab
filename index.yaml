@@ -3219,6 +3219,19 @@ entries:
     urls:
     - https://github.com/OwnYourIO/SpencersLab/releases/download/hyperion-1.0.5/hyperion-1.0.5.tgz
     version: 1.0.5
+  immich:
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2024-11-23T18:06:55.145098065Z"
+    dependencies:
+    - name: app-template
+      repository: https://bjw-s.github.io/helm-charts/
+      version: 3.5.1
+    digest: 093668c429aae7b552d0102accc621d8a96f13bc4d4ea692b3d05f7b4bea06a5
+    name: immich
+    urls:
+    - https://github.com/OwnYourIO/SpencersLab/releases/download/immich-1.0.1/immich-1.0.1.tgz
+    version: 1.0.1
   infra-appset:
   - apiVersion: v2
     appVersion: 1.1.25
@@ -3978,6 +3991,19 @@ entries:
     urls:
     - https://github.com/OwnYourIO/SpencersLab/releases/download/music-assistant-1.0.6/music-assistant-1.0.6.tgz
     version: 1.0.6
+  paperless:
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2024-11-23T18:06:55.26089857Z"
+    dependencies:
+    - name: app-template
+      repository: https://bjw-s.github.io/helm-charts/
+      version: 3.5.1
+    digest: fa9b0ac490bc540ef80b7c05b079ed8430f8012f6b4187122ba42bbf772a88af
+    name: paperless
+    urls:
+    - https://github.com/OwnYourIO/SpencersLab/releases/download/paperless-1.0.1/paperless-1.0.1.tgz
+    version: 1.0.1
   personal-appset:
   - apiVersion: v2
     appVersion: 1.1.1
@@ -4560,4 +4586,4 @@ entries:
     urls:
     - https://github.com/OwnYourIO/SpencersLab/releases/download/zigbee2mqtt-1.0.1/zigbee2mqtt-1.0.1.tgz
     version: 1.0.1
-generated: "2024-11-23T15:43:15.16706203Z"
+generated: "2024-11-23T18:06:55.261302644Z"
