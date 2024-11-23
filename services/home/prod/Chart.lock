@@ -25,12 +25,12 @@ dependencies:
   version: 1.0.14
 - name: snapcast
   repository: https://ownyourio.github.io/SpencersLab/
-  version: 1.0.3
+  version: 1.0.4
 - name: paperless
   repository: https://ownyourio.github.io/SpencersLab/
   version: 1.0.1
 - name: wekan
   repository: https://wekan.github.io/charts/
   version: 7.67.0
-digest: sha256:9269ac3acdccca96ffdf3b959ed277c5cafcb8dd68c807e3dcc4b01fc9885aac
-generated: "2024-11-23T11:30:54.783313101-07:00"
+digest: sha256:9161f59f5125629a2923c26cbbc3ae1211f3d5a54831720ff6b43819c9f1d143
+generated: "2024-11-23T18:36:55.28945495Z"
