@@ -4002,6 +4002,18 @@ entries:
   paperless:
   - apiVersion: v2
     appVersion: 1.0.0
+    created: "2024-11-23T18:34:23.412844552Z"
+    dependencies:
+    - name: app-template
+      repository: https://bjw-s.github.io/helm-charts/
+      version: 3.5.1
+    digest: aa9f1a2f8929b7005c78d5e5b91c0d7bb6baec25da6428cafd5fef31be3e305e
+    name: paperless
+    urls:
+    - https://github.com/OwnYourIO/SpencersLab/releases/download/paperless-1.0.2/paperless-1.0.2.tgz
+    version: 1.0.2
+  - apiVersion: v2
+    appVersion: 1.0.0
     created: "2024-11-23T18:06:55.26089857Z"
     dependencies:
     - name: app-template
@@ -4594,4 +4606,4 @@ entries:
     urls:
     - https://github.com/OwnYourIO/SpencersLab/releases/download/zigbee2mqtt-1.0.1/zigbee2mqtt-1.0.1.tgz
     version: 1.0.1
-generated: "2024-11-23T18:19:26.192703614Z"
+generated: "2024-11-23T18:34:23.413241071Z"
