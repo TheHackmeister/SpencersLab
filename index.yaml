@@ -2563,6 +2563,18 @@ entries:
   espresense:
   - apiVersion: v2
     appVersion: 1.0.12
+    created: "2024-11-23T18:53:37.891971397Z"
+    dependencies:
+    - name: app-template
+      repository: https://bjw-s.github.io/helm-charts/
+      version: 3.5.1
+    digest: 7ec63c3ff290c807bc571d91811028034a543a88885b806fc7245dbe3dde3d9f
+    name: espresense
+    urls:
+    - https://github.com/OwnYourIO/SpencersLab/releases/download/espresense-1.0.14/espresense-1.0.14.tgz
+    version: 1.0.14
+  - apiVersion: v2
+    appVersion: 1.0.12
     created: "2024-11-23T15:43:13.93152561Z"
     dependencies:
     - name: app-template
@@ -4618,4 +4630,4 @@ entries:
     urls:
     - https://github.com/OwnYourIO/SpencersLab/releases/download/zigbee2mqtt-1.0.1/zigbee2mqtt-1.0.1.tgz
     version: 1.0.1
-generated: "2024-11-23T18:52:21.381173772Z"
+generated: "2024-11-23T18:53:38.018568349Z"
