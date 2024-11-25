@@ -4096,6 +4096,18 @@ entries:
   remote-proxy-appset:
   - apiVersion: v2
     appVersion: 1.1.0
+    created: "2024-11-25T03:59:18.51530964Z"
+    dependencies:
+    - name: argo-cd
+      repository: https://argoproj.github.io/argo-helm
+      version: 7.6.5
+    digest: 5c2d87a4b20a8c2d9bf324c27e047388ee02cd2e47d306a40ba205eff9de0bbf
+    name: remote-proxy-appset
+    urls:
+    - https://github.com/OwnYourIO/SpencersLab/releases/download/remote-proxy-appset-1.1.4/remote-proxy-appset-1.1.4.tgz
+    version: 1.1.4
+  - apiVersion: v2
+    appVersion: 1.1.0
     created: "2024-11-25T03:50:06.2706213Z"
     dependencies:
     - name: argo-cd
@@ -4695,4 +4707,4 @@ entries:
     urls:
     - https://github.com/OwnYourIO/SpencersLab/releases/download/zigbee2mqtt-1.0.1/zigbee2mqtt-1.0.1.tgz
     version: 1.0.1
-generated: "2024-11-25T03:50:06.271052105Z"
+generated: "2024-11-25T03:59:18.515698296Z"
