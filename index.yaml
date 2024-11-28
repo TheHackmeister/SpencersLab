@@ -1890,6 +1890,14 @@ entries:
   cloud-proxy-appset:
   - apiVersion: v2
     appVersion: 1.1.1
+    created: "2024-11-28T01:41:00.441896781Z"
+    digest: 99f11def34d80e6fca7eeef7855969ede74d685cb5fc5c1349db3a5d7fd0ae45
+    name: cloud-proxy-appset
+    urls:
+    - https://github.com/OwnYourIO/SpencersLab/releases/download/cloud-proxy-appset-1.1.11/cloud-proxy-appset-1.1.11.tgz
+    version: 1.1.11
+  - apiVersion: v2
+    appVersion: 1.1.1
     created: "2024-11-28T01:24:15.068506781Z"
     digest: e6ffb8229ad59b13b3a2e71d6fa25b1dc05d5be2f897fb340b1700307691cfde
     name: cloud-proxy-appset
@@ -4730,4 +4738,4 @@ entries:
     urls:
     - https://github.com/OwnYourIO/SpencersLab/releases/download/zigbee2mqtt-1.0.1/zigbee2mqtt-1.0.1.tgz
     version: 1.0.1
-generated: "2024-11-28T01:24:15.069285593Z"
+generated: "2024-11-28T01:41:00.442488738Z"
