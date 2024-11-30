@@ -61,6 +61,15 @@ entries:
     urls:
     - https://github.com/OwnYourIO/SpencersLab/releases/download/389ds-1.0.1/389ds-1.0.1.tgz
     version: 1.0.1
+  appset-proxy-remote:
+  - apiVersion: v2
+    appVersion: 1.1.0
+    created: "2024-11-30T02:14:41.404194522Z"
+    digest: f1ee67c102f556dbc8b751e7e2cd0d4abd8e0d2fa83a05f3d6c3791d57450d6e
+    name: appset-proxy-remote
+    urls:
+    - https://github.com/OwnYourIO/SpencersLab/releases/download/appset-proxy-remote-1.1.5/appset-proxy-remote-1.1.5.tgz
+    version: 1.1.5
   appset-traefik:
   - apiVersion: v2
     appVersion: 1.1.0
@@ -4224,6 +4233,18 @@ entries:
   remote-proxy-appset:
   - apiVersion: v2
     appVersion: 1.1.0
+    created: "2024-11-30T02:14:41.512112776Z"
+    dependencies:
+    - name: argo-cd
+      repository: https://argoproj.github.io/argo-helm
+      version: 7.6.5
+    digest: 2c6967b7b5aab426e7078dab0cb602f1f1bf401c3f7ce16a4cf7ccb9ea570fe7
+    name: remote-proxy-appset
+    urls:
+    - https://github.com/OwnYourIO/SpencersLab/releases/download/remote-proxy-appset-1.1.5/remote-proxy-appset-1.1.5.tgz
+    version: 1.1.5
+  - apiVersion: v2
+    appVersion: 1.1.0
     created: "2024-11-25T03:59:18.51530964Z"
     dependencies:
     - name: argo-cd
@@ -4843,4 +4864,4 @@ entries:
     urls:
     - https://github.com/OwnYourIO/SpencersLab/releases/download/zigbee2mqtt-1.0.1/zigbee2mqtt-1.0.1.tgz
     version: 1.0.1
-generated: "2024-11-30T02:07:11.947143649Z"
+generated: "2024-11-30T02:14:41.512512162Z"
