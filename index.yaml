@@ -61,6 +61,15 @@ entries:
     urls:
     - https://github.com/OwnYourIO/SpencersLab/releases/download/389ds-1.0.1/389ds-1.0.1.tgz
     version: 1.0.1
+  appset-cloud-proxy:
+  - apiVersion: v2
+    appVersion: 1.1.1
+    created: "2024-12-01T04:11:43.418778908Z"
+    digest: e37262f4b3eb1f373698d9e8393f294f1c4b6637a1fabd4eac51a38fe1d899a7
+    name: appset-cloud-proxy
+    urls:
+    - https://github.com/OwnYourIO/SpencersLab/releases/download/appset-cloud-proxy-1.1.23/appset-cloud-proxy-1.1.23.tgz
+    version: 1.1.23
   appset-proxy-remote:
   - apiVersion: v2
     appVersion: 1.1.0
@@ -5166,4 +5175,4 @@ entries:
     urls:
     - https://github.com/OwnYourIO/SpencersLab/releases/download/zigbee2mqtt-1.0.1/zigbee2mqtt-1.0.1.tgz
     version: 1.0.1
-generated: "2024-12-01T04:03:55.125554697Z"
+generated: "2024-12-01T04:11:43.419467727Z"
