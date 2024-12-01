@@ -70,6 +70,15 @@ entries:
     urls:
     - https://github.com/OwnYourIO/SpencersLab/releases/download/appset-cloud-proxy-1.1.23/appset-cloud-proxy-1.1.23.tgz
     version: 1.1.23
+  appset-proxy-local:
+  - apiVersion: v2
+    appVersion: 1.1.1
+    created: "2024-12-01T04:17:24.145798506Z"
+    digest: 9d52f62aedcc3dfc623dd50c77e9af12590485fc5f8b784039ab24235720db64
+    name: appset-proxy-local
+    urls:
+    - https://github.com/OwnYourIO/SpencersLab/releases/download/appset-proxy-local-1.1.24/appset-proxy-local-1.1.24.tgz
+    version: 1.1.24
   appset-proxy-remote:
   - apiVersion: v2
     appVersion: 1.1.0
@@ -5175,4 +5184,4 @@ entries:
     urls:
     - https://github.com/OwnYourIO/SpencersLab/releases/download/zigbee2mqtt-1.0.1/zigbee2mqtt-1.0.1.tgz
     version: 1.0.1
-generated: "2024-12-01T04:11:43.419467727Z"
+generated: "2024-12-01T04:17:24.146544378Z"
