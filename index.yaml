@@ -61,6 +61,15 @@ entries:
     urls:
     - https://github.com/OwnYourIO/SpencersLab/releases/download/389ds-1.0.1/389ds-1.0.1.tgz
     version: 1.0.1
+  appset-backups:
+  - apiVersion: v2
+    appVersion: 1.1.1
+    created: "2024-12-01T04:51:58.296326988Z"
+    digest: 379620d0b0eb6bb859d59dc13e3698a374df7bdb2081c2bfb163428ba7038edd
+    name: appset-backups
+    urls:
+    - https://github.com/OwnYourIO/SpencersLab/releases/download/appset-backups-1.1.2/appset-backups-1.1.2.tgz
+    version: 1.1.2
   appset-cloud-proxy:
   - apiVersion: v2
     appVersion: 1.1.1
@@ -70,6 +79,78 @@ entries:
     urls:
     - https://github.com/OwnYourIO/SpencersLab/releases/download/appset-cloud-proxy-1.1.23/appset-cloud-proxy-1.1.23.tgz
     version: 1.1.23
+  appset-email:
+  - apiVersion: v2
+    appVersion: 1.1.1
+    created: "2024-12-01T04:51:58.457136342Z"
+    digest: 30e93827acc1647505a7bc9e0ec4d066331b5249d937ad57a904388839e95ab5
+    name: appset-email
+    urls:
+    - https://github.com/OwnYourIO/SpencersLab/releases/download/appset-email-1.1.2/appset-email-1.1.2.tgz
+    version: 1.1.2
+  appset-grow:
+  - apiVersion: v2
+    appVersion: 1.1.1
+    created: "2024-12-01T04:51:58.651640261Z"
+    digest: 6636d0cf25903546643fa5a35561bb1fb779289a48937cc6002855658aed8490
+    name: appset-grow
+    urls:
+    - https://github.com/OwnYourIO/SpencersLab/releases/download/appset-grow-1.1.3/appset-grow-1.1.3.tgz
+    version: 1.1.3
+  appset-home:
+  - apiVersion: v2
+    appVersion: 1.1.9
+    created: "2024-12-01T04:51:58.845780664Z"
+    digest: b340f53fb051ff4e9fbe79e195b11e209cbf71fd7913b3409dc3f8120aa238d5
+    name: appset-home
+    urls:
+    - https://github.com/OwnYourIO/SpencersLab/releases/download/appset-home-1.1.11/appset-home-1.1.11.tgz
+    version: 1.1.11
+  appset-infra:
+  - apiVersion: v2
+    appVersion: 1.1.25
+    created: "2024-12-01T04:51:59.041367028Z"
+    digest: 805b646205e2f87117beb6ec525df7ac41d78faa840d5f329646c4a541a84a5f
+    name: appset-infra
+    urls:
+    - https://github.com/OwnYourIO/SpencersLab/releases/download/appset-infra-1.1.26/appset-infra-1.1.26.tgz
+    version: 1.1.26
+  appset-media:
+  - apiVersion: v2
+    appVersion: 1.1.2
+    created: "2024-12-01T04:51:59.238799589Z"
+    digest: 10adee95d105d4d4c8c5245e29c635856ebadc1c8cdfc5b21523779d108a3acc
+    name: appset-media
+    urls:
+    - https://github.com/OwnYourIO/SpencersLab/releases/download/appset-media-1.1.3/appset-media-1.1.3.tgz
+    version: 1.1.3
+  appset-monitoring:
+  - apiVersion: v2
+    appVersion: 1.1.8
+    created: "2024-12-01T04:51:59.406089746Z"
+    digest: 0f66fcaf75804c858a5ca8ab04388d7725572df9d1816cdcb2f1fa624b4ea294
+    name: appset-monitoring
+    urls:
+    - https://github.com/OwnYourIO/SpencersLab/releases/download/appset-monitoring-1.1.10/appset-monitoring-1.1.10.tgz
+    version: 1.1.10
+  appset-personal:
+  - apiVersion: v2
+    appVersion: 1.1.1
+    created: "2024-12-01T04:51:59.58880806Z"
+    digest: 1098d35e392632f8bf459a115e9addb18f052a94751916be7ff28d0ddee9b7e5
+    name: appset-personal
+    urls:
+    - https://github.com/OwnYourIO/SpencersLab/releases/download/appset-personal-1.1.2/appset-personal-1.1.2.tgz
+    version: 1.1.2
+  appset-player:
+  - apiVersion: v2
+    appVersion: 1.1.0
+    created: "2024-12-01T04:51:59.766784164Z"
+    digest: af669f86d3280b9c0437590ec7614c49ca6a11128a514952e99602ddc547cab0
+    name: appset-player
+    urls:
+    - https://github.com/OwnYourIO/SpencersLab/releases/download/appset-player-1.1.1/appset-player-1.1.1.tgz
+    version: 1.1.1
   appset-proxy-local:
   - apiVersion: v2
     appVersion: 1.1.1
@@ -5184,4 +5265,4 @@ entries:
     urls:
     - https://github.com/OwnYourIO/SpencersLab/releases/download/zigbee2mqtt-1.0.1/zigbee2mqtt-1.0.1.tgz
     version: 1.0.1
-generated: "2024-12-01T04:17:24.146544378Z"
+generated: "2024-12-01T04:51:59.767493138Z"
