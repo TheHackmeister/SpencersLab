@@ -64,6 +64,14 @@ entries:
   appset-proxy-remote:
   - apiVersion: v2
     appVersion: 1.1.0
+    created: "2024-12-01T00:21:24.737872681Z"
+    digest: 910016d7f9ddc49be8d19fb77ef3656e5ba54a28824aa83fde89c8acd4a0e0ce
+    name: appset-proxy-remote
+    urls:
+    - https://github.com/OwnYourIO/SpencersLab/releases/download/appset-proxy-remote-1.1.6/appset-proxy-remote-1.1.6.tgz
+    version: 1.1.6
+  - apiVersion: v2
+    appVersion: 1.1.0
     created: "2024-11-30T02:14:41.404194522Z"
     digest: f1ee67c102f556dbc8b751e7e2cd0d4abd8e0d2fa83a05f3d6c3791d57450d6e
     name: appset-proxy-remote
@@ -5119,4 +5127,4 @@ entries:
     urls:
     - https://github.com/OwnYourIO/SpencersLab/releases/download/zigbee2mqtt-1.0.1/zigbee2mqtt-1.0.1.tgz
     version: 1.0.1
-generated: "2024-11-30T18:04:11.650380704Z"
+generated: "2024-12-01T00:21:24.738747875Z"
