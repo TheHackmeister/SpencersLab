@@ -109,6 +109,14 @@ entries:
   appset-infra:
   - apiVersion: v2
     appVersion: 1.1.25
+    created: "2024-12-17T00:14:18.787400199Z"
+    digest: 9c968690149fa0b5115b81e353c4bfeaeacdb93d28a87aebbabd1aa9e78ce2a6
+    name: appset-infra
+    urls:
+    - https://github.com/OwnYourIO/SpencersLab/releases/download/appset-infra-1.1.27/appset-infra-1.1.27.tgz
+    version: 1.1.27
+  - apiVersion: v2
+    appVersion: 1.1.25
     created: "2024-12-01T04:51:59.041367028Z"
     digest: 805b646205e2f87117beb6ec525df7ac41d78faa840d5f329646c4a541a84a5f
     name: appset-infra
@@ -5467,4 +5475,4 @@ entries:
     urls:
     - https://github.com/OwnYourIO/SpencersLab/releases/download/zigbee2mqtt-1.0.1/zigbee2mqtt-1.0.1.tgz
     version: 1.0.1
-generated: "2024-12-16T23:50:46.873263888Z"
+generated: "2024-12-17T00:14:18.788259633Z"
