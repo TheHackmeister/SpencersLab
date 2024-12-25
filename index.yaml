@@ -195,6 +195,14 @@ entries:
   appset-proxy-remote:
   - apiVersion: v2
     appVersion: 1.1.0
+    created: "2024-12-25T14:59:14.790589562Z"
+    digest: c95f2cc5877d15817aeacf3b71a4f8fd1379f7a6dab6f59cd6520f63457670d5
+    name: appset-proxy-remote
+    urls:
+    - https://github.com/OwnYourIO/SpencersLab/releases/download/appset-proxy-remote-1.1.18/appset-proxy-remote-1.1.18.tgz
+    version: 1.1.18
+  - apiVersion: v2
+    appVersion: 1.1.0
     created: "2024-12-02T23:59:36.319078215Z"
     digest: c4646d05c8637c805cd6d524b19b0d3704e1fd20338007c3184a8181bce2b01c
     name: appset-proxy-remote
@@ -4730,6 +4738,19 @@ entries:
     urls:
     - https://github.com/OwnYourIO/SpencersLab/releases/download/media-appset-1.1.1/media-appset-1.1.1.tgz
     version: 1.1.1
+  monitoring-agent:
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2024-12-25T14:59:15.136745768Z"
+    dependencies:
+    - name: kube-prometheus-stack
+      repository: https://prometheus-community.github.io/helm-charts
+      version: 63.1.0
+    digest: 52edbb9d35063a90917d885a8c353a3218967a8e5162a3de899323ef0c86fe57
+    name: monitoring-agent
+    urls:
+    - https://github.com/OwnYourIO/SpencersLab/releases/download/monitoring-agent-1.0.1/monitoring-agent-1.0.1.tgz
+    version: 1.0.1
   monitoring-appset:
   - apiVersion: v2
     appVersion: 1.1.8
@@ -5656,4 +5677,4 @@ entries:
     urls:
     - https://github.com/OwnYourIO/SpencersLab/releases/download/zigbee2mqtt-1.0.1/zigbee2mqtt-1.0.1.tgz
     version: 1.0.1
-generated: "2024-12-25T14:13:52.291003438Z"
+generated: "2024-12-25T14:59:15.1373372Z"
