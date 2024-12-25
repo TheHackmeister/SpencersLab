@@ -134,6 +134,14 @@ entries:
   appset-media:
   - apiVersion: v2
     appVersion: 1.1.2
+    created: "2024-12-25T16:45:54.47145449Z"
+    digest: e8e21107c4214ea155e6b26ddc9cacf67e6ae4e5177e3e72b63ceb82e3ec9438
+    name: appset-media
+    urls:
+    - https://github.com/OwnYourIO/SpencersLab/releases/download/appset-media-1.1.4/appset-media-1.1.4.tgz
+    version: 1.1.4
+  - apiVersion: v2
+    appVersion: 1.1.2
     created: "2024-12-01T04:51:59.238799589Z"
     digest: 10adee95d105d4d4c8c5245e29c635856ebadc1c8cdfc5b21523779d108a3acc
     name: appset-media
@@ -5737,4 +5745,4 @@ entries:
     urls:
     - https://github.com/OwnYourIO/SpencersLab/releases/download/zigbee2mqtt-1.0.1/zigbee2mqtt-1.0.1.tgz
     version: 1.0.1
-generated: "2024-12-25T16:25:30.634523375Z"
+generated: "2024-12-25T16:45:54.471935135Z"
