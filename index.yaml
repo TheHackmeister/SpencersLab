@@ -125,6 +125,14 @@ entries:
   appset-infra:
   - apiVersion: v2
     appVersion: 1.1.25
+    created: "2024-12-25T23:06:45.30295063Z"
+    digest: 35c336abf2225405025f9b98e232ba87acac56bac2841ce0da86365fb7a43403
+    name: appset-infra
+    urls:
+    - https://github.com/OwnYourIO/SpencersLab/releases/download/appset-infra-1.1.30/appset-infra-1.1.30.tgz
+    version: 1.1.30
+  - apiVersion: v2
+    appVersion: 1.1.25
     created: "2024-12-25T18:29:51.295269163Z"
     digest: 0d8b5a1a2b440dd4e6c946f3fe0313890c030d78af671d110f78b1551043fecf
     name: appset-infra
@@ -240,6 +248,14 @@ entries:
     - https://github.com/OwnYourIO/SpencersLab/releases/download/appset-player-1.1.1/appset-player-1.1.1.tgz
     version: 1.1.1
   appset-proxy-local:
+  - apiVersion: v2
+    appVersion: 1.1.1
+    created: "2024-12-25T23:06:45.388770804Z"
+    digest: 55011431d37f38f9952d47e590e3f38998ee1af3f24469e0609e4d2de80ec60b
+    name: appset-proxy-local
+    urls:
+    - https://github.com/OwnYourIO/SpencersLab/releases/download/appset-proxy-local-1.1.26/appset-proxy-local-1.1.26.tgz
+    version: 1.1.26
   - apiVersion: v2
     appVersion: 1.1.1
     created: "2024-12-03T02:12:55.15383213Z"
@@ -5873,4 +5889,4 @@ entries:
     urls:
     - https://github.com/OwnYourIO/SpencersLab/releases/download/zigbee2mqtt-1.0.1/zigbee2mqtt-1.0.1.tgz
     version: 1.0.1
-generated: "2024-12-25T22:08:31.174487911Z"
+generated: "2024-12-25T23:06:45.389373002Z"
