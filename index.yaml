@@ -3907,6 +3907,19 @@ entries:
     urls:
     - https://github.com/OwnYourIO/SpencersLab/releases/download/exporter-mikrotik-1.0.1/exporter-mikrotik-1.0.1.tgz
     version: 1.0.1
+  external-secrets-bitwarden:
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2024-12-25T23:24:59.778847469Z"
+    dependencies:
+    - name: external-secrets
+      repository: https://charts.external-secrets.io
+      version: 0.10.7
+    digest: 216e7a9252943e49881ac0521bdc5a0c19a985d6c1cceba708ab953103caa5d2
+    name: external-secrets-bitwarden
+    urls:
+    - https://github.com/OwnYourIO/SpencersLab/releases/download/external-secrets-bitwarden-1.0.1/external-secrets-bitwarden-1.0.1.tgz
+    version: 1.0.1
   freeipa:
   - apiVersion: v2
     appVersion: 1.0.9
@@ -5889,4 +5902,4 @@ entries:
     urls:
     - https://github.com/OwnYourIO/SpencersLab/releases/download/zigbee2mqtt-1.0.1/zigbee2mqtt-1.0.1.tgz
     version: 1.0.1
-generated: "2024-12-25T23:06:45.389373002Z"
+generated: "2024-12-25T23:24:59.780294346Z"
