@@ -143,6 +143,14 @@ entries:
   appset-monitoring:
   - apiVersion: v2
     appVersion: 1.1.8
+    created: "2024-12-25T06:20:09.777727676Z"
+    digest: ffe60be834a9e3e81d8cf5fb75d3644318c61419c0bc9e2880b9eda79302221d
+    name: appset-monitoring
+    urls:
+    - https://github.com/OwnYourIO/SpencersLab/releases/download/appset-monitoring-1.1.11/appset-monitoring-1.1.11.tgz
+    version: 1.1.11
+  - apiVersion: v2
+    appVersion: 1.1.8
     created: "2024-12-01T04:51:59.406089746Z"
     digest: 0f66fcaf75804c858a5ca8ab04388d7725572df9d1816cdcb2f1fa624b4ea294
     name: appset-monitoring
@@ -1593,6 +1601,21 @@ entries:
     - https://github.com/OwnYourIO/SpencersLab/releases/download/backups-appset-1.1.1/backups-appset-1.1.1.tgz
     version: 1.1.1
   base:
+  - apiVersion: v2
+    appVersion: 1.0.31
+    created: "2024-12-25T06:20:09.982813328Z"
+    dependencies:
+    - name: argo-cd
+      repository: https://argoproj.github.io/argo-helm
+      version: 7.6.5
+    - name: cert-manager
+      repository: https://charts.jetstack.io
+      version: v1.15.3
+    digest: f5b80ddb81dbdf2a30ce1ffc3d86491a48f7d179560593c5edbf4f8f657cbe3b
+    name: base
+    urls:
+    - https://github.com/OwnYourIO/SpencersLab/releases/download/base-1.0.71/base-1.0.71.tgz
+    version: 1.0.71
   - apiVersion: v2
     appVersion: 1.0.31
     created: "2024-12-18T05:19:34.986517419Z"
@@ -5603,4 +5626,4 @@ entries:
     urls:
     - https://github.com/OwnYourIO/SpencersLab/releases/download/zigbee2mqtt-1.0.1/zigbee2mqtt-1.0.1.tgz
     version: 1.0.1
-generated: "2024-12-18T05:19:34.987207402Z"
+generated: "2024-12-25T06:20:09.983363394Z"
