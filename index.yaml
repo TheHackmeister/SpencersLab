@@ -4283,6 +4283,18 @@ entries:
   hyperion:
   - apiVersion: v2
     appVersion: 1.0.12
+    created: "2024-12-28T03:50:50.204186309Z"
+    dependencies:
+    - name: app-template
+      repository: https://bjw-s.github.io/helm-charts/
+      version: 3.5.1
+    digest: b5bba5104b38c2df3cbb54282d30baab6f11bfaccc8ab1d6dd3ece9606b6c90a
+    name: hyperion
+    urls:
+    - https://github.com/OwnYourIO/SpencersLab/releases/download/hyperion-1.0.14/hyperion-1.0.14.tgz
+    version: 1.0.14
+  - apiVersion: v2
+    appVersion: 1.0.12
     created: "2024-11-23T15:43:14.410359705Z"
     dependencies:
     - name: app-template
@@ -4703,6 +4715,18 @@ entries:
   ledfx:
   - apiVersion: v2
     appVersion: 1.0.10
+    created: "2024-12-28T03:50:50.307851324Z"
+    dependencies:
+    - name: app-template
+      repository: https://bjw-s.github.io/helm-charts/
+      version: 3.5.1
+    digest: bebef649fa8be71ab2ce8a55e80cafa62b0056acb71b6eaf7785ea538fe07d45
+    name: ledfx
+    urls:
+    - https://github.com/OwnYourIO/SpencersLab/releases/download/ledfx-1.0.12/ledfx-1.0.12.tgz
+    version: 1.0.12
+  - apiVersion: v2
+    appVersion: 1.0.10
     created: "2024-11-23T15:43:14.636003736Z"
     dependencies:
     - name: app-template
@@ -4786,6 +4810,18 @@ entries:
     - https://github.com/OwnYourIO/SpencersLab/releases/download/ledfx-1.0.5/ledfx-1.0.5.tgz
     version: 1.0.5
   logitech-media-server:
+  - apiVersion: v2
+    appVersion: 1.0.15
+    created: "2024-12-28T03:50:50.437969582Z"
+    dependencies:
+    - name: app-template
+      repository: https://bjw-s.github.io/helm-charts/
+      version: 3.5.1
+    digest: dd4e8ce429b8f89ad83d419e4bea0089b73bd3e207c8153fc343336107320db3
+    name: logitech-media-server
+    urls:
+    - https://github.com/OwnYourIO/SpencersLab/releases/download/logitech-media-server-1.0.17/logitech-media-server-1.0.17.tgz
+    version: 1.0.17
   - apiVersion: v2
     appVersion: 1.0.15
     created: "2024-11-23T15:43:14.728956694Z"
@@ -5528,6 +5564,18 @@ entries:
   zigbee2mqtt:
   - apiVersion: v2
     appVersion: 1.0.38
+    created: "2024-12-28T03:50:50.563064971Z"
+    dependencies:
+    - name: app-template
+      repository: https://bjw-s.github.io/helm-charts/
+      version: 3.5.1
+    digest: 7f0cce18554d8aa69f3fdbfc8b7368b337ecf3c25a00a149de0abf6aa52a9bfd
+    name: zigbee2mqtt
+    urls:
+    - https://github.com/OwnYourIO/SpencersLab/releases/download/zigbee2mqtt-1.0.40/zigbee2mqtt-1.0.40.tgz
+    version: 1.0.40
+  - apiVersion: v2
+    appVersion: 1.0.38
     created: "2024-11-23T15:43:15.166438415Z"
     dependencies:
     - name: app-template
@@ -5934,4 +5982,4 @@ entries:
     urls:
     - https://github.com/OwnYourIO/SpencersLab/releases/download/zigbee2mqtt-1.0.1/zigbee2mqtt-1.0.1.tgz
     version: 1.0.1
-generated: "2024-12-25T23:33:36.221516541Z"
+generated: "2024-12-28T03:50:50.563697711Z"
