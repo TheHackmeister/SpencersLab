@@ -1735,6 +1735,21 @@ entries:
   base:
   - apiVersion: v2
     appVersion: 1.0.31
+    created: "2025-01-04T21:14:12.038910786Z"
+    dependencies:
+    - name: argo-cd
+      repository: https://argoproj.github.io/argo-helm
+      version: 7.7.13
+    - name: cert-manager
+      repository: https://charts.jetstack.io
+      version: v1.16.2
+    digest: 28dd272ceb4406f183ba12ad2c4e2af3f64134fe570fcd6ce8b173c840553cfb
+    name: base
+    urls:
+    - https://github.com/OwnYourIO/SpencersLab/releases/download/base-1.0.95/base-1.0.95.tgz
+    version: 1.0.95
+  - apiVersion: v2
+    appVersion: 1.0.31
     created: "2025-01-04T20:41:08.940530462Z"
     dependencies:
     - name: argo-cd
@@ -6462,4 +6477,4 @@ entries:
     urls:
     - https://github.com/OwnYourIO/SpencersLab/releases/download/zigbee2mqtt-1.0.1/zigbee2mqtt-1.0.1.tgz
     version: 1.0.1
-generated: "2025-01-04T20:41:08.941346468Z"
+generated: "2025-01-04T21:14:12.039940285Z"
