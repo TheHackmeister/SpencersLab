@@ -5208,6 +5208,18 @@ entries:
   logitech-media-server:
   - apiVersion: v2
     appVersion: 1.0.15
+    created: "2025-01-04T22:08:21.575553549Z"
+    dependencies:
+    - name: app-template
+      repository: https://bjw-s.github.io/helm-charts/
+      version: 3.6.0
+    digest: 8684d5d62a67a925c497b84aa999e3762a694135f3d11afbe23d41eab658adcb
+    name: logitech-media-server
+    urls:
+    - https://github.com/OwnYourIO/SpencersLab/releases/download/logitech-media-server-1.0.19/logitech-media-server-1.0.19.tgz
+    version: 1.0.19
+  - apiVersion: v2
+    appVersion: 1.0.15
     created: "2024-12-31T05:33:05.864401836Z"
     dependencies:
     - name: app-template
@@ -6522,4 +6534,4 @@ entries:
     urls:
     - https://github.com/OwnYourIO/SpencersLab/releases/download/zigbee2mqtt-1.0.1/zigbee2mqtt-1.0.1.tgz
     version: 1.0.1
-generated: "2025-01-04T21:57:38.385959923Z"
+generated: "2025-01-04T22:08:21.57612092Z"
