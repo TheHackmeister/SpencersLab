@@ -6285,6 +6285,18 @@ entries:
   zigbee2mqtt:
   - apiVersion: v2
     appVersion: 1.0.38
+    created: "2025-02-22T16:26:07.144424235Z"
+    dependencies:
+    - name: app-template
+      repository: https://bjw-s.github.io/helm-charts/
+      version: 3.6.0
+    digest: db9ee6981eca45f6b4a85220f708d10c5361fe9fa725673b79da4e43637545fb
+    name: zigbee2mqtt
+    urls:
+    - https://github.com/OwnYourIO/SpencersLab/releases/download/zigbee2mqtt-1.0.50/zigbee2mqtt-1.0.50.tgz
+    version: 1.0.50
+  - apiVersion: v2
+    appVersion: 1.0.38
     created: "2025-02-09T01:58:51.204217672Z"
     dependencies:
     - name: app-template
@@ -6811,4 +6823,4 @@ entries:
     urls:
     - https://github.com/OwnYourIO/SpencersLab/releases/download/zigbee2mqtt-1.0.1/zigbee2mqtt-1.0.1.tgz
     version: 1.0.1
-generated: "2025-02-21T23:07:30.133176542Z"
+generated: "2025-02-22T16:26:07.145754702Z"
